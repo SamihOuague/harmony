@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PageController!{% endblock %}
+
+{% block body %}
+<div class="example-wrapper container">
+    <h1 style="margin: 50px 0px;">Liste des pages :</h1>
+    <a href="{{path('app_new_page')}}" class="btn btn-outline-success" style="margin: 50px 0px">Ajouter une page</a>
+    {% if (pages) %}
+        {% for page in pages %}
+            <div class="alert alert-primary d-flex justify-content-between">
+                <h2>{{page.numero}} - {{page.titre|upper}}</h2>
+                <a href="/page/{{page.id}}/delete" class="btn btn-outline-danger d-flex align-items-center">Supprimer</a>
+            </div>
+        {% endfor %}
+    {% endif %}
+    
+</div>
+{% endblock %}

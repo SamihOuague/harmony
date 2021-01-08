@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid" style="height: 100%; max-width: 100%;">
+    <div class="row" style="height: 100%; overflow: hidden; max-width: 100%;">
+        <div class="col-3 text-center" style="background-color: #8DC63F; position: relative; z-index: 0;">
+            <img style="margin-top: 30px;" width="100" src="https://harmony-promotion.com/presentation/images/rond.png"/>
+            <div>
+                <button id="prev" class="btn btn-outline-light" style="width: 100px; border-radius: 50px; margin-top: 15px;">Precedent</button>
+                <button id="next" class="btn btn-outline-light" style="width: 100px; border-radius: 50px; margin-top: 15px;">Suivant</button>
+            </div>
+            <div style="margin-top: 10px;">
+                {% if (pages) %}
+                    {% for page in pages %}
+                        <a href="#{{page.numero}}" id="{{page.numero}}" class="text-light page" style="text-decoration: none; 
+                                                            margin-top:20px; 
+                                                            display: block; 
+                                                            font-size: 14px;">
+                            {{page.numero}} - {{page.titre|upper}}
+                        </a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-9">
+            {% if (pages) %}
+                {% for page in pages %}
+                    <img id="p{{page.numero}}" class="{{(page.numero == 1) ? '' : 'd-none'}}" style="width: 100%; position: relative; z-index: 99;" src="uploads/pages/{{page.page}}"/>
+                {% endfor %}
+            {% endif %}
+        </div>
+    <div>
+</div>
+<script>
+    $(document).ready(($) => {
+        let currentId = 1;
+        let animateFunction = (currId) => {
+            $("#p" + currId).animate({
+                            width: "+=100",
+                            marginLeft: "-=25"
+                        }, 900, () => {
+                            $("#p" + currentId).animate({
+                                width: "-=100",
+                                marginLeft: "+=25"
+                            }, 600);
+                        });
+            $("#" + currId).animate({
+                rotation: "+=360"
+            }, {
+                step: (now, fx) => {
+                    $("#" + currId).css("transform", "rotateY("+ now +"deg)");
+                },
+                duration: 1500
+            });
+        }
+        animateFunction(currentId);
+        $(".page").click((e) => {
+            $("#p" + currentId).addClass("d-none");
+            $("#p" + e.currentTarget.id).removeClass("d-none");
+            currentId = e.currentTarget.id;
+            animateFunction(currentId);
+        });
+
+        $("#next").click((e) => {
+            if (currentId < $(".page").length) {
+                $("#p"+ currentId++).addClass("d-none");
+                $("#p" + currentId).removeClass("d-none");
+                animateFunction(currentId);
+            }
+        });
+        $("#prev").click((e) => {
+            if (currentId > 1) {
+                $("#p"+ currentId--).addClass("d-none");
+                $("#p" + currentId).removeClass("d-none");
+                animateFunction(currentId);
+            }
+        });
+    });
+</script>
+{% endblock %}
