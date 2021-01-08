@@ -86,7 +86,7 @@ return array(
     'PackageVersions\\' => array($vendorDir . '/composer/package-versions-deprecated/src/PackageVersions'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'LibDNS\\' => array($vendorDir . '/daverandom/libdns/src'),
-    'League\\Uri\\' => array($vendorDir . '/league/uri-interfaces/src', $vendorDir . '/league/uri/src', $vendorDir . '/league/uri-parser/src'),
+    'League\\Uri\\' => array($vendorDir . '/league/uri/src', $vendorDir . '/league/uri-interfaces/src', $vendorDir . '/league/uri-parser/src'),
     'Laminas\\ZendFrameworkBridge\\' => array($vendorDir . '/laminas/laminas-zendframework-bridge/src'),
     'Laminas\\EventManager\\' => array($vendorDir . '/laminas/laminas-eventmanager/src'),
     'Laminas\\Code\\' => array($vendorDir . '/laminas/laminas-code/src'),

@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'c63d9d433ce518cf5b136e98492a6aad6cd57c0f',
+    'reference' => '50f568686c1083e3e761ebbf404051ee6b4e4235',
     'name' => '__root__',
   ),
   'versions' => 
@@ -41,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'c63d9d433ce518cf5b136e98492a6aad6cd57c0f',
+      'reference' => '50f568686c1083e3e761ebbf404051ee6b4e4235',
     ),
     'amphp/amp' => 
     array (
@@ -579,6 +579,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '430d14c01836b77c28092883d195a43ce413ee32',
+    ),
+    'symfony/apache-pack' => 
+    array (
+      'pretty_version' => 'v1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3aa5818d73ad2551281fc58a75afd9ca82622e6c',
     ),
     'symfony/asset' => 
     array (
