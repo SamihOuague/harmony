@@ -1,13 +1,13 @@
 doctrine:
-        dbal:
-            # configure these for your database server
-            driver: 'pdo_mysql'
-            server_version: '5.7'
+    dbal:
+        # configure these for your database server
+        driver: 'pdo_mysql'
+        server_version: '5.7'
+        charset: utf8mb4
+        default_table_options:
             charset: utf8mb4
-            default_table_options:
-                charset: utf8mb4
-                collate: utf8mb4_unicode_ci
-            url: '%env(resolve:postgres://rethhmosooqwqe:2273796371e79da858f5f860b73928a6cf042e37838984b2809ba4dc32e670df@ec2-54-78-127-245.eu-west-1.compute.amazonaws.com:5432/d72r2iepjst2mf)%'
+            collate: utf8mb4_unicode_ci
+        url: '%env(resolve:postgres://rethhmosooqwqe:2273796371e79da858f5f860b73928a6cf042e37838984b2809ba4dc32e670df@ec2-54-78-127-245.eu-west-1.compute.amazonaws.com:5432/d72r2iepjst2mf)%'
 
 
         # IMPORTANT: You MUST configure your server version,
