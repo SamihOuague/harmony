@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
+use App\Entity\UserEntity;
 use App\Form\RegistrationFormType;
 use App\Security\CustomFormAuthenticator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -23,7 +23,7 @@ class RegistrationController extends AbstractController
             return $this->redirectToRoute('home');
         }
         
-        $user = new User();
+        $user = new UserEntity();
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
