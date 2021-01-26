@@ -3579,3 +3579,10 @@ abc750,127.0.0.1,GET,https://localhost:8000/programme/new,1611664114,,200
 4ce859,127.0.0.1,POST,https://localhost:8000/programme/new,1611664696,,302
 b6f220,127.0.0.1,GET,https://localhost:8000/,1611664696,,200
 426d26,127.0.0.1,GET,https://localhost:8000/detail/1,1611664702,,200
+3418cb,127.0.0.1,GET,https://localhost:8000/detail/1,1611666259,,200
+1934cf,127.0.0.1,GET,https://localhost:8000/programme,1611666371,,200
+82dd31,127.0.0.1,GET,https://localhost:8000/harmony-promotion,1611666490,,200
+f89fa6,127.0.0.1,GET,https://localhost:8000/programme,1611666502,,200
+2e5459,127.0.0.1,GET,https://localhost:8000/,1611666505,,200
+efe8fa,127.0.0.1,GET,https://localhost:8000/,1611666579,,200
+ba1567,127.0.0.1,GET,https://localhost:8000/,1611666595,,200

@@ -149,38 +149,38 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
         <footer class=\"container-fluid\" style=\"background-color: white; padding: 50px 0; overflow: hidden;\">
           <div class=\"row\">
             <div class=\"col-lg-2 text-center offset-lg-1\">
-              <img width=\"150\" src=\"https://harmony-promotion.com/images/harmony-promotion.png\" alt=\"Harmony Logo\"/>
+              <img width=\"100\" src=\"https://harmony-promotion.com/images/harmony-promotion.png\" alt=\"Harmony Logo\"/>
             </div>
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">MENU</h4>
               <a href=\"";
         // line 81
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("programme");
-        echo "\" class=\"text-muted\" style=\"font-size: 21px;\">Tous les programmes</a><br/>
+        echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Tous les programmes</a><br/>
               <a href=\"";
         // line 82
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("guide");
-        echo "\" class=\"text-muted\" style=\"font-size: 21px;\">Guide de l'acheteur</a><br/>
+        echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Guide de l'acheteur</a><br/>
               <a href=\"";
         // line 83
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("guide");
-        echo "\" class=\"text-muted\" style=\"font-size: 21px;\">Guide de l'investisseur</a><br/>
+        echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Guide de l'investisseur</a><br/>
             </div>
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">ENTREPRISE</h4>
-              <a href=\"#\" class=\"text-muted\" style=\"font-size: 21px;\">Carrière</a><br/>
-              <a href=\"#\" class=\"text-muted\" style=\"font-size: 21px;\">Mentions légales</a><br/>
+              <a href=\"#\" class=\"text-muted\" style=\"font-size: 18px;\">Carrière</a><br/>
+              <a href=\"#\" class=\"text-muted\" style=\"font-size: 18px;\">Mentions légales</a><br/>
             </div>
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">DÉCOUVRIR</h4>
               <a href=\"";
         // line 92
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("harmony");
-        echo "#team\" class=\"text-muted\" style=\"font-size: 21px;\">Notre team</a><br/>
+        echo "#team\" class=\"text-muted\" style=\"font-size: 18px;\">Notre team</a><br/>
               <a href=\"";
         // line 93
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("harmony");
-        echo "\" class=\"text-muted\" style=\"font-size: 21px;\">Nos valeurs</a><br/>
+        echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Nos valeurs</a><br/>
             </div>
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">CONTACT</h4>
@@ -373,23 +373,23 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
         <footer class=\"container-fluid\" style=\"background-color: white; padding: 50px 0; overflow: hidden;\">
           <div class=\"row\">
             <div class=\"col-lg-2 text-center offset-lg-1\">
-              <img width=\"150\" src=\"https://harmony-promotion.com/images/harmony-promotion.png\" alt=\"Harmony Logo\"/>
+              <img width=\"100\" src=\"https://harmony-promotion.com/images/harmony-promotion.png\" alt=\"Harmony Logo\"/>
             </div>
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">MENU</h4>
-              <a href=\"{{ path('programme') }}\" class=\"text-muted\" style=\"font-size: 21px;\">Tous les programmes</a><br/>
-              <a href=\"{{ path('guide') }}\" class=\"text-muted\" style=\"font-size: 21px;\">Guide de l'acheteur</a><br/>
-              <a href=\"{{ path('guide') }}\" class=\"text-muted\" style=\"font-size: 21px;\">Guide de l'investisseur</a><br/>
+              <a href=\"{{ path('programme') }}\" class=\"text-muted\" style=\"font-size: 18px;\">Tous les programmes</a><br/>
+              <a href=\"{{ path('guide') }}\" class=\"text-muted\" style=\"font-size: 18px;\">Guide de l'acheteur</a><br/>
+              <a href=\"{{ path('guide') }}\" class=\"text-muted\" style=\"font-size: 18px;\">Guide de l'investisseur</a><br/>
             </div>
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">ENTREPRISE</h4>
-              <a href=\"#\" class=\"text-muted\" style=\"font-size: 21px;\">Carrière</a><br/>
-              <a href=\"#\" class=\"text-muted\" style=\"font-size: 21px;\">Mentions légales</a><br/>
+              <a href=\"#\" class=\"text-muted\" style=\"font-size: 18px;\">Carrière</a><br/>
+              <a href=\"#\" class=\"text-muted\" style=\"font-size: 18px;\">Mentions légales</a><br/>
             </div>
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">DÉCOUVRIR</h4>
-              <a href=\"{{ path('harmony') }}#team\" class=\"text-muted\" style=\"font-size: 21px;\">Notre team</a><br/>
-              <a href=\"{{ path('harmony') }}\" class=\"text-muted\" style=\"font-size: 21px;\">Nos valeurs</a><br/>
+              <a href=\"{{ path('harmony') }}#team\" class=\"text-muted\" style=\"font-size: 18px;\">Notre team</a><br/>
+              <a href=\"{{ path('harmony') }}\" class=\"text-muted\" style=\"font-size: 18px;\">Nos valeurs</a><br/>
             </div>
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">CONTACT</h4>
