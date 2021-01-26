@@ -19,7 +19,7 @@ class NewsController extends AbstractController
     {
         $news = $this->getDoctrine()->getRepository(News::class)->findAll();
         return $this->render('news/index.html.twig', [
-            'articles' => $news,
+            'articles' => $news
         ]);
     }
 
