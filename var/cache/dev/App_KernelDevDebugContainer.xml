@@ -428,7 +428,7 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
-    <service id="App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true">
+    <service id="App\Repository\UserEntityRepository" class="App\Repository\UserEntityRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -4201,7 +4201,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.36p0BAC"/>
+      <argument type="service" id=".service_locator.1WsiuJU"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4617,6 +4617,18 @@
     <service id="security.encoder_factory.generic" class="Symfony\Component\Security\Core\Encoder\EncoderFactory">
       <argument type="collection">
         <argument key="App\Entity\User" type="collection">
+          <argument key="algorithm">auto</argument>
+          <argument key="migrate_from" type="collection"/>
+          <argument key="hash_algorithm">sha512</argument>
+          <argument key="key_length">40</argument>
+          <argument key="ignore_case">false</argument>
+          <argument key="encode_as_base64">true</argument>
+          <argument key="iterations">5000</argument>
+          <argument key="cost">null</argument>
+          <argument key="memory_cost">null</argument>
+          <argument key="time_cost">null</argument>
+        </argument>
+        <argument key="App\Entity\UserEntity" type="collection">
           <argument key="algorithm">auto</argument>
           <argument key="migrate_from" type="collection"/>
           <argument key="hash_algorithm">sha512</argument>
@@ -5054,7 +5066,7 @@
     </service>
     <service id="security.user.provider.concrete.app_user_provider" class="Symfony\Bridge\Doctrine\Security\User\EntityUserProvider">
       <argument type="service" id="doctrine"/>
-      <argument>App\Entity\User</argument>
+      <argument>App\Entity\UserEntity</argument>
       <argument>email</argument>
       <argument>null</argument>
     </service>
@@ -5221,6 +5233,7 @@
       <argument type="service" id="security.encoder_factory.generic"/>
       <argument type="collection">
         <argument>App\Entity\User</argument>
+        <argument>App\Entity\UserEntity</argument>
       </argument>
       <call method="setName">
         <argument>security:encode-password</argument>
@@ -5276,8 +5289,8 @@
     <service id=".abstract.instanceof.App\Repository\ProgrammeRepository" class="App\Repository\ProgrammeRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProspectRepository" class="App\Repository\ProspectRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ProspectRepository" class="App\Repository\ProspectRepository" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserEntityRepository" class="App\Repository\UserEntityRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\UserEntityRepository" class="App\Repository\UserEntityRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.Kbr2i2X" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5826,7 +5839,7 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.36p0BAC" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.1WsiuJU" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\BienRepository" type="service" id="App\Repository\BienRepository"/>
@@ -5835,7 +5848,7 @@
         <argument key="App\Repository\PageRepository" type="service" id="App\Repository\PageRepository"/>
         <argument key="App\Repository\ProgrammeRepository" type="service" id="App\Repository\ProgrammeRepository"/>
         <argument key="App\Repository\ProspectRepository" type="service" id="App\Repository\ProspectRepository"/>
-        <argument key="App\Repository\UserRepository" type="service" id="App\Repository\UserRepository"/>
+        <argument key="App\Repository\UserEntityRepository" type="service" id="App\Repository\UserEntityRepository"/>
       </argument>
     </service>
     <service id="debug.security.voter.security.access.authenticated_voter" class="Symfony\Component\Security\Core\Authorization\Voter\TraceableVoter">
