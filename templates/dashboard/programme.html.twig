@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% if (app.user) %}
+        {{form(form)}}
+    {% endif  %}
+</div>
+{% endblock %}

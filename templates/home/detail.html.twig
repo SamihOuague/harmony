@@ -1,0 +1,198 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Harmony Promotion | {{programme.title}}{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div style="background-image: url('/uploads/pages/{{programme.miniature}}'); height: 500px; background-size: cover;">
+    <div class="d-flex justify-content-between align-items-end h-100" style="padding: 0px 5%;">
+        <div style="
+            width: 90px; 
+            height: 90px; 
+            background-color: {% if programme.isPrestige %}rgb(0, 48, 60){% else %}#336336{% endif %}; 
+            border-radius: 50%; 
+            background-image: url('https://harmony-promotion.com/images/photos.png');
+            background-size: 65%;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-bottom: -50px;">
+        </div>
+        <div class="{% if not programme.isPrestige %}bg-light{% endif %} d-flex justify-content-end flex-column" style="
+                                height: {% if not programme.isPrestige %} 270px {% else %} 220px {% endif %}; 
+                                width: 450px; 
+                                margin-bottom: 50px;
+                                border-radius: 0px 50px 0px 50px;
+                                overflow: {% if programme.isPrestige %}visible{% else %}hidden{% endif %};
+                                {% if programme.isPrestige %}background-color: rgba(255, 255, 255, 0.6);{% endif %}">
+            {% if programme.isPrestige %}<img src="https://harmony-promotion.com/images/pastille.svg" alt="Pastille prestige" width="100" style="position: relative; left: 400px; top: 100px;"/>{% endif %}
+            <div class="h-100" style="padding: 25px 35px; font-family: 'Montserrat'; color: {% if programme.isPrestige %}rgb(0, 48, 60){% else %}#336336{% endif %};">
+                <h1 style="font-family: 'Barlow'; margin-top: 20px; font-size: 31px;">{{programme.title}}</h1>
+                {% if programme.isPrestige %}<div style="border: 2px solid #B1A06B; width: 50px; left: -55px; top: -20px; position: relative;"></div>{% endif %}
+                <h3 style="{% if not programme.isPrestige %}color: #8DC63F;{% endif %}font-size: 25px;">{{programme.ville}}</h3>
+                {% if not programme.isPrestige %}<h3 style="{% if not programme.isPrestige %}color: #8DC63F;{% endif %}font-size: 25px;">Programme neuf</h3>{% endif %}
+            </div>
+            <div class="d-flex {% if not programme.isPrestige %}justify-content-around align-items-center{% endif %}" 
+                                                                                            style="background-color: {% if not programme.isPrestige %}#336336{% endif %}; 
+                                                                                                    height: 100px; 
+                                                                                                    width: 100%;">
+                <a href="/rappel/{{programme.id}}/programme">
+                    <img width="45" style="margin: {% if not programme.isPrestige %}5px{% else %}0 0px 25px 35px{% endif %};" src="{% if programme.isPrestige %}https://harmony-promotion.com/images/appelP.svg{% else %}https://harmony-promotion.com/images/appel-w.png{% endif %}"/>
+                </a>
+                <a href="/brochure/{{programme.id}}/programme">
+                    <img width="45" style="margin: {% if not programme.isPrestige %}5px{% else %}0 0px 25px 35px{% endif %};" src="{% if programme.isPrestige %}https://harmony-promotion.com/images/brochureP.svg{% else %}https://harmony-promotion.com/images/brochure-w.png{% endif %}"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid {% if not programme.isPrestige %}text-center{% endif %}" style="border-bottom: 2px solid #d39c2f; padding: 80px 0px;">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            {% if not programme.isPrestige %}
+                <h4 style="color: #336336; font-family: 'Barlow';">Nos commerciaux sont à votre disposition dans notre bureau de vente !</h4>
+                <h5 style="font-family: 'Barlow';">40-42 Avenue Maurice Berteaux, 94420 Le Plessis-Trévise</h5>
+                <a href="{{ path('rappel') }}" class="btn btn-success" style="margin-top: 35px; width: 220px; padding: 10px; font-size: 18px;">Prendre rendez-vous</a>
+            {% else %}
+                <h4 class="text-center" style="color: rgb(0, 48, 60); font-family: 'Barlow'; font-size: 35px;">LA GAMME HARMONY PRESTIGE<br/>
+                    OÙ RÉINVENTER LE LUXE À LA FRANÇAISE</h4>
+                <br/>
+                <p class="text-muted text-justify" style="font-size: 18px;">Fervent défenseur de la planète, Harmony Prestige s’appuie sur l’innovation pour créer des biens luxueux et 
+                respectueux afin de répondre aux défis environnementaux de notre siècle.</p>
+                <p class="text-muted text-justify" style="font-size: 18px;">Plus que l’acquisition d’une résidence principale ou secondaire, Harmony Promotion vous propose une palette de services haut de gamme sur-mesure tels que : 
+                le service 3 étoiles pour votre déménagement, la conciergerie au quotidien, la Smart house évolutive pour piloter votre logement ou Harmo’bility, 
+                à votre disposition pour vos déplacements.</p>
+                <p class="text-muted text-justify" style="font-size: 18px;">Écoute, discrétion et efficacité : vous procurer une expérience dédiée à votre bien-être est une priorité.</p>
+                <p class="text-muted text-justify" style="font-size: 18px;">L’innovation, le standing et la performance de nos projets sont au centre de notre stratégie. Nos experts choisissent 
+                rigoureusement les emplacements de nos biens pour vous offrir un cadre de vie sélectif 
+                et privilégié. Nos partenaires, sont quant à eux reconnus pour leur savoir-faire et leur excellence, 
+                nous permettant d’investir ardemment dans l’écologie et créer des programmes immobiliers toujours plus innovants.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="container" style="padding-top: 100px;">
+    <h2 class="text-center" style="font-family: 'Barlow'; color: {% if not programme.isPrestige %}#336336{% else %}rgb(0, 48, 60){% endif %};">Biens disponibles</h2>
+    {% if biens|length > 0 %}
+        <h3 class="text-center" style="font-family: 'Montserrat'; margin-bottom: 50px;">Tout ce dont vous rêvez à portée de main</h3>
+    {% else %}
+        <h3 class="text-center" style="font-family: 'Montserrat'; margin-bottom: 50px;">Les biens de ce programme seront disponibles prochainement</h3>
+    {% endif %}
+    {% if biens %}
+        {% for bien in biens %}
+            <div class="accordion" id="bien{{bien.id}}">
+                <div class="alert alert-success">
+                    <div id="heading{{bien.id}}" class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-around w-100">
+                            <span class="text-center w-100">{{bien.title}}</span>
+                            <span class="text-center w-100">Jusqu'à {{bien.surface}} m2</span>
+                            <span class="text-center w-100">À partir de {{bien.prix}} €</span>
+                            <span class="text-center w-100">{{bien.disponible}} disponible{% if bien.disponible > 1 %}s{% endif %}</span>
+                        </div>
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#bien-{{bien.id}}" aria-expanded="true" aria-controls="bien-{{bien.id}}">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="bien-{{bien.id}}" class="collapse" aria-labelledby="heading{{bien.id}}" data-parent="#bien{{bien.id}}">
+                    <div class="alert alert-warning d-flex justify-content-around">
+                        <span class="text-center w-100">Lot</span>
+                        <span class="text-center w-100">Surface (m2)</span>
+                        <span class="text-center w-100">Étage</span>
+                        <span class="text-center w-100">Orientation</span>
+                        <span class="text-center w-100">Extérieur</span>
+                        <span class="text-center w-100">Parking</span>
+                        <span class="text-center w-100">Actions</span>
+                    </div>
+                    {% for lot in bien.lots %}
+                        <div class="alert alert-secondary d-flex justify-content-around align-items-center">
+                            <span class="text-center w-100">{{lot.lot}}</span>
+                            <span class="text-center w-100">{{lot.surface}} m2</span>
+                            <span class="text-center w-100">{{lot.etage}}</span>
+                            <span class="text-center w-100">{{lot.orientation}}</span>
+                            <span class="text-center w-100">{{lot.exterieur}}</span>
+                            <span class="text-center w-100">-</span>
+                            <span class="text-center w-100">                            
+                                <a href="/rappel/{{lot.id}}/bien">
+                                    <img src="https://harmony-promotion.com/images/phone-black.png" width="35" alt="rappel" style="margin-right: 5px;"/>
+                                </a>
+                                <a href="/brochure/{{lot.id}}/bien">
+                                    <img src="https://harmony-promotion.com/images/mail-black.png" width="35" alt="brochure"/>
+                                </a>
+                            </span>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+<div class="d-flex justify-content-center flex-wrap" style="border-top: 2px solid #d39c2f; margin-top: 100px; padding: 50px 0px;">
+    <div class="bg-light border border-muted" style="max-width: 750px; padding: 50px;">
+        <h3 style="color: {% if programme.isPrestige %}background-color: rgb(0, 48, 60){% else %}#336336{% endif %}; font-family: 'Barlow'; margin-bottom: 50px;">{{programme.subtitle}}</h3>
+        <p style="font-family: 'Barlow'; font-size: 21px;">{{programme.text}}</p>
+        <a class="btn {% if programme.isPrestige %}text-light{% else %}btn-success{% endif %}" style="margin-top: 50px; font-size: 18px; padding: 10px; {% if programme.isPrestige %}background-color: rgb(0, 48, 60);{% endif %}" href="/brochure/{{programme.id}}/programme">Demander la brochure</a>
+    </div>
+    <div style="border-style: solid;
+                border-color: black;
+                border-width: 1px 1px 1px 0px;
+                height: 350px;
+                width: 450px;
+                {% if programme.img1 %}
+                    background-image: url(/uploads/pages/{{ programme.img1 }});
+                    background-size: cover;
+                {% endif %}">
+    </div>
+</div>
+<div class="container-fluid text-center" style="padding-top: 50px; border-top: 2px solid #d39c2f; border-bottom: 100px solid #d39c2f; padding: 50px 0 0 0;">
+    <h2 style="color: {% if programme.isPrestige %}background-color: rgb(0, 48, 60){% else %}#336336{% endif %}; font-family: 'Barlow';">Plan du quartier</h2>
+    <h3 style="font-family: 'Barlow'; margin-bottom: 50px;">Tout ce dont vous rêvez à portée de main</h3>
+    <div id="map" style="height: 600px;">
+    </div>
+</div>
+<div class="container-fluid" style="padding-top: 25px; margin-bottom: 50px;">
+    <div class="d-flex justify-content-center flex-wrap">
+        {% for prog in programmes %}
+            {% if prog.id != programme.id %}
+                <a href="/detail/{{prog.id}}" style="text-decoration: none;">
+                    <div style="margin: 10px 50px; max-width: 240px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;">
+                        <div style="min-height: 150px; background-image: url('/uploads/pages/{{prog.miniature}}'); background-size: cover; width: 100%;">
+                        </div>
+                        <div class="h-100" {% if prog.isPrestige %}style="background-color: rgb(0, 48, 60);"{% endif %}>
+                            <div class="d-flex justify-content-end" style="padding-right: 10px;">
+                                <div class="text-center d-inline-block {% if prog.isPrestige %}text-dark bg-light{% else %}text-light{% endif %}" style="margin-top: -10px; background-color: {% if not prog.isPrestige %}rgb(144, 188, 85){% endif %}; padding: 5px 12px;">
+                                    {{prog.tag}}
+                                </div>
+                            </div>
+                            <div style="padding: 20px;">
+                                <h2 style="font-family: 'Barlow'; font-size: 18px; color: {% if not prog.isPrestige %}#336336{% else %}white{% endif %}; font-weight: 700;">{{prog.title}}</h2>
+                                <h3 style="font-family: 'Montserrat'; font-size: 18px; color: {% if not prog.isPrestige %}#d39c2f{% else %}white{% endif %};">{{prog.ville}}</h3>
+                                <div style="border: 2px solid {% if prog.isPrestige %} #B1A06B {% else %} #f8f9fa {% endif %}; width: 50px; margin: 5px 0;"></div>
+                                <p class="text-muted text-justify" style="font-size: 13px; word-wrap: break-word; hyphens: auto;">{{prog.text|slice(0, 80)}}...</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<script>
+    function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: {{ lat }}, lng: {{ lng }} },
+          zoom: 15,
+        });
+        map.setTilt(45);
+        const marker = new google.maps.Marker({
+            position: { lat: {{ lat }}, lng: {{ lng }} },
+            map: map,
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD75nFLcsn06DgLjQVJRpNJNV5iNnoPuks&callback=initMap"></script>
+{% endblock %}

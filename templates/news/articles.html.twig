@@ -1,0 +1,34 @@
+<?php
+    include("./admin/connexion.php");
+    $req = $bdd->query("SELECT * FROM news");
+    while ($data = $req->fetch()) {
+?>
+        <div class="col-lg-4 d-flex justify-content-center" style="margin-top: 90px;">
+            <div style="width: 300px; height: 400px;">
+                <img src="./images/<?= $data["miniature"] ?>" alt="Article 1" style="width: 100%;"/>
+                <div style="box-shadow: 5px 5px 5px #8080802e;
+                            border-radius: 0px 20px 20px 20px; 
+                            background-color: white; 
+                            height: 250px; 
+                            position: relative; 
+                            top: -100px; 
+                            left: 50px;
+                            font-family: 'Montserrat';
+                            padding: 20px;">
+                    <h3 style="font-weight: 600; font-size: 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?= $data["title"] ?></h3>
+                    <br/>
+                    <p style="hyphens: auto;"><?= substr($data["snippet"], 0, 60) ?>... <a style="color: #8FB91E; font-weight: 800; margin-left: 20px;" href="view_article.php?id=<?=$data["id"]?>">Lire plus</a></p>
+                    <br/><br/>
+                    <p style="position: absolute; bottom: 25px;">
+                        <?php 
+                            $date = new DateTime($data["created_at"]);
+                        ?>
+                        <strong style="font-weight: 800;"><?= $data["author"] ?></strong> | <?= $date->format("d.m.Y") ?>
+                    </p>
+                </div>
+            </div>
+        </div>
+<?php
+    }
+    $req->closeCursor();
+?>

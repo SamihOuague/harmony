@@ -70,6 +70,7 @@
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">App_KernelDevDebugContainer</parameter>
     <parameter key="pages_directory">/home/souaguen/Bureau/harmonypresent/public/uploads/pages</parameter>
+    <parameter key="news_directory">/home/souaguen/Bureau/harmonypresent/public/news</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -327,12 +328,26 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
-    <service id="App\Controller\HomeController" class="App\Controller\HomeController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\DashboardController" class="App\Controller\DashboardController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <argument type="service" id="security.helper"/>
       <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\DashboardController"/>
+      </call>
+    </service>
+    <service id="App\Controller\HomeController" class="App\Controller\HomeController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
         <argument type="service" id=".service_locator.5nX7ca3.App\Controller\HomeController"/>
+      </call>
+    </service>
+    <service id="App\Controller\NewsController" class="App\Controller\NewsController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\NewsController"/>
       </call>
     </service>
     <service id="App\Controller\PageController" class="App\Controller\PageController" public="true" autowire="true" autoconfigure="true">
@@ -341,6 +356,14 @@
       <argument type="service" id="security.helper"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.5nX7ca3.App\Controller\PageController"/>
+      </call>
+    </service>
+    <service id="App\Controller\PresentationController" class="App\Controller\PresentationController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="security.helper"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.5nX7ca3.App\Controller\PresentationController"/>
       </call>
     </service>
     <service id="App\Controller\RegistrationController" class="App\Controller\RegistrationController" public="true" autowire="true" autoconfigure="true">
@@ -357,13 +380,51 @@
         <argument type="service" id=".service_locator.5nX7ca3.App\Controller\SecurityController"/>
       </call>
     </service>
+    <service id="App\Form\BienFormType" class="App\Form\BienFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\ContactFormType" class="App\Form\ContactFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\LotFormType" class="App\Form\LotFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\NewsFormType" class="App\Form\NewsFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\PageFormType" class="App\Form\PageFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\ProgrammeFormType" class="App\Form\ProgrammeFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\RappelFormType" class="App\Form\RappelFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Repository\BienRepository" class="App\Repository\BienRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\LotRepository" class="App\Repository\LotRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\NewsRepository" class="App\Repository\NewsRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\PageRepository" class="App\Repository\PageRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ProgrammeRepository" class="App\Repository\ProgrammeRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ProspectRepository" class="App\Repository\ProspectRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -844,7 +905,13 @@
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\BienFormType</argument>
+        <argument>App\Form\ContactFormType</argument>
+        <argument>App\Form\LotFormType</argument>
+        <argument>App\Form\NewsFormType</argument>
         <argument>App\Form\PageFormType</argument>
+        <argument>App\Form\ProgrammeFormType</argument>
+        <argument>App\Form\RappelFormType</argument>
         <argument>App\Form\RegistrationFormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
@@ -1203,7 +1270,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.NM3uXWC"/>
+      <argument type="service" id=".service_locator.jSgg3tT"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4082,14 +4149,19 @@
     </service>
     <service id="doctrine.dbal.default_connection" class="Doctrine\DBAL\Connection" public="true">
       <argument type="collection">
+        <argument key="driver">pdo_mysql</argument>
+        <argument key="charset">utf8mb4</argument>
         <argument key="url">%env(resolve:DATABASE_URL)%</argument>
         <argument key="host">localhost</argument>
         <argument key="port">null</argument>
         <argument key="user">root</argument>
         <argument key="password">null</argument>
-        <argument key="driver">pdo_mysql</argument>
         <argument key="driverOptions" type="collection"/>
-        <argument key="defaultTableOptions" type="collection"/>
+        <argument key="serverVersion" type="string">5.7</argument>
+        <argument key="defaultTableOptions" type="collection">
+          <argument key="charset">utf8mb4</argument>
+          <argument key="collate">utf8mb4_unicode_ci</argument>
+        </argument>
       </argument>
       <argument type="service" id="doctrine.dbal.default_connection.configuration"/>
       <argument type="service" id="doctrine.dbal.default_connection.event_manager"/>
@@ -4129,7 +4201,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.flBjdud"/>
+      <argument type="service" id=".service_locator.36p0BAC"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -5155,24 +5227,55 @@
       </call>
     </service>
     <service id="twig.missing_extension_suggestor" class="Twig\Extra\TwigExtraBundle\MissingExtensionSuggestor"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DashboardController" class="App\Controller\DashboardController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DashboardController" class="App\Controller\DashboardController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\DashboardController" class="App\Controller\DashboardController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\NewsController" class="App\Controller\NewsController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\NewsController" class="App\Controller\NewsController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\NewsController" class="App\Controller\NewsController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PageController" class="App\Controller\PageController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PageController" class="App\Controller\PageController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\PageController" class="App\Controller\PageController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PresentationController" class="App\Controller\PresentationController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PresentationController" class="App\Controller\PresentationController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PresentationController" class="App\Controller\PresentationController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\BienFormType" class="App\Form\BienFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\BienFormType" class="App\Form\BienFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactFormType" class="App\Form\ContactFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ContactFormType" class="App\Form\ContactFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\LotFormType" class="App\Form\LotFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\LotFormType" class="App\Form\LotFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\NewsFormType" class="App\Form\NewsFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\NewsFormType" class="App\Form\NewsFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PageFormType" class="App\Form\PageFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\PageFormType" class="App\Form\PageFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ProgrammeFormType" class="App\Form\ProgrammeFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ProgrammeFormType" class="App\Form\ProgrammeFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RappelFormType" class="App\Form\RappelFormType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\RappelFormType" class="App\Form\RappelFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\BienRepository" class="App\Repository\BienRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\BienRepository" class="App\Repository\BienRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\LotRepository" class="App\Repository\LotRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\LotRepository" class="App\Repository\LotRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\NewsRepository" class="App\Repository\NewsRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\NewsRepository" class="App\Repository\NewsRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PageRepository" class="App\Repository\PageRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\PageRepository" class="App\Repository\PageRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProgrammeRepository" class="App\Repository\ProgrammeRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ProgrammeRepository" class="App\Repository\ProgrammeRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProspectRepository" class="App\Repository\ProspectRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ProspectRepository" class="App\Repository\ProspectRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.Kbr2i2X" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -5434,6 +5537,12 @@
         <argument key="slugger" type="service" id="slugger"/>
       </argument>
     </service>
+    <service id=".service_locator.zvIpLOp" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="data" type="service" id=".errored..service_locator.zvIpLOp.App\Entity\Prospect"/>
+      </argument>
+    </service>
     <service id=".service_locator.5YF.0Kc" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5448,9 +5557,15 @@
         <argument key="authenticationUtils" type="service" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.LTwzhgY" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.TiWR23c" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\DashboardController::editProgramme" type="service" id=".service_locator.fZXk27d"/>
+        <argument key="App\Controller\DashboardController::programme" type="service" id=".service_locator.fZXk27d"/>
+        <argument key="App\Controller\DashboardController::saveImg" type="service" id=".service_locator.fZXk27d"/>
+        <argument key="App\Controller\HomeController::importLead" type="service" id=".service_locator.zvIpLOp"/>
+        <argument key="App\Controller\NewsController::createArticle" type="service" id=".service_locator.fZXk27d"/>
+        <argument key="App\Controller\NewsController::saveImg" type="service" id=".service_locator.fZXk27d"/>
         <argument key="App\Controller\PageController::new" type="service" id=".service_locator.fZXk27d"/>
         <argument key="App\Controller\RegistrationController::register" type="service" id=".service_locator.5YF.0Kc"/>
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.UDgw6Ol"/>
@@ -5460,6 +5575,12 @@
         <argument key="kernel::loadRoutes" type="service" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::registerContainerConfiguration" type="service" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::terminate" type="service" id=".service_locator.KfwZsne"/>
+        <argument key="App\Controller\DashboardController:editProgramme" type="service" id=".service_locator.fZXk27d"/>
+        <argument key="App\Controller\DashboardController:programme" type="service" id=".service_locator.fZXk27d"/>
+        <argument key="App\Controller\DashboardController:saveImg" type="service" id=".service_locator.fZXk27d"/>
+        <argument key="App\Controller\HomeController:importLead" type="service" id=".service_locator.zvIpLOp"/>
+        <argument key="App\Controller\NewsController:createArticle" type="service" id=".service_locator.fZXk27d"/>
+        <argument key="App\Controller\NewsController:saveImg" type="service" id=".service_locator.fZXk27d"/>
         <argument key="App\Controller\PageController:new" type="service" id=".service_locator.fZXk27d"/>
         <argument key="App\Controller\RegistrationController:register" type="service" id=".service_locator.5YF.0Kc"/>
         <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.UDgw6Ol"/>
@@ -5527,10 +5648,16 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.NM3uXWC" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.jSgg3tT" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\BienFormType" type="service" id="App\Form\BienFormType"/>
+        <argument key="App\Form\ContactFormType" type="service" id="App\Form\ContactFormType"/>
+        <argument key="App\Form\LotFormType" type="service" id="App\Form\LotFormType"/>
+        <argument key="App\Form\NewsFormType" type="service" id="App\Form\NewsFormType"/>
         <argument key="App\Form\PageFormType" type="service" id="App\Form\PageFormType"/>
+        <argument key="App\Form\ProgrammeFormType" type="service" id="App\Form\ProgrammeFormType"/>
+        <argument key="App\Form\RappelFormType" type="service" id="App\Form\RappelFormType"/>
         <argument key="App\Form\RegistrationFormType" type="service" id="App\Form\RegistrationFormType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
@@ -5699,10 +5826,15 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.flBjdud" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.36p0BAC" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Repository\BienRepository" type="service" id="App\Repository\BienRepository"/>
+        <argument key="App\Repository\LotRepository" type="service" id="App\Repository\LotRepository"/>
+        <argument key="App\Repository\NewsRepository" type="service" id="App\Repository\NewsRepository"/>
         <argument key="App\Repository\PageRepository" type="service" id="App\Repository\PageRepository"/>
+        <argument key="App\Repository\ProgrammeRepository" type="service" id="App\Repository\ProgrammeRepository"/>
+        <argument key="App\Repository\ProspectRepository" type="service" id="App\Repository\ProspectRepository"/>
         <argument key="App\Repository\UserRepository" type="service" id="App\Repository\UserRepository"/>
       </argument>
     </service>
@@ -5758,15 +5890,33 @@
         <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\DashboardController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\DashboardController"/>
+      <argument>App\Controller\DashboardController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
     <service id=".service_locator.5nX7ca3.App\Controller\HomeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\HomeController"/>
       <argument>App\Controller\HomeController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.5nX7ca3" method="withContext"/>
     </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\NewsController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\NewsController"/>
+      <argument>App\Controller\NewsController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
     <service id=".service_locator.5nX7ca3.App\Controller\PageController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\PageController"/>
       <argument>App\Controller\PageController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.5nX7ca3" method="withContext"/>
+    </service>
+    <service id=".service_locator.5nX7ca3.App\Controller\PresentationController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PresentationController"/>
+      <argument>App\Controller\PresentationController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.5nX7ca3" method="withContext"/>
     </service>
@@ -5944,12 +6094,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.LTwzhgY"/>
+      <argument type="service" id=".service_locator.TiWR23c"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.LTwzhgY"/>
+      <argument type="service" id=".service_locator.TiWR23c"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -5961,6 +6111,7 @@
     </service>
     <service id=".errored..service_locator.KfwZsne.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
+    <service id=".errored..service_locator.zvIpLOp.App\Entity\Prospect" class="App\Entity\Prospect"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <tag name="container.no_preload"/>
       <argument type="service" id=".service_locator.eXzwb0x"/>
@@ -6357,7 +6508,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.LTwzhgY"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.TiWR23c"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

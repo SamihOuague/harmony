@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Harmony Promotion{% endblock %}
+
+{% block body %}
+<div class="container d-flex justify-content-center">
+    <div class="border border-muted" style="max-height: 600px; width: 375px; margin: 50px 0; background-color: white;">
+        <div class="d-flex border-bottom border-success align-items-center" style="padding: 20px 10px;">
+            <img src="https://harmony-promotion.com/images/appel-black.svg" width="50" style="margin: 0 20px 0 10px;" alt="phone"/>
+            <h1 style="font-family: 'Barlow'; font-size: 28px;" class="text-dark">{{form_name}}</h1>
+        </div>
+        <div style="padding: 25px;">
+            {{ form_start(form) }}
+                {{form_row(form.fullname)}}
+                {{form_row(form.phone)}}
+                {{form_row(form.email)}}
+                <div class="d-flex align-items-start">
+                    {{form_row(form.agrees)}}
+                    <label class="text-justify" for="agrees">J'accepte que mes données soient utilisées dans le cadre de ma demande. 
+                    Pour en savoir plus sur le traitement de vos données et vos droits, 
+                    <a href="#" class="text-success">consultez notre politique de traitement des données.</a></label>
+                </div>
+                {{form_row(form.Valider)}}
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+{% endblock %}
