@@ -74,7 +74,7 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
                   <span class=\"navbar-toggler-icon\"></span>
                 </button>
                 <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-                    <ul class=\"navbar-nav ml-auto w-100 d-flex justify-content-around\" style=\"font-size: 16px;\">
+                    <ul class=\"navbar-nav ml-auto w-100 d-flex justify-content-around\" style=\"font-size: 14px;\">
                       <li class=\"nav-item d-flex align-items-center justify-content-center\">
                         <a class=\"nav-link\" href=\"";
         // line 27
@@ -321,7 +321,7 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
                   <span class=\"navbar-toggler-icon\"></span>
                 </button>
                 <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-                    <ul class=\"navbar-nav ml-auto w-100 d-flex justify-content-around\" style=\"font-size: 16px;\">
+                    <ul class=\"navbar-nav ml-auto w-100 d-flex justify-content-around\" style=\"font-size: 14px;\">
                       <li class=\"nav-item d-flex align-items-center justify-content-center\">
                         <a class=\"nav-link\" href=\"{{ path('programme') }}\">PROGRAMMES</a>
                       </li>
