@@ -149,7 +149,7 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
         <footer class=\"container-fluid\" style=\"background-color: white; padding: 50px 0; overflow: hidden;\">
           <div class=\"row\">
             <div class=\"col-lg-2 text-center offset-lg-1\">
-              <img width=\"100\" src=\"https://harmony-promotion.com/images/harmony-promotion.png\" alt=\"Harmony Logo\"/>
+              <img style=\"margin: 25px 0;\" width=\"100\" src=\"https://harmony-promotion.com/images/harmony-promotion.png\" alt=\"Harmony Logo\"/>
             </div>
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">MENU</h4>
@@ -373,7 +373,7 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
         <footer class=\"container-fluid\" style=\"background-color: white; padding: 50px 0; overflow: hidden;\">
           <div class=\"row\">
             <div class=\"col-lg-2 text-center offset-lg-1\">
-              <img width=\"100\" src=\"https://harmony-promotion.com/images/harmony-promotion.png\" alt=\"Harmony Logo\"/>
+              <img style=\"margin: 25px 0;\" width=\"100\" src=\"https://harmony-promotion.com/images/harmony-promotion.png\" alt=\"Harmony Logo\"/>
             </div>
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">MENU</h4>
