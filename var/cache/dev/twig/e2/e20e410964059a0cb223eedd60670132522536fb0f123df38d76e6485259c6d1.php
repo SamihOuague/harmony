@@ -101,6 +101,7 @@ class __TwigTemplate_973ea1538ae6a2ac8bb2948faef0a8ac259d4b807e493fa8f8c32612f76
             </div>
             <div class=\"col-lg-6 order-lg-1\" style=\"padding: 50px;\">
                 <div class=\"h-100\" style=\"background-color: white; width: 100%; padding: 50px;\">
+                    <div class=\"d-none d-lg-block d-xl-block\" style=\"width: 75px; border: 3px solid #8DC640; position: absolute; right: 20px; top: 170px;\"></div>
                     <h4 style=\"color: #336336; font-family: 'Barlow';\">HARMO’BILITY</h4>
                     <h5 style=\"color: #336336; font-family: 'Montserrat'; font-size: 17px;\">Anticiper les bonnes pratiques de demain</h5>
                     <br/>
@@ -119,6 +120,7 @@ class __TwigTemplate_973ea1538ae6a2ac8bb2948faef0a8ac259d4b807e493fa8f8c32612f76
             </div>
             <div class=\"col-lg-6 order-lg-2\" style=\"padding: 50px;\">
                 <div class=\"h-100\" style=\"background-color: white; width: 100%; padding: 50px;\">
+                    <div class=\"d-none d-lg-block d-xl-block\" style=\"width: 75px; border: 3px solid #8DC640; position: absolute; left: 20px; top: 170px;\"></div>
                     <h4 style=\"color: #336336; font-family: 'Barlow';\">PROTÉGER NOTRE PLANÈTE</h4>
                     <h5 style=\"color: #336336; font-family: 'Montserrat'; font-size: 17px;\">En faire plus pour notre Terre</h5>
                     <br/>
@@ -137,6 +139,7 @@ class __TwigTemplate_973ea1538ae6a2ac8bb2948faef0a8ac259d4b807e493fa8f8c32612f76
             </div>
             <div class=\"col-lg-6 order-lg-1\" style=\"padding: 50px;\">
                 <div class=\"h-100\" style=\"background-color: white; width: 100%; padding: 50px;\">
+                    <div class=\"d-none d-lg-block d-xl-block\" style=\"width: 75px; border: 3px solid #8DC640; position: absolute; right: 20px; top: 170px;\"></div>
                     <h4 style=\"color: #336336; font-family: 'Barlow';\">L'ECONOMIE CIRCULAIRE</h4>
                     <h5 style=\"color: #336336; font-family: 'Montserrat'; font-size: 17px;\">Choisir de construire autrement</h5>
                     <br/>
@@ -187,14 +190,14 @@ class __TwigTemplate_973ea1538ae6a2ac8bb2948faef0a8ac259d4b807e493fa8f8c32612f76
     <div style=\"background-color: rgba(255, 255, 255, 0.9); max-width: 650px; padding: 3% 6%;\">
         <h3 class=\"text-center\" style=\"color: #336336;\">LA HARMONY TEAM</h3>
         <br/>
-        <p class=\"text-secondary\" style=\"font-family: 'Montserrat';\">Notre équipe est notre plus grande force, elle travaille avec bienveillance et positivité.</p>
+        <p class=\"text-secondary text-justify\" style=\"font-family: 'Montserrat';\">Notre équipe est notre plus grande force, elle travaille avec bienveillance et positivité.</p>
 
-        <p class=\"text-secondary\" style=\"font-family: 'Montserrat';\">La diversité des talents et la personnalité de chacun participent a notre savoir-faire.</p>
-        <p class=\"text-secondary\" style=\"font-family: 'Montserrat';\">Par notre engagement, nous faisons évoluer, ensemble, le paysage urbain dans le bon sens.</p>
+        <p class=\"text-secondary text-justify\" style=\"font-family: 'Montserrat';\">La diversité des talents et la personnalité de chacun participent a notre savoir-faire.
+        Par notre engagement, nous faisons évoluer, ensemble, le paysage urbain dans le bon sens.</p>
     </div>
     <div class=\"d-flex justify-content-center\" style=\"margin-top: -20px;\">
         <a href=\"";
-        // line 114
+        // line 117
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\" class=\"btn btn-success\" style=\"width: 200px;\">Nous rejoindre</a>
     </div>
@@ -220,7 +223,7 @@ class __TwigTemplate_973ea1538ae6a2ac8bb2948faef0a8ac259d4b807e493fa8f8c32612f76
 
     public function getDebugInfo()
     {
-        return array (  198 => 114,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  201 => 117,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -246,6 +249,7 @@ class __TwigTemplate_973ea1538ae6a2ac8bb2948faef0a8ac259d4b807e493fa8f8c32612f76
             </div>
             <div class=\"col-lg-6 order-lg-1\" style=\"padding: 50px;\">
                 <div class=\"h-100\" style=\"background-color: white; width: 100%; padding: 50px;\">
+                    <div class=\"d-none d-lg-block d-xl-block\" style=\"width: 75px; border: 3px solid #8DC640; position: absolute; right: 20px; top: 170px;\"></div>
                     <h4 style=\"color: #336336; font-family: 'Barlow';\">HARMO’BILITY</h4>
                     <h5 style=\"color: #336336; font-family: 'Montserrat'; font-size: 17px;\">Anticiper les bonnes pratiques de demain</h5>
                     <br/>
@@ -264,6 +268,7 @@ class __TwigTemplate_973ea1538ae6a2ac8bb2948faef0a8ac259d4b807e493fa8f8c32612f76
             </div>
             <div class=\"col-lg-6 order-lg-2\" style=\"padding: 50px;\">
                 <div class=\"h-100\" style=\"background-color: white; width: 100%; padding: 50px;\">
+                    <div class=\"d-none d-lg-block d-xl-block\" style=\"width: 75px; border: 3px solid #8DC640; position: absolute; left: 20px; top: 170px;\"></div>
                     <h4 style=\"color: #336336; font-family: 'Barlow';\">PROTÉGER NOTRE PLANÈTE</h4>
                     <h5 style=\"color: #336336; font-family: 'Montserrat'; font-size: 17px;\">En faire plus pour notre Terre</h5>
                     <br/>
@@ -282,6 +287,7 @@ class __TwigTemplate_973ea1538ae6a2ac8bb2948faef0a8ac259d4b807e493fa8f8c32612f76
             </div>
             <div class=\"col-lg-6 order-lg-1\" style=\"padding: 50px;\">
                 <div class=\"h-100\" style=\"background-color: white; width: 100%; padding: 50px;\">
+                    <div class=\"d-none d-lg-block d-xl-block\" style=\"width: 75px; border: 3px solid #8DC640; position: absolute; right: 20px; top: 170px;\"></div>
                     <h4 style=\"color: #336336; font-family: 'Barlow';\">L'ECONOMIE CIRCULAIRE</h4>
                     <h5 style=\"color: #336336; font-family: 'Montserrat'; font-size: 17px;\">Choisir de construire autrement</h5>
                     <br/>
@@ -332,10 +338,10 @@ class __TwigTemplate_973ea1538ae6a2ac8bb2948faef0a8ac259d4b807e493fa8f8c32612f76
     <div style=\"background-color: rgba(255, 255, 255, 0.9); max-width: 650px; padding: 3% 6%;\">
         <h3 class=\"text-center\" style=\"color: #336336;\">LA HARMONY TEAM</h3>
         <br/>
-        <p class=\"text-secondary\" style=\"font-family: 'Montserrat';\">Notre équipe est notre plus grande force, elle travaille avec bienveillance et positivité.</p>
+        <p class=\"text-secondary text-justify\" style=\"font-family: 'Montserrat';\">Notre équipe est notre plus grande force, elle travaille avec bienveillance et positivité.</p>
 
-        <p class=\"text-secondary\" style=\"font-family: 'Montserrat';\">La diversité des talents et la personnalité de chacun participent a notre savoir-faire.</p>
-        <p class=\"text-secondary\" style=\"font-family: 'Montserrat';\">Par notre engagement, nous faisons évoluer, ensemble, le paysage urbain dans le bon sens.</p>
+        <p class=\"text-secondary text-justify\" style=\"font-family: 'Montserrat';\">La diversité des talents et la personnalité de chacun participent a notre savoir-faire.
+        Par notre engagement, nous faisons évoluer, ensemble, le paysage urbain dans le bon sens.</p>
     </div>
     <div class=\"d-flex justify-content-center\" style=\"margin-top: -20px;\">
         <a href=\"{{ path('contact') }}\" class=\"btn btn-success\" style=\"width: 200px;\">Nous rejoindre</a>

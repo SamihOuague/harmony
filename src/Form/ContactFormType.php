@@ -20,7 +20,7 @@ class ContactFormType extends AbstractType
                 "label" => false,
                 "required" => true,
                 "attr" => [
-                    "placeholder" => "NOM & Prenom",
+                    "placeholder" => "NOM & Prénom",
                     "class" => "form-control",
                     "style" => "margin-top: 10px;"
                 ]
@@ -38,7 +38,7 @@ class ContactFormType extends AbstractType
                 "label" => false,
                 "required" => true,
                 "attr" => [
-                    "placeholder" => "Numero de telephone",
+                    "placeholder" => "Numéro de téléphone",
                     "class" => "form-control",
                     "style" => "margin-top: 10px;"
                 ]

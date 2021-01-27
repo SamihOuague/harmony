@@ -194,7 +194,7 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
         // line 108
         if ((isset($context["programmes"]) || array_key_exists("programmes", $context) ? $context["programmes"] : (function () { throw new RuntimeError('Variable "programmes" does not exist.', 108, $this->source); })())) {
             // line 109
-            echo "            <div class=\"d-flex\" style=\"overflow-x: scroll;\">
+            echo "            <div class=\"d-flex example\" style=\"overflow-x: hidden;\">
                 ";
             // line 110
             $context['_parent'] = $context;
@@ -204,7 +204,7 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
                 echo "                    <a href=\"/detail/";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "id", [], "any", false, false, false, 111), "html", null, true);
                 echo "\" style=\"text-decoration: none; margin: 50px 0;\">
-                        <div class=\"\" style=\"margin: 0px 15px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
+                        <div class=\"item item-anime\" style=\"margin: 0px 15px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
                             <div class=\"d-flex justify-content-end align-items-start\" style=\"min-height: 150px; background-image: url('/uploads/pages/";
                 // line 113
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "miniature", [], "any", false, false, false, 113), "html", null, true);
@@ -284,13 +284,19 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['prog'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
             // line 132
-            echo "            </div>
+            echo "                <div id=\"scrollLeft\" style=\"min-width: 50px; height: 450px; position: absolute; left: 15px; display: flex; justify-content: center; align-items: center; cursor: pointer;\">
+                    <i class=\"fas fa-arrow-left\" style=\"color: white; background-color: rgba(0,0,0,0.6); padding: 20px; border-radius: 50%;\"></i>
+                </div>
+                <div id=\"scrollRight\" style=\"min-width: 50px; height: 450px; position: absolute; right: 15px; display: flex; justify-content: center; align-items: center; cursor: pointer;\">
+                    <i class=\"fas fa-arrow-right\" style=\"color: white; background-color: rgba(0,0,0,0.6); padding: 20px; border-radius: 50%;\"></i>
+                </div>
+            </div>
         ";
         }
-        // line 134
+        // line 140
         echo "        <div class=\"text-center\" style=\"margin-top: 50px;\">
             <a href=\"";
-        // line 135
+        // line 141
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("programme");
         echo "\" class=\"text-center btn btn-success\" style=\"padding: 20px;\">TOUS NOS PROGRAMMES</a>
         </div>
@@ -358,7 +364,7 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
         <p class=\"text-center text-muted\" style=\"font-size: 21px;\">Nous recherchons des terrains à acheter, prenons contact !</p>
         <div class=\"text-center\">
             <a href=\"";
-        // line 200
+        // line 206
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\" style=\"padding: 10px; width: 150px;\" class=\"btn btn-success\">PROPOSER</a>
         </div>
@@ -392,7 +398,7 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
                                             margin-top: 25px;\">
                     <div class=\"d-flex align-items-center justify-content-center\" style=\"background-color: #8DC63F; width: 160px;\">
                         <a href=\"";
-        // line 231
+        // line 237
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("guide");
         echo "\">
                             <span class=\"text-light\">ACHETEUR</span>
@@ -400,7 +406,7 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
                     </div>
                     <div class=\"d-flex align-items-center justify-content-center\" style=\"width: 160px;\">
                         <a href=\"";
-        // line 236
+        // line 242
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("guide");
         echo "\">
                             <span class=\"text-dark\">INVESTISSEUR</span>
@@ -413,6 +419,30 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
             </div>
         </div>
     </div>
+    <script>
+        var vid = document.getElementById(\"myVideo\");
+        vid.volume = 0;
+        \$(\"#scrollLeft\").click((e) => {
+          let scrollStart = \$(\".example\")[0].scrollLeft - 250;
+          \$(\$(\".example\")[0]).animate({scrollLeft: (scrollStart <= 0) ? 0 : scrollStart }, 800)
+        });
+        
+        \$(\"#scrollRight\").click((e) => {
+          \$(\$(\".example\")[0]).animate({scrollLeft: \$(\".example\")[0].scrollLeft + 250}, 800)
+        });
+    
+        \$(\".item-anime\").hover((e) => {
+            let elt = e.currentTarget.children[1].children;
+            \$(e.currentTarget).animate({
+                height: \"+=25\"
+            }, 200);
+        }, (e) => {
+            let elt = e.currentTarget.children[1].children;
+            \$(e.currentTarget).animate({
+                  height: \"-=25\"
+            }, {duration: 50});
+        });
+    </script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -434,7 +464,7 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
 
     public function getDebugInfo()
     {
-        return array (  404 => 236,  396 => 231,  362 => 200,  294 => 135,  291 => 134,  287 => 132,  275 => 126,  267 => 125,  257 => 124,  247 => 123,  240 => 119,  228 => 118,  221 => 116,  218 => 115,  214 => 114,  210 => 113,  204 => 111,  200 => 110,  197 => 109,  195 => 108,  191 => 107,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  410 => 242,  402 => 237,  368 => 206,  300 => 141,  297 => 140,  287 => 132,  275 => 126,  267 => 125,  257 => 124,  247 => 123,  240 => 119,  228 => 118,  221 => 116,  218 => 115,  214 => 114,  210 => 113,  204 => 111,  200 => 110,  197 => 109,  195 => 108,  191 => 107,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -547,10 +577,10 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
         <h2 style=\"font-family: 'Barlow'; font-weight: 600;  color: rgb(0, 48, 60);\" class=\"text-center\">NOS PROGRAMMES</h2>
         <h4 style=\"font-family: 'Montserrat'; margin-bottom: 20px;\" class=\"text-center\">Trouvez votre logement idéal parmi les {{ nbbiens }} biens disponibles</h4>
         {% if (programmes) %}
-            <div class=\"d-flex\" style=\"overflow-x: scroll;\">
+            <div class=\"d-flex example\" style=\"overflow-x: hidden;\">
                 {% for prog in programmes %}
                     <a href=\"/detail/{{prog.id}}\" style=\"text-decoration: none; margin: 50px 0;\">
-                        <div class=\"\" style=\"margin: 0px 15px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
+                        <div class=\"item item-anime\" style=\"margin: 0px 15px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
                             <div class=\"d-flex justify-content-end align-items-start\" style=\"min-height: 150px; background-image: url('/uploads/pages/{{prog.miniature}}'); background-size: cover; width: 100%;\">
                                 {% if prog.isPrestige %}<img src=\"https://harmony-promotion.com/images/pastille.svg\" alt=\"Pastille prestige\" width=\"75\" style=\"margin: 5px;\"/>{% endif %}
                             </div>
@@ -570,6 +600,12 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
                         </div>
                     </a>
                 {% endfor %}
+                <div id=\"scrollLeft\" style=\"min-width: 50px; height: 450px; position: absolute; left: 15px; display: flex; justify-content: center; align-items: center; cursor: pointer;\">
+                    <i class=\"fas fa-arrow-left\" style=\"color: white; background-color: rgba(0,0,0,0.6); padding: 20px; border-radius: 50%;\"></i>
+                </div>
+                <div id=\"scrollRight\" style=\"min-width: 50px; height: 450px; position: absolute; right: 15px; display: flex; justify-content: center; align-items: center; cursor: pointer;\">
+                    <i class=\"fas fa-arrow-right\" style=\"color: white; background-color: rgba(0,0,0,0.6); padding: 20px; border-radius: 50%;\"></i>
+                </div>
             </div>
         {% endif %}
         <div class=\"text-center\" style=\"margin-top: 50px;\">
@@ -685,6 +721,30 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
             </div>
         </div>
     </div>
+    <script>
+        var vid = document.getElementById(\"myVideo\");
+        vid.volume = 0;
+        \$(\"#scrollLeft\").click((e) => {
+          let scrollStart = \$(\".example\")[0].scrollLeft - 250;
+          \$(\$(\".example\")[0]).animate({scrollLeft: (scrollStart <= 0) ? 0 : scrollStart }, 800)
+        });
+        
+        \$(\"#scrollRight\").click((e) => {
+          \$(\$(\".example\")[0]).animate({scrollLeft: \$(\".example\")[0].scrollLeft + 250}, 800)
+        });
+    
+        \$(\".item-anime\").hover((e) => {
+            let elt = e.currentTarget.children[1].children;
+            \$(e.currentTarget).animate({
+                height: \"+=25\"
+            }, 200);
+        }, (e) => {
+            let elt = e.currentTarget.children[1].children;
+            \$(e.currentTarget).animate({
+                  height: \"-=25\"
+            }, {duration: 50});
+        });
+    </script>
 {% endblock %}
 ", "home/index.html.twig", "/home/souaguen/Bureau/harmonypresent/templates/home/index.html.twig");
     }

@@ -122,7 +122,7 @@ class __TwigTemplate_cd2ac377b2774fad738a181dff549374730179312bcb462593f32f17e22
         <a href=\"";
         // line 40
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("telecharge");
-        echo "\" class=\"btn btn-success\" style=\"margin: 50px 0;\">Télécharger le guide</a>
+        echo "\" class=\"btn btn-success btn-lg\" style=\"margin: 50px 0;\">Télécharger le guide</a>
     </div>
 </div>
 <div id=\"investisseur\" class=\"container d-none\" style=\"font-size: 19px;\">
@@ -144,14 +144,14 @@ class __TwigTemplate_cd2ac377b2774fad738a181dff549374730179312bcb462593f32f17e22
         <a href=\"";
         // line 59
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("telecharge");
-        echo "\" class=\"btn btn-success\" style=\"margin: 50px 0;\">Télécharger le guide</a>
+        echo "\" class=\"btn btn-success btn-lg\" style=\"margin: 50px 0;\">Télécharger le guide</a>
     </div>
 </div>
 <div class=\"container\" style=\"padding: 50px;\">
     <h1 class=\"text-center\" style=\"font-family: 'Barlow'; margin-bottom: 50px; \">FAQ</h1>
     <div class=\"alert alert-dark\">
         <div class=\"d-flex justify-content-between flex-no-wrap\">
-            <h2 class=\"alert-heading\" style=\"margin: 15px 0;\">Qui est Harmony Promotion ?</h2>
+            <h3 class=\"alert-heading\" style=\"margin: 15px 0;\">Qui est Harmony Promotion ?</h2>
             <button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bien1\" aria-expanded=\"true\" aria-controls=\"bien1\">
                 <i class=\"fas fa-chevron-down\"></i>
             </button>
@@ -168,7 +168,7 @@ class __TwigTemplate_cd2ac377b2774fad738a181dff549374730179312bcb462593f32f17e22
     </div>
     <div class=\"alert alert-dark\">
         <div class=\"d-flex justify-content-between flex-no-wrap\">
-            <h2 class=\"alert-heading\" style=\"margin: 15px 0;\">C’est quoi un logement neuf ?</h2>
+            <h3 class=\"alert-heading\" style=\"margin: 15px 0;\">C’est quoi un logement neuf ?</h2>
             <button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bien2\" aria-expanded=\"true\" aria-controls=\"bien2\">
                 <i class=\"fas fa-chevron-down\"></i>
             </button>
@@ -185,7 +185,7 @@ class __TwigTemplate_cd2ac377b2774fad738a181dff549374730179312bcb462593f32f17e22
     </div>
     <div class=\"alert alert-dark\">
         <div class=\"d-flex justify-content-between flex-no-wrap\">
-            <h2 class=\"alert-heading\" style=\"margin: 15px 0;\">Comment se passe l’achat d’un appartement sur plan ?</h2>
+            <h3 class=\"alert-heading\" style=\"margin: 15px 0;\">Comment se passe l’achat d’un appartement sur plan ?</h2>
             <button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bien3\" aria-expanded=\"true\" aria-controls=\"bien3\">
                 <i class=\"fas fa-chevron-down\"></i>
             </button>
@@ -202,7 +202,7 @@ class __TwigTemplate_cd2ac377b2774fad738a181dff549374730179312bcb462593f32f17e22
     </div>
     <div class=\"alert alert-dark\">
         <div class=\"d-flex justify-content-between flex-no-wrap\">
-            <h2 class=\"alert-heading\" style=\"margin: 15px 0;\">Pourquoi acheter chez Harmony Promotion ?</h2>
+            <h3 class=\"alert-heading\" style=\"margin: 15px 0;\">Pourquoi acheter chez Harmony Promotion ?</h2>
             <button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bien4\" aria-expanded=\"true\" aria-controls=\"bien4\">
                 <i class=\"fas fa-chevron-down\"></i>
             </button>
@@ -219,7 +219,7 @@ class __TwigTemplate_cd2ac377b2774fad738a181dff549374730179312bcb462593f32f17e22
     </div>
     <div class=\"alert alert-dark\">
         <div class=\"d-flex justify-content-between flex-no-wrap\">
-            <h2 class=\"alert-heading\" style=\"margin: 15px 0;\">Pourquoi investir dans l’immobilier neuf en 2021 ?</h2>
+            <h3 class=\"alert-heading\" style=\"margin: 15px 0;\">Pourquoi investir dans l’immobilier neuf en 2021 ?</h2>
             <button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bien5\" aria-expanded=\"true\" aria-controls=\"bien5\">
                 <i class=\"fas fa-chevron-down\"></i>
             </button>
@@ -325,7 +325,7 @@ class __TwigTemplate_cd2ac377b2774fad738a181dff549374730179312bcb462593f32f17e22
     </ol>
     <p>Pour tout savoir sur chacune de ces étapes demandez notre guide complet juste ici :</p>
     <div class=\"text-center\">
-        <a href=\"{{ path('telecharge') }}\" class=\"btn btn-success\" style=\"margin: 50px 0;\">Télécharger le guide</a>
+        <a href=\"{{ path('telecharge') }}\" class=\"btn btn-success btn-lg\" style=\"margin: 50px 0;\">Télécharger le guide</a>
     </div>
 </div>
 <div id=\"investisseur\" class=\"container d-none\" style=\"font-size: 19px;\">
@@ -344,14 +344,14 @@ class __TwigTemplate_cd2ac377b2774fad738a181dff549374730179312bcb462593f32f17e22
     <p class=\"text-muted\">Outre les avantages fiscaux qu'ils représentent, l'investissement immobilier dans le neuf vous permet de bénéficier des appels de fonds, tout comme les acheteurs. Enfin, comme vous le savez surement, \"la pierre\" est une valeur sûre et d'avenir.</p>
     <p>Pour tout savoir sur chacun des dispositifs demandez votre guide complet juste ici :</p>
     <div class=\"text-center\">
-        <a href=\"{{ path('telecharge') }}\" class=\"btn btn-success\" style=\"margin: 50px 0;\">Télécharger le guide</a>
+        <a href=\"{{ path('telecharge') }}\" class=\"btn btn-success btn-lg\" style=\"margin: 50px 0;\">Télécharger le guide</a>
     </div>
 </div>
 <div class=\"container\" style=\"padding: 50px;\">
     <h1 class=\"text-center\" style=\"font-family: 'Barlow'; margin-bottom: 50px; \">FAQ</h1>
     <div class=\"alert alert-dark\">
         <div class=\"d-flex justify-content-between flex-no-wrap\">
-            <h2 class=\"alert-heading\" style=\"margin: 15px 0;\">Qui est Harmony Promotion ?</h2>
+            <h3 class=\"alert-heading\" style=\"margin: 15px 0;\">Qui est Harmony Promotion ?</h2>
             <button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bien1\" aria-expanded=\"true\" aria-controls=\"bien1\">
                 <i class=\"fas fa-chevron-down\"></i>
             </button>
@@ -368,7 +368,7 @@ class __TwigTemplate_cd2ac377b2774fad738a181dff549374730179312bcb462593f32f17e22
     </div>
     <div class=\"alert alert-dark\">
         <div class=\"d-flex justify-content-between flex-no-wrap\">
-            <h2 class=\"alert-heading\" style=\"margin: 15px 0;\">C’est quoi un logement neuf ?</h2>
+            <h3 class=\"alert-heading\" style=\"margin: 15px 0;\">C’est quoi un logement neuf ?</h2>
             <button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bien2\" aria-expanded=\"true\" aria-controls=\"bien2\">
                 <i class=\"fas fa-chevron-down\"></i>
             </button>
@@ -385,7 +385,7 @@ class __TwigTemplate_cd2ac377b2774fad738a181dff549374730179312bcb462593f32f17e22
     </div>
     <div class=\"alert alert-dark\">
         <div class=\"d-flex justify-content-between flex-no-wrap\">
-            <h2 class=\"alert-heading\" style=\"margin: 15px 0;\">Comment se passe l’achat d’un appartement sur plan ?</h2>
+            <h3 class=\"alert-heading\" style=\"margin: 15px 0;\">Comment se passe l’achat d’un appartement sur plan ?</h2>
             <button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bien3\" aria-expanded=\"true\" aria-controls=\"bien3\">
                 <i class=\"fas fa-chevron-down\"></i>
             </button>
@@ -402,7 +402,7 @@ class __TwigTemplate_cd2ac377b2774fad738a181dff549374730179312bcb462593f32f17e22
     </div>
     <div class=\"alert alert-dark\">
         <div class=\"d-flex justify-content-between flex-no-wrap\">
-            <h2 class=\"alert-heading\" style=\"margin: 15px 0;\">Pourquoi acheter chez Harmony Promotion ?</h2>
+            <h3 class=\"alert-heading\" style=\"margin: 15px 0;\">Pourquoi acheter chez Harmony Promotion ?</h2>
             <button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bien4\" aria-expanded=\"true\" aria-controls=\"bien4\">
                 <i class=\"fas fa-chevron-down\"></i>
             </button>
@@ -419,7 +419,7 @@ class __TwigTemplate_cd2ac377b2774fad738a181dff549374730179312bcb462593f32f17e22
     </div>
     <div class=\"alert alert-dark\">
         <div class=\"d-flex justify-content-between flex-no-wrap\">
-            <h2 class=\"alert-heading\" style=\"margin: 15px 0;\">Pourquoi investir dans l’immobilier neuf en 2021 ?</h2>
+            <h3 class=\"alert-heading\" style=\"margin: 15px 0;\">Pourquoi investir dans l’immobilier neuf en 2021 ?</h2>
             <button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bien5\" aria-expanded=\"true\" aria-controls=\"bien5\">
                 <i class=\"fas fa-chevron-down\"></i>
             </button>

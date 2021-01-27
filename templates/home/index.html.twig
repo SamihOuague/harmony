@@ -106,10 +106,10 @@
         <h2 style="font-family: 'Barlow'; font-weight: 600;  color: rgb(0, 48, 60);" class="text-center">NOS PROGRAMMES</h2>
         <h4 style="font-family: 'Montserrat'; margin-bottom: 20px;" class="text-center">Trouvez votre logement idéal parmi les {{ nbbiens }} biens disponibles</h4>
         {% if (programmes) %}
-            <div class="d-flex" style="overflow-x: scroll;">
+            <div class="d-flex example" style="overflow-x: hidden;">
                 {% for prog in programmes %}
                     <a href="/detail/{{prog.id}}" style="text-decoration: none; margin: 50px 0;">
-                        <div class="" style="margin: 0px 15px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;">
+                        <div class="item item-anime" style="margin: 0px 15px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;">
                             <div class="d-flex justify-content-end align-items-start" style="min-height: 150px; background-image: url('/uploads/pages/{{prog.miniature}}'); background-size: cover; width: 100%;">
                                 {% if prog.isPrestige %}<img src="https://harmony-promotion.com/images/pastille.svg" alt="Pastille prestige" width="75" style="margin: 5px;"/>{% endif %}
                             </div>
@@ -129,6 +129,12 @@
                         </div>
                     </a>
                 {% endfor %}
+                <div id="scrollLeft" style="min-width: 50px; height: 450px; position: absolute; left: 15px; display: flex; justify-content: center; align-items: center; cursor: pointer;">
+                    <i class="fas fa-arrow-left" style="color: white; background-color: rgba(0,0,0,0.6); padding: 20px; border-radius: 50%;"></i>
+                </div>
+                <div id="scrollRight" style="min-width: 50px; height: 450px; position: absolute; right: 15px; display: flex; justify-content: center; align-items: center; cursor: pointer;">
+                    <i class="fas fa-arrow-right" style="color: white; background-color: rgba(0,0,0,0.6); padding: 20px; border-radius: 50%;"></i>
+                </div>
             </div>
         {% endif %}
         <div class="text-center" style="margin-top: 50px;">
@@ -244,4 +250,28 @@
             </div>
         </div>
     </div>
+    <script>
+        var vid = document.getElementById("myVideo");
+        vid.volume = 0;
+        $("#scrollLeft").click((e) => {
+          let scrollStart = $(".example")[0].scrollLeft - 250;
+          $($(".example")[0]).animate({scrollLeft: (scrollStart <= 0) ? 0 : scrollStart }, 800)
+        });
+        
+        $("#scrollRight").click((e) => {
+          $($(".example")[0]).animate({scrollLeft: $(".example")[0].scrollLeft + 250}, 800)
+        });
+    
+        $(".item-anime").hover((e) => {
+            let elt = e.currentTarget.children[1].children;
+            $(e.currentTarget).animate({
+                height: "+=25"
+            }, 200);
+        }, (e) => {
+            let elt = e.currentTarget.children[1].children;
+            $(e.currentTarget).animate({
+                  height: "-=25"
+            }, {duration: 50});
+        });
+    </script>
 {% endblock %}

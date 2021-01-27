@@ -83,7 +83,7 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
         // line 32
         echo "    </head>
     <body class=\"bg-light\" style=\"height: 100%; overflow-x: hidden;\">
-        <nav class=\"navbar navbar-expand-lg navbar-light bg-light\" style=\"min-height: 65px;\">
+        <nav class=\"navbar navbar-expand-lg navbar-light bg-light border-bottom border-muted\" style=\"min-height: 65px;\">
             <div class=\"container d-flex justify-content-lg-around justify-content-between\">
                 <a class=\"navbar-brand\" href=\"/\">
                   <img src=\"https://harmony-promotion.com/images/harmony-promotion.png\" style=\"margin-right: 25px;\" width=\"65\" alt=\"logo harmony-promotion\"/>
@@ -342,7 +342,7 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
         {% block stylesheets %}{% endblock %}
     </head>
     <body class=\"bg-light\" style=\"height: 100%; overflow-x: hidden;\">
-        <nav class=\"navbar navbar-expand-lg navbar-light bg-light\" style=\"min-height: 65px;\">
+        <nav class=\"navbar navbar-expand-lg navbar-light bg-light border-bottom border-muted\" style=\"min-height: 65px;\">
             <div class=\"container d-flex justify-content-lg-around justify-content-between\">
                 <a class=\"navbar-brand\" href=\"/\">
                   <img src=\"https://harmony-promotion.com/images/harmony-promotion.png\" style=\"margin-right: 25px;\" width=\"65\" alt=\"logo harmony-promotion\"/>

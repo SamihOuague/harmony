@@ -86,7 +86,7 @@ class __TwigTemplate_8baeb30e56c140113793d568e04e666f9aa0cd5679efe4563ce8197a650
 
         // line 6
         echo "
-<div class=\"container\">
+<div class=\"container-fluid\">
     <div class=\"row\">
         <div class=\"col-lg-6\">
             <div id=\"map\" style=\"margin: 50px 0; min-height: 500px;\">
@@ -160,7 +160,7 @@ class __TwigTemplate_8baeb30e56c140113793d568e04e666f9aa0cd5679efe4563ce8197a650
 
 {% block body %}
 
-<div class=\"container\">
+<div class=\"container-fluid\">
     <div class=\"row\">
         <div class=\"col-lg-6\">
             <div id=\"map\" style=\"margin: 50px 0; min-height: 500px;\">

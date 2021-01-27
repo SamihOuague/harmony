@@ -165,14 +165,14 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
         </div>
         <div class=\"col-lg-8\" style=\"padding: 0;\">
             <div class=\"d-flex justify-content-around\" style=\"height: 70px; background-color: #336335;\">
-                <select class=\"w-100\" style=\"margin: 15px;\">
+                <select class=\"w-100 exampleFormControlSelect1\" style=\"margin: 15px;\">
                     <option disabled selected>Département</option>
                     <option value=\"75\">75</option>
                     <option value=\"92\">92</option>
                     <option value=\"94\">94</option>
                     <option value=\"971\">971</option>
                 </select>
-                <select class=\"w-100\" style=\"margin: 15px;\">
+                <select class=\"w-100 exampleFormControlSelect1\" style=\"margin: 15px;\">
                     <option disabled selected>Type de bien</option>
                     <option value=\"studio\">Studio</option>
                     <option value=\"t2\">T2</option>
@@ -180,7 +180,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
                     <option value=\"t4\">T4</option>
                     <option value=\"duplex\">T4 Duplex</option>
                 </select>
-                <select class=\"w-100\" style=\"margin: 15px;\">
+                <select class=\"w-100 exampleFormControlSelect1\" style=\"margin: 15px;\">
                     <option disabled selected>Nombre de pièce</option>
                     <option value=\"1\">1</option>
                     <option value=\"2\">2</option>
@@ -192,7 +192,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
         // line 109
         if ((isset($context["programmes"]) || array_key_exists("programmes", $context) ? $context["programmes"] : (function () { throw new RuntimeError('Variable "programmes" does not exist.', 109, $this->source); })())) {
             // line 110
-            echo "            <div class=\"d-flex flex-wrap justify-content-lg-start justify-content-center\" style=\"overflow: scroll; max-height: 600px;\">
+            echo "            <div class=\"d-flex flex-wrap justify-content-lg-start justify-content-center\" style=\"overflow-y: scroll; overflow-x: hidden; max-height: 600px;\">
                 ";
             // line 111
             $context['_parent'] = $context;
@@ -319,7 +319,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
     <div class=\"container\" id=\"formulaire\">
         <div class=\"row d-flex justify-content-center\">
           <div class=\"col-lg-8\">
-            <h3 class=\"text-center\" style=\"color: #336335; font-family: 'Barlow';\">Gardez un oeil sur les opportunités en toute simplicité !</h3>
+            <h3 class=\"text-center\" style=\"color: #336335; font-family: 'Barlow';\">Gardez un oeil sur les opportunités en toute simplicité</h3>
             <p class=\"text-center p\">Créez votre alerte personnalisée pour être sûr de ne pas passer à côté de votre logement idéal ! 
               Adieu les longues heures de recherche, nous vous tenons informés dès qu'un bien correspond à vos critère</p>
           </div>
@@ -328,7 +328,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
           <form class=\"col-lg-6\" id=\"myform\">
             <div class=\"form-group row\">
               <input type=\"text\" name=\"name\" required=\"required\" style=\"margin-bottom: 35px;\" class=\"form-control col-lg-5\" placeholder=\"Nom\">
-              <input type=\"text\" name=\"firstname\" style=\"margin-bottom: 35px;\" class=\"form-control offset-lg-2 col-lg-5\" placeholder=\"Prenom\">
+              <input type=\"text\" name=\"firstname\" style=\"margin-bottom: 35px;\" class=\"form-control offset-lg-2 col-lg-5\" placeholder=\"Prénom\">
               <input type=\"email\" name=\"email\" class=\"form-control col-lg-5\" placeholder=\"Adresse e-mail\">
             </div>
             <p>Type de logement</p>
@@ -357,7 +357,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
             </div>
 
             <div class=\"form-group input-info\">
-              <select class=\"col-lg-5 exampleFormControlSelect1\" name=\"ideal\">
+              <select class=\"col-lg-5 exampleFormControlSelect1\" name=\"ideal\" style=\"height: 40px;\">
                   <option disabled=\"\" selected=\"\">Lieu idéal</option>
                   <option value=\"75001\">(75001) Paris I</option>
                   <option value=\"75002\">(75002) Paris II</option>
@@ -537,14 +537,14 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
         </div>
         <div class=\"col-lg-8\" style=\"padding: 0;\">
             <div class=\"d-flex justify-content-around\" style=\"height: 70px; background-color: #336335;\">
-                <select class=\"w-100\" style=\"margin: 15px;\">
+                <select class=\"w-100 exampleFormControlSelect1\" style=\"margin: 15px;\">
                     <option disabled selected>Département</option>
                     <option value=\"75\">75</option>
                     <option value=\"92\">92</option>
                     <option value=\"94\">94</option>
                     <option value=\"971\">971</option>
                 </select>
-                <select class=\"w-100\" style=\"margin: 15px;\">
+                <select class=\"w-100 exampleFormControlSelect1\" style=\"margin: 15px;\">
                     <option disabled selected>Type de bien</option>
                     <option value=\"studio\">Studio</option>
                     <option value=\"t2\">T2</option>
@@ -552,7 +552,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
                     <option value=\"t4\">T4</option>
                     <option value=\"duplex\">T4 Duplex</option>
                 </select>
-                <select class=\"w-100\" style=\"margin: 15px;\">
+                <select class=\"w-100 exampleFormControlSelect1\" style=\"margin: 15px;\">
                     <option disabled selected>Nombre de pièce</option>
                     <option value=\"1\">1</option>
                     <option value=\"2\">2</option>
@@ -561,7 +561,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
                 </select>
             </div>
             {% if (programmes) %}
-            <div class=\"d-flex flex-wrap justify-content-lg-start justify-content-center\" style=\"overflow: scroll; max-height: 600px;\">
+            <div class=\"d-flex flex-wrap justify-content-lg-start justify-content-center\" style=\"overflow-y: scroll; overflow-x: hidden; max-height: 600px;\">
                 {% for prog in programmes %}
                     <a href=\"/detail/{{prog.id}}\" style=\"text-decoration: none;\">
                         <div class=\"\" style=\"margin: 15px 25px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
@@ -613,7 +613,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
     <div class=\"container\" id=\"formulaire\">
         <div class=\"row d-flex justify-content-center\">
           <div class=\"col-lg-8\">
-            <h3 class=\"text-center\" style=\"color: #336335; font-family: 'Barlow';\">Gardez un oeil sur les opportunités en toute simplicité !</h3>
+            <h3 class=\"text-center\" style=\"color: #336335; font-family: 'Barlow';\">Gardez un oeil sur les opportunités en toute simplicité</h3>
             <p class=\"text-center p\">Créez votre alerte personnalisée pour être sûr de ne pas passer à côté de votre logement idéal ! 
               Adieu les longues heures de recherche, nous vous tenons informés dès qu'un bien correspond à vos critère</p>
           </div>
@@ -622,7 +622,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
           <form class=\"col-lg-6\" id=\"myform\">
             <div class=\"form-group row\">
               <input type=\"text\" name=\"name\" required=\"required\" style=\"margin-bottom: 35px;\" class=\"form-control col-lg-5\" placeholder=\"Nom\">
-              <input type=\"text\" name=\"firstname\" style=\"margin-bottom: 35px;\" class=\"form-control offset-lg-2 col-lg-5\" placeholder=\"Prenom\">
+              <input type=\"text\" name=\"firstname\" style=\"margin-bottom: 35px;\" class=\"form-control offset-lg-2 col-lg-5\" placeholder=\"Prénom\">
               <input type=\"email\" name=\"email\" class=\"form-control col-lg-5\" placeholder=\"Adresse e-mail\">
             </div>
             <p>Type de logement</p>
@@ -651,7 +651,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
             </div>
 
             <div class=\"form-group input-info\">
-              <select class=\"col-lg-5 exampleFormControlSelect1\" name=\"ideal\">
+              <select class=\"col-lg-5 exampleFormControlSelect1\" name=\"ideal\" style=\"height: 40px;\">
                   <option disabled=\"\" selected=\"\">Lieu idéal</option>
                   <option value=\"75001\">(75001) Paris I</option>
                   <option value=\"75002\">(75002) Paris II</option>
