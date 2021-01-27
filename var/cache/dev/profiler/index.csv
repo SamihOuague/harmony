@@ -3612,3 +3612,6 @@ f521c0,127.0.0.1,GET,https://localhost:8000/guide,1611748024,,200
 2d5834,127.0.0.1,GET,https://localhost:8000/guide,1611748044,,200
 5e83a6,127.0.0.1,GET,https://localhost:8000/contact,1611748048,,200
 ada89b,127.0.0.1,GET,https://localhost:8000/harmony-promotion,1611748053,,200
+ba5dfd,127.0.0.1,GET,https://localhost:8000/article/1,1611748339,,200
+a176ab,127.0.0.1,GET,https://localhost:8000/article/images/newsbg.png,1611748339,f48334,404
+f48334,127.0.0.1,GET,https://localhost:8000/article/images/newsbg.png,1611748339,,404

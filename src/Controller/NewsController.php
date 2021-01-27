@@ -13,7 +13,7 @@ use App\Form\NewsFormType;
 class NewsController extends AbstractController
 {    
     /**
-     * @Route("/news", name="news")
+     * @Route("/actus", name="news")
      */
     public function index(): Response
     {
