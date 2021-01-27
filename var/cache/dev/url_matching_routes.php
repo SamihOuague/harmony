@@ -23,7 +23,7 @@ return [
         '/rappel' => [[['_route' => 'rappel', '_controller' => 'App\\Controller\\HomeController::rendezVous'], null, null, null, false, false, null]],
         '/recevoir-le-guide' => [[['_route' => 'telecharge', '_controller' => 'App\\Controller\\HomeController::telecharge'], null, null, null, false, false, null]],
         '/FAQ' => [[['_route' => 'faq', '_controller' => 'App\\Controller\\HomeController::faq'], null, null, null, false, false, null]],
-        '/news' => [[['_route' => 'news', '_controller' => 'App\\Controller\\NewsController::index'], null, null, null, false, false, null]],
+        '/actus' => [[['_route' => 'news', '_controller' => 'App\\Controller\\NewsController::index'], null, null, null, false, false, null]],
         '/add/new' => [[['_route' => 'newnew', '_controller' => 'App\\Controller\\NewsController::createArticle'], null, null, null, false, false, null]],
         '/page/new' => [[['_route' => 'app_new_page', '_controller' => 'App\\Controller\\PageController::new'], null, null, null, false, false, null]],
         '/page' => [[['_route' => 'page', '_controller' => 'App\\Controller\\PageController::index'], null, null, null, false, false, null]],

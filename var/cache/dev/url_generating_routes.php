@@ -35,7 +35,7 @@ return [
     'app_home_brochure' => [['id', 'type'], ['_controller' => 'App\\Controller\\HomeController::brochure'], [], [['variable', '/', '[^/]++', 'type', true], ['variable', '/', '[^/]++', 'id', true], ['text', '/brochure']], [], []],
     'telecharge' => [[], ['_controller' => 'App\\Controller\\HomeController::telecharge'], [], [['text', '/recevoir-le-guide']], [], []],
     'faq' => [[], ['_controller' => 'App\\Controller\\HomeController::faq'], [], [['text', '/FAQ']], [], []],
-    'news' => [[], ['_controller' => 'App\\Controller\\NewsController::index'], [], [['text', '/news']], [], []],
+    'news' => [[], ['_controller' => 'App\\Controller\\NewsController::index'], [], [['text', '/actus']], [], []],
     'app_news_article' => [['id'], ['_controller' => 'App\\Controller\\NewsController::article'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/article']], [], []],
     'newnew' => [[], ['_controller' => 'App\\Controller\\NewsController::createArticle'], [], [['text', '/add/new']], [], []],
     'app_new_page' => [[], ['_controller' => 'App\\Controller\\PageController::new'], [], [['text', '/page/new']], [], []],
