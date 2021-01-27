@@ -9,6 +9,24 @@
         <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <style type="text/css">
+          .exampleFormControlSelect1 {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("chevron.png");
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            background-position-y: 10px;
+            border: 1px solid #dfdfdf;
+            border-radius: 2px;
+            margin-right: 2rem;
+            padding-right: 2rem;
+            font-family: 'Montserrat'; 
+            color: #3B4754; 
+            background-color: white; 
+            border-radius: 5px;
+          }
+        </style>
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
@@ -32,12 +50,9 @@
                       <li class="nav-item d-flex align-items-center text-center justify-content-center">
                         <a class="nav-link" href="{{ path('harmony') }}">HARMONY <br class="d-none d-lg-block d-xl-block"/>PROMOTION</a>
                       </li>
-                      <li class="nav-item d-flex align-items-center justify-content-center">
+                      <!--<li class="nav-item d-flex align-items-center justify-content-center">
                         <a class="nav-link" href="{{ path('news') }}">ACTUS/NEWS</a>
-                      </li>
-                      <li class="nav-item d-flex align-items-center justify-content-center">
-                        <a class="nav-link" href="{{ path('faq') }}">FAQ</a>
-                      </li>
+                      </li>-->
                       <li class="nav-item d-flex align-items-center justify-content-center">
                         <a class="nav-link" href="{{ path('contact') }}">CONTACT</a>
                       </li>

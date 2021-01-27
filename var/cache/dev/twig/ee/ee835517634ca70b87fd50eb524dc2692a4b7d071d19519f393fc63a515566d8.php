@@ -55,14 +55,32 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
         <link href=\"https://fonts.googleapis.com/css2?family=Barlow&display=swap\" rel=\"stylesheet\">
         <link href=\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap\" rel=\"stylesheet\">
         <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css\" integrity=\"sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==\" crossorigin=\"anonymous\" />
+        <style type=\"text/css\">
+          .exampleFormControlSelect1 {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url(\"chevron.png\");
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            background-position-y: 10px;
+            border: 1px solid #dfdfdf;
+            border-radius: 2px;
+            margin-right: 2rem;
+            padding-right: 2rem;
+            font-family: 'Montserrat'; 
+            color: #3B4754; 
+            background-color: white; 
+            border-radius: 5px;
+          }
+        </style>
         <title>";
-        // line 12
+        // line 30
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
         ";
-        // line 13
+        // line 31
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 14
+        // line 32
         echo "    </head>
     <body class=\"bg-light\" style=\"height: 100%; overflow-x: hidden;\">
         <nav class=\"navbar navbar-expand-lg navbar-light bg-light\" style=\"min-height: 65px;\">
@@ -77,37 +95,31 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
                     <ul class=\"navbar-nav ml-auto w-100 d-flex justify-content-around\" style=\"font-size: 14px;\">
                       <li class=\"nav-item d-flex align-items-center justify-content-center\">
                         <a class=\"nav-link\" href=\"";
-        // line 27
+        // line 45
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("programme");
         echo "\">PROGRAMMES</a>
                       </li>
                       <li class=\"nav-item d-flex align-items-center text-center justify-content-center\">
                         <a class=\"nav-link\" href=\"";
-        // line 30
+        // line 48
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("guide");
         echo "\">GUIDE DE <br class=\"d-none d-lg-block d-xl-block\"/>L'IMMOBILIER</a>
                       </li>
                       <li class=\"nav-item d-flex align-items-center text-center justify-content-center\">
                         <a class=\"nav-link\" href=\"";
-        // line 33
+        // line 51
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("harmony");
         echo "\">HARMONY <br class=\"d-none d-lg-block d-xl-block\"/>PROMOTION</a>
                       </li>
-                      <li class=\"nav-item d-flex align-items-center justify-content-center\">
+                      <!--<li class=\"nav-item d-flex align-items-center justify-content-center\">
                         <a class=\"nav-link\" href=\"";
-        // line 36
+        // line 54
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("news");
         echo "\">ACTUS/NEWS</a>
-                      </li>
+                      </li>-->
                       <li class=\"nav-item d-flex align-items-center justify-content-center\">
                         <a class=\"nav-link\" href=\"";
-        // line 39
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("faq");
-        echo "\">FAQ</a>
-                      </li>
-                      <li class=\"nav-item d-flex align-items-center justify-content-center\">
-                        <a class=\"nav-link\" href=\"";
-        // line 42
+        // line 57
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\">CONTACT</a>
                       </li>
@@ -116,12 +128,12 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
             </div>
         </nav>
         ";
-        // line 48
+        // line 63
         $this->displayBlock('body', $context, $blocks);
-        // line 49
+        // line 64
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 50
+        // line 65
         echo "        <div id=\"anticovid\" class=\"fixed-bottom bg-success text-light d-flex justify-content-between\" style=\"height: 150px; opacity: 0.8;\">
           <div style=\"margin: 10px 25px;\">
             <img src=\"https://harmony-promotion.com/images/covid.png\" alt=\"stop covid\" width=\"100\"/>
@@ -154,15 +166,15 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">MENU</h4>
               <a href=\"";
-        // line 81
+        // line 96
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("programme");
         echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Tous les programmes</a><br/>
               <a href=\"";
-        // line 82
+        // line 97
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("guide");
         echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Guide de l'acheteur</a><br/>
               <a href=\"";
-        // line 83
+        // line 98
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("guide");
         echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Guide de l'investisseur</a><br/>
             </div>
@@ -174,22 +186,22 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">DÉCOUVRIR</h4>
               <a href=\"";
-        // line 92
+        // line 107
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("harmony");
         echo "#team\" class=\"text-muted\" style=\"font-size: 18px;\">Notre team</a><br/>
               <a href=\"";
-        // line 93
+        // line 108
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("harmony");
         echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Nos valeurs</a><br/>
             </div>
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">CONTACT</h4>
               <a href=\"";
-        // line 97
+        // line 112
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rappel");
         echo "\"><img src=\"https://harmony-promotion.com/images/appel-v.png\" width=\"35\" style=\"margin: 25px;\" alt=\"logo telephone\"/></a>
               <a href=\"";
-        // line 98
+        // line 113
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\"><img src=\"https://harmony-promotion.com/images/mail-v.png\" width=\"35\" style=\"margin: 25px;\" alt=\"logo mail\"/></a>
             </div>
@@ -207,7 +219,7 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
 
     }
 
-    // line 12
+    // line 30
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -226,7 +238,7 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
 
     }
 
-    // line 13
+    // line 31
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -244,7 +256,7 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
 
     }
 
-    // line 48
+    // line 63
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -262,7 +274,7 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
 
     }
 
-    // line 49
+    // line 64
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -292,7 +304,7 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
 
     public function getDebugInfo()
     {
-        return array (  266 => 49,  248 => 48,  230 => 13,  211 => 12,  193 => 98,  189 => 97,  182 => 93,  178 => 92,  166 => 83,  162 => 82,  158 => 81,  125 => 50,  122 => 49,  120 => 48,  111 => 42,  105 => 39,  99 => 36,  93 => 33,  87 => 30,  81 => 27,  66 => 14,  64 => 13,  60 => 12,  47 => 1,);
+        return array (  278 => 64,  260 => 63,  242 => 31,  223 => 30,  205 => 113,  201 => 112,  194 => 108,  190 => 107,  178 => 98,  174 => 97,  170 => 96,  137 => 65,  134 => 64,  132 => 63,  123 => 57,  117 => 54,  111 => 51,  105 => 48,  99 => 45,  84 => 32,  82 => 31,  78 => 30,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -308,6 +320,24 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
         <link href=\"https://fonts.googleapis.com/css2?family=Barlow&display=swap\" rel=\"stylesheet\">
         <link href=\"https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap\" rel=\"stylesheet\">
         <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css\" integrity=\"sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==\" crossorigin=\"anonymous\" />
+        <style type=\"text/css\">
+          .exampleFormControlSelect1 {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url(\"chevron.png\");
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            background-position-y: 10px;
+            border: 1px solid #dfdfdf;
+            border-radius: 2px;
+            margin-right: 2rem;
+            padding-right: 2rem;
+            font-family: 'Montserrat'; 
+            color: #3B4754; 
+            background-color: white; 
+            border-radius: 5px;
+          }
+        </style>
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
@@ -331,12 +361,9 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
                       <li class=\"nav-item d-flex align-items-center text-center justify-content-center\">
                         <a class=\"nav-link\" href=\"{{ path('harmony') }}\">HARMONY <br class=\"d-none d-lg-block d-xl-block\"/>PROMOTION</a>
                       </li>
-                      <li class=\"nav-item d-flex align-items-center justify-content-center\">
+                      <!--<li class=\"nav-item d-flex align-items-center justify-content-center\">
                         <a class=\"nav-link\" href=\"{{ path('news') }}\">ACTUS/NEWS</a>
-                      </li>
-                      <li class=\"nav-item d-flex align-items-center justify-content-center\">
-                        <a class=\"nav-link\" href=\"{{ path('faq') }}\">FAQ</a>
-                      </li>
+                      </li>-->
                       <li class=\"nav-item d-flex align-items-center justify-content-center\">
                         <a class=\"nav-link\" href=\"{{ path('contact') }}\">CONTACT</a>
                       </li>

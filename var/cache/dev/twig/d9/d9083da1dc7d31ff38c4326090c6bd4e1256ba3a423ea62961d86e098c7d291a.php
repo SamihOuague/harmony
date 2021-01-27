@@ -165,14 +165,14 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
         </a>
     </div>
     <div class=\"d-flex justify-content-center align-items-center\" style=\"height: 80px; background-color: #172F26;\">
-            <select name=\"lieu\" style=\"height: 50px;\">
+            <select class=\"exampleFormControlSelect1\" name=\"lieu\" style=\"height: 45px;\">
                 <option disabled selected>Département</option>
                 <option value=\"75\">75</option>
                 <option value=\"92\">92</option>
                 <option value=\"94\">94</option>
                 <option value=\"971\">971</option>
             </select>
-            <select name=\"type\" style=\"height: 50px; margin-left: 2%;\">
+            <select class=\"exampleFormControlSelect1\" name=\"type\" style=\"height: 45px; margin-left: 2%;\">
                 <option disabled selected>Type de bien</option>
                 <option value=\"studio\">Studio</option>
                 <option value=\"t2\">T2</option>
@@ -180,7 +180,7 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
                 <option value=\"t4\">T4</option>
                 <option value=\"duplex\">T4 Duplex</option>
             </select>
-            <button style=\"height: 50px; margin-left: 2%; width: 100%; font-size: 14px; max-width: 140px;\" class=\"btn btn-success\">
+            <button style=\"height: 45px; margin-left: 2%; width: 100%; font-size: 14px; max-width: 140px;\" class=\"btn btn-success\">
                 RECHERCHER
             </button>
     </div>
@@ -524,14 +524,14 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
         </a>
     </div>
     <div class=\"d-flex justify-content-center align-items-center\" style=\"height: 80px; background-color: #172F26;\">
-            <select name=\"lieu\" style=\"height: 50px;\">
+            <select class=\"exampleFormControlSelect1\" name=\"lieu\" style=\"height: 45px;\">
                 <option disabled selected>Département</option>
                 <option value=\"75\">75</option>
                 <option value=\"92\">92</option>
                 <option value=\"94\">94</option>
                 <option value=\"971\">971</option>
             </select>
-            <select name=\"type\" style=\"height: 50px; margin-left: 2%;\">
+            <select class=\"exampleFormControlSelect1\" name=\"type\" style=\"height: 45px; margin-left: 2%;\">
                 <option disabled selected>Type de bien</option>
                 <option value=\"studio\">Studio</option>
                 <option value=\"t2\">T2</option>
@@ -539,7 +539,7 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
                 <option value=\"t4\">T4</option>
                 <option value=\"duplex\">T4 Duplex</option>
             </select>
-            <button style=\"height: 50px; margin-left: 2%; width: 100%; font-size: 14px; max-width: 140px;\" class=\"btn btn-success\">
+            <button style=\"height: 45px; margin-left: 2%; width: 100%; font-size: 14px; max-width: 140px;\" class=\"btn btn-success\">
                 RECHERCHER
             </button>
     </div>
