@@ -165,112 +165,117 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
         </div>
         <div class=\"col-lg-8\" style=\"padding: 0;\">
             <div class=\"d-flex justify-content-around\" style=\"height: 70px; background-color: #336335;\">
-                <select class=\"w-100 exampleFormControlSelect1\" style=\"margin: 15px;\">
+                <select class=\"w-100 exampleFormControlSelect1\" id=\"department\" style=\"margin: 15px;\">
                     <option disabled selected>Département</option>
                     <option value=\"75\">75</option>
                     <option value=\"92\">92</option>
                     <option value=\"94\">94</option>
-                    <option value=\"971\">971</option>
+                    <option value=\"97\">971</option>
                 </select>
-                <select class=\"w-100 exampleFormControlSelect1\" style=\"margin: 15px;\">
+                <select class=\"w-100 exampleFormControlSelect1\" id=\"piece\" style=\"margin: 15px;\">
                     <option disabled selected>Type de bien</option>
-                    <option value=\"studio\">Studio</option>
-                    <option value=\"t2\">T2</option>
-                    <option value=\"t3\">T3</option>
-                    <option value=\"t4\">T4</option>
-                    <option value=\"duplex\">T4 Duplex</option>
-                </select>
-                <select class=\"w-100 exampleFormControlSelect1\" style=\"margin: 15px;\">
-                    <option disabled selected>Nombre de pièce</option>
-                    <option value=\"1\">1</option>
-                    <option value=\"2\">2</option>
-                    <option value=\"3\">3</option>
-                    <option value=\"4\">4</option>
+                    <option value=\"Studio\">Studio</option>
+                    <option value=\"T2\">T2</option>
+                    <option value=\"T3\">T3</option>
+                    <option value=\"T4\">T4</option>
+                    <option value=\"Duplex\">T4 Duplex</option>
                 </select>
             </div>
             ";
-        // line 109
-        if ((isset($context["programmes"]) || array_key_exists("programmes", $context) ? $context["programmes"] : (function () { throw new RuntimeError('Variable "programmes" does not exist.', 109, $this->source); })())) {
-            // line 110
+        // line 102
+        if ((isset($context["programmes"]) || array_key_exists("programmes", $context) ? $context["programmes"] : (function () { throw new RuntimeError('Variable "programmes" does not exist.', 102, $this->source); })())) {
+            // line 103
             echo "            <div class=\"d-flex flex-wrap justify-content-lg-start justify-content-center\" style=\"overflow-y: scroll; overflow-x: hidden; max-height: 600px;\">
                 ";
-            // line 111
+            // line 104
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["programmes"]) || array_key_exists("programmes", $context) ? $context["programmes"] : (function () { throw new RuntimeError('Variable "programmes" does not exist.', 111, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["programmes"]) || array_key_exists("programmes", $context) ? $context["programmes"] : (function () { throw new RuntimeError('Variable "programmes" does not exist.', 104, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["prog"]) {
-                // line 112
-                echo "                    <a href=\"/detail/";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "id", [], "any", false, false, false, 112), "html", null, true);
+                // line 105
+                echo "                    <a class=\"";
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["prog"], "biens", [], "any", false, false, false, 105));
+                foreach ($context['_seq'] as $context["_key"] => $context["bien"]) {
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "title", [], "any", false, false, false, 105), "html", null, true);
+                    echo " ";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['bien'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                echo "dep-";
+                echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "departement", [], "any", false, false, false, 105), 0, 2), "html", null, true);
+                echo " prog\" href=\"/detail/";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "id", [], "any", false, false, false, 105), "html", null, true);
                 echo "\" style=\"text-decoration: none;\">
-                        <div class=\"\" style=\"margin: 15px 25px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
+                        <div style=\"margin: 15px 25px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
                             <div class=\"d-flex justify-content-end align-items-start\" style=\"min-height: 150px; background-image: url('/uploads/pages/";
-                // line 114
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "miniature", [], "any", false, false, false, 114), "html", null, true);
+                // line 107
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "miniature", [], "any", false, false, false, 107), "html", null, true);
                 echo "'); background-size: cover; width: 100%;\">
                                 ";
-                // line 115
-                if (twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 115)) {
+                // line 108
+                if (twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 108)) {
                     echo "<img src=\"https://harmony-promotion.com/images/pastille.svg\" alt=\"Pastille prestige\" width=\"75\" style=\"margin: 5px;\"/>";
                 }
-                // line 116
+                // line 109
                 echo "                            </div>
                             <div class=\"h-100\" ";
-                // line 117
-                if (twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 117)) {
+                // line 110
+                if (twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 110)) {
                     echo "style=\"background-color: rgb(0, 48, 60);\"";
                 }
                 echo ">
                                 <div class=\"d-flex justify-content-end\" style=\"padding-right: 10px;\">
                                     <div class=\"text-center d-inline-block ";
-                // line 119
-                if (twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 119)) {
+                // line 112
+                if (twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 112)) {
                     echo "text-dark bg-light";
                 } else {
                     echo "text-light";
                 }
                 echo "\" style=\"margin-top: -10px; background-color: ";
-                if ( !twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 119)) {
+                if ( !twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 112)) {
                     echo "rgb(144, 188, 85)";
                 }
                 echo "; padding: 5px 12px;\">
                                         ";
-                // line 120
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "tag", [], "any", false, false, false, 120), "html", null, true);
+                // line 113
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "tag", [], "any", false, false, false, 113), "html", null, true);
                 echo "
                                     </div>
                                 </div>
                                 <div style=\"padding: 20px;\">
                                     <h2 style=\"font-family: 'Barlow'; font-size: 18px; color: ";
-                // line 124
-                if ( !twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 124)) {
+                // line 117
+                if ( !twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 117)) {
                     echo "#336336";
                 } else {
                     echo "white";
                 }
                 echo "; font-weight: 700;\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "title", [], "any", false, false, false, 124), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "title", [], "any", false, false, false, 117), "html", null, true);
                 echo "</h2>
                                     <h3 style=\"font-family: 'Montserrat'; font-size: 18px; color: ";
-                // line 125
-                if ( !twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 125)) {
+                // line 118
+                if ( !twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 118)) {
                     echo "#d39c2f";
                 } else {
                     echo "white";
                 }
                 echo ";\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "ville", [], "any", false, false, false, 125), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "ville", [], "any", false, false, false, 118), "html", null, true);
                 echo "</h3>
                                     <div style=\"border: 2px solid ";
-                // line 126
-                if (twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 126)) {
+                // line 119
+                if (twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 119)) {
                     echo " #B1A06B ";
                 } else {
                     echo " #f8f9fa ";
                 }
                 echo "; width: 50px; margin: 5px 0;\"></div>
                                     <p class=\"text-muted text-justify\" style=\"font-size: 13px; word-wrap: break-word; hyphens: auto;\">";
-                // line 127
-                echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "text", [], "any", false, false, false, 127), 0, 80), "html", null, true);
+                // line 120
+                echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "text", [], "any", false, false, false, 120), 0, 80), "html", null, true);
                 echo "...</p>
                                 </div>
                             </div>
@@ -281,11 +286,11 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['prog'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 133
+            // line 126
             echo "            </div>
             ";
         }
-        // line 135
+        // line 128
         echo "        </div>
     </div>
     <div class=\"row\">
@@ -301,13 +306,13 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
                 <p class=\"text-muted\">N'hésitez plus, prenons contact ! </p>
                 <div class=\"text-center\" style=\"margin-top: 50px;\">
                     <a class=\"btn btn-success\" style=\"width: 250px;\" href=\"";
-        // line 149
+        // line 142
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rappel");
         echo "\">Être rappelé</a>
                 </div>
                 <div class=\"text-center\" style=\"margin-top: 25px;\">
                     <a class=\"btn btn-success\" style=\"width: 250px;\" href=\"";
-        // line 152
+        // line 145
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\">0 801 900 500</a>
                 </div>
@@ -424,7 +429,49 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
     const locations = [{ lat: 48.850718025545966, lng: 2.3893828982502505 },
                     { lat: 48.817687281884, lng: 2.2627395481495602 },
                     { lat: 48.800650783051175, lng: 2.422302689972822 },
-                    { lat: 48.889262090834016, lng: 2.305715694540116}]
+                    { lat: 48.889262090834016, lng: 2.305715694540116}];
+    let dep = \"\";
+    let piece = \"\";
+    let anchors = window.location.hash.split(\"#\");
+    if (anchors.length > 1)
+        \$(\".prog\").hide();
+    for (let i = 1; i < anchors.length; i++) {
+        if (Number(anchors[i])) {
+            \$(\".dep-\" + anchors[i]).show();
+            \$(\"#department\").val(anchors[i]);
+        }
+        if (!(Number(anchors[i]))) {
+            \$(\".\" + anchors[i]).show();
+            \$(\"#piece\").val(anchors[i]);
+        }
+    }
+
+    \$(\"#department\").change((e) => {
+        dep = \".dep-\" + e.target.value;
+        \$(\".prog\").hide();
+        if (piece != \"\") {
+            for (let i = 0, elt = null; i < \$(piece).length; i++) {
+                elt = \$(\$(dep)[i]);
+                if (elt.hasClass(piece.substr(1)))
+                    elt.show();
+            }
+        } else
+            \$(dep).show();
+    });
+
+    \$(\"#piece\").change((e) => {
+        piece = \".\" + e.target.value;
+        \$(\".prog\").hide();
+        if (dep != \"\") {
+            for (let i = 0, elt = null; i < \$(dep).length; i++) {
+                elt = \$(\$(piece)[i]);
+                if (elt.hasClass(dep.substr(1)))
+                    elt.show();
+            }
+        } else {
+            \$(piece).show();
+        }
+    });
 </script>
 ";
         
@@ -447,7 +494,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
 
     public function getDebugInfo()
     {
-        return array (  311 => 152,  305 => 149,  289 => 135,  285 => 133,  273 => 127,  265 => 126,  255 => 125,  245 => 124,  238 => 120,  226 => 119,  219 => 117,  216 => 116,  212 => 115,  208 => 114,  202 => 112,  198 => 111,  195 => 110,  193 => 109,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  316 => 145,  310 => 142,  294 => 128,  290 => 126,  278 => 120,  270 => 119,  260 => 118,  250 => 117,  243 => 113,  231 => 112,  224 => 110,  221 => 109,  217 => 108,  213 => 107,  195 => 105,  191 => 104,  188 => 103,  186 => 102,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -537,34 +584,27 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
         </div>
         <div class=\"col-lg-8\" style=\"padding: 0;\">
             <div class=\"d-flex justify-content-around\" style=\"height: 70px; background-color: #336335;\">
-                <select class=\"w-100 exampleFormControlSelect1\" style=\"margin: 15px;\">
+                <select class=\"w-100 exampleFormControlSelect1\" id=\"department\" style=\"margin: 15px;\">
                     <option disabled selected>Département</option>
                     <option value=\"75\">75</option>
                     <option value=\"92\">92</option>
                     <option value=\"94\">94</option>
-                    <option value=\"971\">971</option>
+                    <option value=\"97\">971</option>
                 </select>
-                <select class=\"w-100 exampleFormControlSelect1\" style=\"margin: 15px;\">
+                <select class=\"w-100 exampleFormControlSelect1\" id=\"piece\" style=\"margin: 15px;\">
                     <option disabled selected>Type de bien</option>
-                    <option value=\"studio\">Studio</option>
-                    <option value=\"t2\">T2</option>
-                    <option value=\"t3\">T3</option>
-                    <option value=\"t4\">T4</option>
-                    <option value=\"duplex\">T4 Duplex</option>
-                </select>
-                <select class=\"w-100 exampleFormControlSelect1\" style=\"margin: 15px;\">
-                    <option disabled selected>Nombre de pièce</option>
-                    <option value=\"1\">1</option>
-                    <option value=\"2\">2</option>
-                    <option value=\"3\">3</option>
-                    <option value=\"4\">4</option>
+                    <option value=\"Studio\">Studio</option>
+                    <option value=\"T2\">T2</option>
+                    <option value=\"T3\">T3</option>
+                    <option value=\"T4\">T4</option>
+                    <option value=\"Duplex\">T4 Duplex</option>
                 </select>
             </div>
             {% if (programmes) %}
             <div class=\"d-flex flex-wrap justify-content-lg-start justify-content-center\" style=\"overflow-y: scroll; overflow-x: hidden; max-height: 600px;\">
                 {% for prog in programmes %}
-                    <a href=\"/detail/{{prog.id}}\" style=\"text-decoration: none;\">
-                        <div class=\"\" style=\"margin: 15px 25px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
+                    <a class=\"{% for bien in prog.biens %}{{ bien.title }} {% endfor %}dep-{{prog.departement|slice(0,2)}} prog\" href=\"/detail/{{prog.id}}\" style=\"text-decoration: none;\">
+                        <div style=\"margin: 15px 25px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
                             <div class=\"d-flex justify-content-end align-items-start\" style=\"min-height: 150px; background-image: url('/uploads/pages/{{prog.miniature}}'); background-size: cover; width: 100%;\">
                                 {% if prog.isPrestige %}<img src=\"https://harmony-promotion.com/images/pastille.svg\" alt=\"Pastille prestige\" width=\"75\" style=\"margin: 5px;\"/>{% endif %}
                             </div>
@@ -718,7 +758,49 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
     const locations = [{ lat: 48.850718025545966, lng: 2.3893828982502505 },
                     { lat: 48.817687281884, lng: 2.2627395481495602 },
                     { lat: 48.800650783051175, lng: 2.422302689972822 },
-                    { lat: 48.889262090834016, lng: 2.305715694540116}]
+                    { lat: 48.889262090834016, lng: 2.305715694540116}];
+    let dep = \"\";
+    let piece = \"\";
+    let anchors = window.location.hash.split(\"#\");
+    if (anchors.length > 1)
+        \$(\".prog\").hide();
+    for (let i = 1; i < anchors.length; i++) {
+        if (Number(anchors[i])) {
+            \$(\".dep-\" + anchors[i]).show();
+            \$(\"#department\").val(anchors[i]);
+        }
+        if (!(Number(anchors[i]))) {
+            \$(\".\" + anchors[i]).show();
+            \$(\"#piece\").val(anchors[i]);
+        }
+    }
+
+    \$(\"#department\").change((e) => {
+        dep = \".dep-\" + e.target.value;
+        \$(\".prog\").hide();
+        if (piece != \"\") {
+            for (let i = 0, elt = null; i < \$(piece).length; i++) {
+                elt = \$(\$(dep)[i]);
+                if (elt.hasClass(piece.substr(1)))
+                    elt.show();
+            }
+        } else
+            \$(dep).show();
+    });
+
+    \$(\"#piece\").change((e) => {
+        piece = \".\" + e.target.value;
+        \$(\".prog\").hide();
+        if (dep != \"\") {
+            for (let i = 0, elt = null; i < \$(dep).length; i++) {
+                elt = \$(\$(piece)[i]);
+                if (elt.hasClass(dep.substr(1)))
+                    elt.show();
+            }
+        } else {
+            \$(piece).show();
+        }
+    });
 </script>
 {% endblock %}", "home/programme.html.twig", "/home/souaguen/Bureau/harmonypresent/templates/home/programme.html.twig");
     }

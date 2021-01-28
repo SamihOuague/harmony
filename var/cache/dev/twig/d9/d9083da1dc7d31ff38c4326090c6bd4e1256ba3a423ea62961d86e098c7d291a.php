@@ -137,9 +137,9 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
                         <h2 style=\"font-family: 'Barlow'; color: #336336; font-weight: 600;\">Amplitude</h2>
                         <p>Programme immobilier à Alfortville</p>
                     </div>
-                    <button style=\"position: absolute; bottom: -10%; left: 10%;\" class=\"btn btn-success\">
+                    <a href=\"/detail/11\" style=\"position: absolute; bottom: -10%; left: 10%;\" class=\"btn btn-success\">
                         En savoir plus
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class=\"carousel-item\">
@@ -165,24 +165,27 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
         </a>
     </div>
     <div class=\"d-flex justify-content-center align-items-center\" style=\"height: 80px; background-color: #172F26;\">
-            <select class=\"exampleFormControlSelect1\" name=\"lieu\" style=\"height: 45px;\">
-                <option disabled selected>Département</option>
-                <option value=\"75\">75</option>
-                <option value=\"92\">92</option>
-                <option value=\"94\">94</option>
-                <option value=\"971\">971</option>
-            </select>
-            <select class=\"exampleFormControlSelect1\" name=\"type\" style=\"height: 45px; margin-left: 2%;\">
-                <option disabled selected>Type de bien</option>
-                <option value=\"studio\">Studio</option>
-                <option value=\"t2\">T2</option>
-                <option value=\"t3\">T3</option>
-                <option value=\"t4\">T4</option>
-                <option value=\"duplex\">T4 Duplex</option>
-            </select>
-            <button style=\"height: 45px; margin-left: 2%; width: 100%; font-size: 14px; max-width: 140px;\" class=\"btn btn-success\">
-                RECHERCHER
-            </button>
+        <select id=\"department\" class=\"exampleFormControlSelect1\" name=\"lieu\" style=\"height: 45px;\">
+            <option disabled selected>Département</option>
+            <option value=\"75\">75</option>
+            <option value=\"92\">92</option>
+            <option value=\"94\">94</option>
+            <option value=\"971\">971</option>
+        </select>
+        <select id=\"piece\" class=\"exampleFormControlSelect1\" name=\"type\" style=\"height: 45px; margin-left: 2%;\">
+            <option disabled selected>Type de bien</option>
+            <option value=\"Studio\">Studio</option>
+            <option value=\"T2\">T2</option>
+            <option value=\"T3\">T3</option>
+            <option value=\"T4\">T4</option>
+            <option value=\"Duplex\">T4 Duplex</option>
+        </select>
+        <a href=\"";
+        // line 101
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("programme");
+        echo "\" id=\"search\" style=\"margin-left: 2%;\" class=\"btn btn-lg btn-success\">
+            RECHERCHER
+        </a>
     </div>
     <div style=\"padding: 50px;\">
         <h2 style=\"font-family: 'Barlow'; font-weight: 600;  color: rgb(0, 48, 60);\" class=\"text-center\">NOS PROGRAMMES</h2>
@@ -420,8 +423,21 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
         </div>
     </div>
     <script>
-        var vid = document.getElementById(\"myVideo\");
+        let vid = document.getElementById(\"myVideo\");
+        let dep = \"\";
+        let piece = \"\";
+        let href = \$(\"#search\").attr(\"href\");
         vid.volume = 0;
+        \$(\"#department\").change((e) => {
+            dep = \"#\" + e.target.value;
+            \$(\"#search\").attr(\"href\", href + dep + piece);
+        });
+
+        \$(\"#piece\").change((e) => {
+            piece = \"#\" + e.target.value;
+            \$(\"#search\").attr(\"href\", href + dep + piece);
+        });
+
         \$(\"#scrollLeft\").click((e) => {
           let scrollStart = \$(\".example\")[0].scrollLeft - 250;
           \$(\$(\".example\")[0]).animate({scrollLeft: (scrollStart <= 0) ? 0 : scrollStart }, 800)
@@ -464,7 +480,7 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
 
     public function getDebugInfo()
     {
-        return array (  410 => 242,  402 => 237,  368 => 206,  300 => 141,  297 => 140,  287 => 132,  275 => 126,  267 => 125,  257 => 124,  247 => 123,  240 => 119,  228 => 118,  221 => 116,  218 => 115,  214 => 114,  210 => 113,  204 => 111,  200 => 110,  197 => 109,  195 => 108,  191 => 107,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  413 => 242,  405 => 237,  371 => 206,  303 => 141,  300 => 140,  290 => 132,  278 => 126,  270 => 125,  260 => 124,  250 => 123,  243 => 119,  231 => 118,  224 => 116,  221 => 115,  217 => 114,  213 => 113,  207 => 111,  203 => 110,  200 => 109,  198 => 108,  194 => 107,  185 => 101,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -526,9 +542,9 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
                         <h2 style=\"font-family: 'Barlow'; color: #336336; font-weight: 600;\">Amplitude</h2>
                         <p>Programme immobilier à Alfortville</p>
                     </div>
-                    <button style=\"position: absolute; bottom: -10%; left: 10%;\" class=\"btn btn-success\">
+                    <a href=\"/detail/11\" style=\"position: absolute; bottom: -10%; left: 10%;\" class=\"btn btn-success\">
                         En savoir plus
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class=\"carousel-item\">
@@ -554,24 +570,24 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
         </a>
     </div>
     <div class=\"d-flex justify-content-center align-items-center\" style=\"height: 80px; background-color: #172F26;\">
-            <select class=\"exampleFormControlSelect1\" name=\"lieu\" style=\"height: 45px;\">
-                <option disabled selected>Département</option>
-                <option value=\"75\">75</option>
-                <option value=\"92\">92</option>
-                <option value=\"94\">94</option>
-                <option value=\"971\">971</option>
-            </select>
-            <select class=\"exampleFormControlSelect1\" name=\"type\" style=\"height: 45px; margin-left: 2%;\">
-                <option disabled selected>Type de bien</option>
-                <option value=\"studio\">Studio</option>
-                <option value=\"t2\">T2</option>
-                <option value=\"t3\">T3</option>
-                <option value=\"t4\">T4</option>
-                <option value=\"duplex\">T4 Duplex</option>
-            </select>
-            <button style=\"height: 45px; margin-left: 2%; width: 100%; font-size: 14px; max-width: 140px;\" class=\"btn btn-success\">
-                RECHERCHER
-            </button>
+        <select id=\"department\" class=\"exampleFormControlSelect1\" name=\"lieu\" style=\"height: 45px;\">
+            <option disabled selected>Département</option>
+            <option value=\"75\">75</option>
+            <option value=\"92\">92</option>
+            <option value=\"94\">94</option>
+            <option value=\"971\">971</option>
+        </select>
+        <select id=\"piece\" class=\"exampleFormControlSelect1\" name=\"type\" style=\"height: 45px; margin-left: 2%;\">
+            <option disabled selected>Type de bien</option>
+            <option value=\"Studio\">Studio</option>
+            <option value=\"T2\">T2</option>
+            <option value=\"T3\">T3</option>
+            <option value=\"T4\">T4</option>
+            <option value=\"Duplex\">T4 Duplex</option>
+        </select>
+        <a href=\"{{ path('programme') }}\" id=\"search\" style=\"margin-left: 2%;\" class=\"btn btn-lg btn-success\">
+            RECHERCHER
+        </a>
     </div>
     <div style=\"padding: 50px;\">
         <h2 style=\"font-family: 'Barlow'; font-weight: 600;  color: rgb(0, 48, 60);\" class=\"text-center\">NOS PROGRAMMES</h2>
@@ -722,8 +738,21 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
         </div>
     </div>
     <script>
-        var vid = document.getElementById(\"myVideo\");
+        let vid = document.getElementById(\"myVideo\");
+        let dep = \"\";
+        let piece = \"\";
+        let href = \$(\"#search\").attr(\"href\");
         vid.volume = 0;
+        \$(\"#department\").change((e) => {
+            dep = \"#\" + e.target.value;
+            \$(\"#search\").attr(\"href\", href + dep + piece);
+        });
+
+        \$(\"#piece\").change((e) => {
+            piece = \"#\" + e.target.value;
+            \$(\"#search\").attr(\"href\", href + dep + piece);
+        });
+
         \$(\"#scrollLeft\").click((e) => {
           let scrollStart = \$(\".example\")[0].scrollLeft - 250;
           \$(\$(\".example\")[0]).animate({scrollLeft: (scrollStart <= 0) ? 0 : scrollStart }, 800)

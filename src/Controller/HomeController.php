@@ -33,9 +33,9 @@ class HomeController extends AbstractController
     public function detail(int $id): Response
     {
         $programme = $this->getDoctrine()->getRepository(Programme::class)->find($id);
-        $coords = explode(",", $programme->getCoords());
         if (!$programme)
             return $this->redirectToRoute("home");
+        $coords = explode(",", $programme->getCoords());
         return $this->render('home/detail.html.twig', [
             'biens' => $programme->getBiens(),
             'programme' => $programme,

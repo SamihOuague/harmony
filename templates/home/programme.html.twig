@@ -83,34 +83,27 @@
         </div>
         <div class="col-lg-8" style="padding: 0;">
             <div class="d-flex justify-content-around" style="height: 70px; background-color: #336335;">
-                <select class="w-100 exampleFormControlSelect1" style="margin: 15px;">
+                <select class="w-100 exampleFormControlSelect1" id="department" style="margin: 15px;">
                     <option disabled selected>Département</option>
                     <option value="75">75</option>
                     <option value="92">92</option>
                     <option value="94">94</option>
-                    <option value="971">971</option>
+                    <option value="97">971</option>
                 </select>
-                <select class="w-100 exampleFormControlSelect1" style="margin: 15px;">
+                <select class="w-100 exampleFormControlSelect1" id="piece" style="margin: 15px;">
                     <option disabled selected>Type de bien</option>
-                    <option value="studio">Studio</option>
-                    <option value="t2">T2</option>
-                    <option value="t3">T3</option>
-                    <option value="t4">T4</option>
-                    <option value="duplex">T4 Duplex</option>
-                </select>
-                <select class="w-100 exampleFormControlSelect1" style="margin: 15px;">
-                    <option disabled selected>Nombre de pièce</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
+                    <option value="Studio">Studio</option>
+                    <option value="T2">T2</option>
+                    <option value="T3">T3</option>
+                    <option value="T4">T4</option>
+                    <option value="Duplex">T4 Duplex</option>
                 </select>
             </div>
             {% if (programmes) %}
             <div class="d-flex flex-wrap justify-content-lg-start justify-content-center" style="overflow-y: scroll; overflow-x: hidden; max-height: 600px;">
                 {% for prog in programmes %}
-                    <a href="/detail/{{prog.id}}" style="text-decoration: none;">
-                        <div class="" style="margin: 15px 25px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;">
+                    <a class="{% for bien in prog.biens %}{{ bien.title }} {% endfor %}dep-{{prog.departement|slice(0,2)}} prog" href="/detail/{{prog.id}}" style="text-decoration: none;">
+                        <div style="margin: 15px 25px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;">
                             <div class="d-flex justify-content-end align-items-start" style="min-height: 150px; background-image: url('/uploads/pages/{{prog.miniature}}'); background-size: cover; width: 100%;">
                                 {% if prog.isPrestige %}<img src="https://harmony-promotion.com/images/pastille.svg" alt="Pastille prestige" width="75" style="margin: 5px;"/>{% endif %}
                             </div>
@@ -264,6 +257,48 @@
     const locations = [{ lat: 48.850718025545966, lng: 2.3893828982502505 },
                     { lat: 48.817687281884, lng: 2.2627395481495602 },
                     { lat: 48.800650783051175, lng: 2.422302689972822 },
-                    { lat: 48.889262090834016, lng: 2.305715694540116}]
+                    { lat: 48.889262090834016, lng: 2.305715694540116}];
+    let dep = "";
+    let piece = "";
+    let anchors = window.location.hash.split("#");
+    if (anchors.length > 1)
+        $(".prog").hide();
+    for (let i = 1; i < anchors.length; i++) {
+        if (Number(anchors[i])) {
+            $(".dep-" + anchors[i]).show();
+            $("#department").val(anchors[i]);
+        }
+        if (!(Number(anchors[i]))) {
+            $("." + anchors[i]).show();
+            $("#piece").val(anchors[i]);
+        }
+    }
+
+    $("#department").change((e) => {
+        dep = ".dep-" + e.target.value;
+        $(".prog").hide();
+        if (piece != "") {
+            for (let i = 0, elt = null; i < $(piece).length; i++) {
+                elt = $($(dep)[i]);
+                if (elt.hasClass(piece.substr(1)))
+                    elt.show();
+            }
+        } else
+            $(dep).show();
+    });
+
+    $("#piece").change((e) => {
+        piece = "." + e.target.value;
+        $(".prog").hide();
+        if (dep != "") {
+            for (let i = 0, elt = null; i < $(dep).length; i++) {
+                elt = $($(piece)[i]);
+                if (elt.hasClass(dep.substr(1)))
+                    elt.show();
+            }
+        } else {
+            $(piece).show();
+        }
+    });
 </script>
 {% endblock %}
