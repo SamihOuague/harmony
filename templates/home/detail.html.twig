@@ -4,13 +4,23 @@
 
 {% block body %}
 <style>
+    @media (max-width: 620px) {
+        .accordion {
+            font-size: 8px;
+        }
+    }
+    @media (min-width: 620px) and (max-width: 780px) {
+        .accordion {
+            font-size: 11px;
+        }
+    }
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
 <div style="background-image: url('/uploads/pages/{{programme.miniature}}'); height: 500px; background-size: cover;">
     <div class="d-flex justify-content-between align-items-end h-100" style="padding: 0px 5%;">
-        <div style="
+        <div class="d-none d-md-block" style="
             width: 90px; 
             height: 90px; 
             background-color: {% if programme.isPrestige %}rgb(0, 48, 60){% else %}#336336{% endif %}; 
@@ -28,7 +38,7 @@
                                 border-radius: 0px 50px 0px 50px;
                                 overflow: {% if programme.isPrestige %}visible{% else %}hidden{% endif %};
                                 {% if programme.isPrestige %}background-color: rgba(255, 255, 255, 0.6);{% endif %}">
-            {% if programme.isPrestige %}<img src="https://harmony-promotion.com/images/pastille.svg" alt="Pastille prestige" width="100" style="position: relative; left: 400px; top: 100px;"/>{% endif %}
+            {% if programme.isPrestige %}<img src="https://harmony-promotion.com/images/pastille.svg" alt="Pastille prestige" class="d-none d-md-block" width="100" style="position: relative; left: 400px; top: 100px;"/>{% endif %}
             <div class="h-100" style="padding: 25px 35px; font-family: 'Montserrat'; color: {% if programme.isPrestige %}rgb(0, 48, 60){% else %}#336336{% endif %};">
                 <h1 style="font-family: 'Barlow'; margin-top: 20px; font-size: 31px;">{{programme.title}}</h1>
                 {% if programme.isPrestige %}<div style="border: 2px solid #B1A06B; width: 50px; left: -55px; top: -20px; position: relative;"></div>{% endif %}
