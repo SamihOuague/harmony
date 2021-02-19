@@ -13,6 +13,11 @@
             font-size: 7px;
             border: 1px solid white;
             border-radius: 5px;
+            cursor: pointer;
+        }
+        .ctaimg
+        {
+            width: 15px;
         }
     }
     @media (min-width: 620px) and (max-width: 780px) {
@@ -24,6 +29,11 @@
             font-size: 10px; 
             border: 1px solid white;
             border-radius: 5px;
+            cursor: pointer;
+        }
+        .ctaimg
+        {
+            width: 25px;
         }
     }
     @media (min-width: 780px) {
@@ -35,6 +45,11 @@
             font-size: 14px;
             border: 1px solid white;
             border-radius: 5px;
+            cursor: pointer;
+        }
+        .ctaimg
+        {
+            width: 35px;
         }
     }
 
@@ -119,16 +134,16 @@
     {% if biens %}
         {% for bien in biens %}
             <div class="accordion" id="bien{{bien.id}}">
-                <div style="padding: 15px 0; background-color: #336336; color: white; border-radius: 5px; border: 2px solid silver;">
+                <div style="padding: 15px 0; background-color: {% if not programme.isPrestige %}#336336{% else %}rgb(0, 48, 60){% endif %};; color: white; border-radius: 5px; border: 2px solid silver;">
                     <div id="heading{{bien.id}}" class="d-flex justify-content-between align-items-center">
                         <div class="d-flex justify-content-around align-items-center w-100">
                             <span class="text-center w-100">{{bien.title}}</span>
                             <span class="text-center w-100">Jusqu'à {{bien.surface}} m2</span>
                             <span class="text-center w-100">À partir de {{bien.prix}} €</span>
                             <span class="text-center w-100">{{bien.disponible}} disponible{% if bien.disponible > 1 %}s{% endif %}</span>
-                            <span id="ddplan" class="text-center w-100 border border-light">Plan 2D</span>
+                            <span id="ddplan" class="text-center w-75 border border-light">Plan 2D</span>
                         </div>
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#bien-{{bien.id}}" aria-expanded="true" aria-controls="bien-{{bien.id}}">
+                        <button style="margin-left: 25px;" class="btn btn-link" type="button" data-toggle="collapse" data-target="#bien-{{bien.id}}" aria-expanded="true" aria-controls="bien-{{bien.id}}">
                             <i class="fas fa-chevron-down text-light"></i>
                         </button>
                     </div>
@@ -153,10 +168,10 @@
                             <span class="text-center w-100">-</span>
                             <span class="text-center w-100">                            
                                 <a href="/rappel/{{lot.id}}/bien">
-                                    <img src="https://harmony-promotion.com/images/phone-black.png" width="35" alt="rappel" style="margin-right: 5px;"/>
+                                    <img src="https://harmony-promotion.com/images/phone-black.png" width="35" alt="rappel" class="ctaimg" style="margin-right: 5px;"/>
                                 </a>
                                 <a href="/brochure/{{lot.id}}/bien">
-                                    <img src="https://harmony-promotion.com/images/mail-black.png" width="35" alt="brochure"/>
+                                    <img src="https://harmony-promotion.com/images/mail-black.png" width="35" alt="brochure" class="ctaimg"/>
                                 </a>
                             </span>
                         </div>

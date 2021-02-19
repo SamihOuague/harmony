@@ -26,6 +26,9 @@
             background-color: white; 
             border-radius: 5px;
           }
+          .navlink {
+            font-size: 25px;
+          }
         </style>
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
@@ -42,19 +45,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto w-100 d-flex justify-content-around" style="font-size: 14px;">
                       <li class="nav-item d-flex align-items-center justify-content-center">
-                        <a class="nav-link" href="{{ path('programme') }}">PROGRAMMES</a>
+                        <a class="nav-link" style="font-size: 16px; font-family: 'Montserrat';" href="{{ path('programme') }}">PROGRAMMES</a>
                       </li>
                       <li class="nav-item d-flex align-items-center text-center justify-content-center">
-                        <a class="nav-link" href="{{  path('guide') }}">GUIDE DE <br class="d-none d-lg-block d-xl-block"/>L'IMMOBILIER</a>
+                        <a class="nav-link" style="font-size: 16px; font-family: 'Montserrat';" href="{{  path('guide') }}">GUIDE DE <br class="d-none d-lg-block d-xl-block"/>L'IMMOBILIER</a>
                       </li>
                       <li class="nav-item d-flex align-items-center text-center justify-content-center">
-                        <a class="nav-link" href="{{ path('harmony') }}">HARMONY <br class="d-none d-lg-block d-xl-block"/>PROMOTION</a>
+                        <a class="nav-link" style="font-size: 16px; font-family: 'Montserrat';" href="{{ path('harmony') }}">HARMONY <br class="d-none d-lg-block d-xl-block"/>PROMOTION</a>
                       </li>
                       <!--<li class="nav-item d-flex align-items-center justify-content-center">
                         <a class="nav-link" href="{{ path('news') }}">ACTUS/NEWS</a>
                       </li>-->
                       <li class="nav-item d-flex align-items-center justify-content-center">
-                        <a class="nav-link" href="{{ path('contact') }}">CONTACT</a>
+                        <a class="nav-link" style="font-size: 16px; font-family: 'Montserrat';" href="{{ path('contact') }}">CONTACT</a>
                       </li>
                       <li class="nav-item d-flex align-items-center justify-content-center">
                         <a class="nav-link" href="{{ path('contact') }}">

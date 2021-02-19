@@ -1,24 +1,24 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => '847a9a1b117f8cd66c43b1cd2d3ce04e2e56c972',
+    'reference' => 'e8d136db79f8b2c77ec4c7cf4ffa8e2fbb5f2c02',
     'name' => '__root__',
   ),
   'versions' => 
   array (
     '__root__' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => '847a9a1b117f8cd66c43b1cd2d3ce04e2e56c972',
+      'reference' => 'e8d136db79f8b2c77ec4c7cf4ffa8e2fbb5f2c02',
     ),
     'amphp/amp' => 
     array (
@@ -832,12 +832,12 @@
     ),
     'symfony/mailer' => 
     array (
-      'pretty_version' => 'v5.2.1',
-      'version' => '5.2.1.0',
+      'pretty_version' => 'v5.2.3',
+      'version' => '5.2.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '3f34fa977efca75ad17f1416ecb4605f27dbb75e',
+      'reference' => '1efa11a8f59b8ba706aa6ee112c4675dce4dccf6',
     ),
     'symfony/maker-bundle' => 
     array (

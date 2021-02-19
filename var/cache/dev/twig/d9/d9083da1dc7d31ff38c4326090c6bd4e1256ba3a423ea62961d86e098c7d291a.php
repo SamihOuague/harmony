@@ -176,10 +176,10 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
         <div class=\"d-none d-md-flex\">
             <select id=\"department\" class=\"exampleFormControlSelect1\" name=\"lieu\" style=\"height: 45px;\">
                 <option disabled selected>Département</option>
-                <option value=\"75\">75</option>
-                <option value=\"92\">92</option>
-                <option value=\"94\">94</option>
-                <option value=\"971\">971</option>
+                <option value=\"75\">75 - Paris</option>
+                <option value=\"92\">92 - Issy-les-Moulineaux</option>
+                <option value=\"94\">94 - Plessis-Trévise</option>
+                <option value=\"971\">971 - St Martin</option>
             </select>
             <select id=\"piece\" class=\"exampleFormControlSelect1\" name=\"type\" style=\"height: 45px; margin-left: 2%;\">
                 <option disabled selected>Type de bien</option>
@@ -207,7 +207,7 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
         // line 118
         if ((isset($context["programmes"]) || array_key_exists("programmes", $context) ? $context["programmes"] : (function () { throw new RuntimeError('Variable "programmes" does not exist.', 118, $this->source); })())) {
             // line 119
-            echo "            <div class=\"d-flex example\" style=\"overflow-x: hidden;\">
+            echo "            <div class=\"d-flex example justify-content-center\" style=\"overflow-x: hidden;\">
                 ";
             // line 120
             $context['_parent'] = $context;
@@ -591,10 +591,10 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
         <div class=\"d-none d-md-flex\">
             <select id=\"department\" class=\"exampleFormControlSelect1\" name=\"lieu\" style=\"height: 45px;\">
                 <option disabled selected>Département</option>
-                <option value=\"75\">75</option>
-                <option value=\"92\">92</option>
-                <option value=\"94\">94</option>
-                <option value=\"971\">971</option>
+                <option value=\"75\">75 - Paris</option>
+                <option value=\"92\">92 - Issy-les-Moulineaux</option>
+                <option value=\"94\">94 - Plessis-Trévise</option>
+                <option value=\"971\">971 - St Martin</option>
             </select>
             <select id=\"piece\" class=\"exampleFormControlSelect1\" name=\"type\" style=\"height: 45px; margin-left: 2%;\">
                 <option disabled selected>Type de bien</option>
@@ -613,7 +613,7 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
         <h2 style=\"font-family: 'Barlow'; font-weight: 600;  color: rgb(0, 48, 60);\" class=\"text-center\">NOS PROGRAMMES</h2>
         <h4 style=\"font-family: 'Montserrat'; margin-bottom: 20px;\" class=\"text-center\">Trouvez votre logement idéal parmi les {{ nbbiens }} biens disponibles</h4>
         {% if (programmes) %}
-            <div class=\"d-flex example\" style=\"overflow-x: hidden;\">
+            <div class=\"d-flex example justify-content-center\" style=\"overflow-x: hidden;\">
                 {% for prog in programmes %}
                     <a href=\"/detail/{{prog.id}}\" style=\"text-decoration: none; margin: 50px 0;\">
                         <div class=\"item item-anime\" style=\"margin: 0px 15px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
