@@ -63,7 +63,6 @@ final class Versions
   'doctrine/orm' => '2.8.1@242cf1a33df1b8bc5e1b86c3ebd01db07851c833',
   'doctrine/persistence' => '2.1.0@9899c16934053880876b920a3b8b02ed2337ac1d',
   'doctrine/sql-formatter' => '1.1.1@56070bebac6e77230ed7d306ad13528e60732871',
-  'egulias/email-validator' => '2.1.25@0dbf5d78455d4d6a41d186da50adc1122ec066f4',
   'friendsofphp/proxy-manager-lts' => 'v1.0.2@4a66e4e0d3279d3bb3722963b4294331fabe15bc',
   'kelunik/certificate' => 'v1.1.2@56542e62d51533d04d0a9713261fea546bff80f6',
   'laminas/laminas-code' => '4.0.0@28a6d70ea8b8bca687d7163300e611ae33baf82a',
@@ -107,7 +106,6 @@ final class Versions
   'symfony/http-foundation' => 'v5.2.1@a1f6218b29897ab52acba58cfa905b83625bef8d',
   'symfony/http-kernel' => 'v5.2.1@1feb619286d819180f7b8bc0dc44f516d9c62647',
   'symfony/intl' => 'v5.2.1@53927f98c9201fe5db3cfc4d574b1f4039020297',
-  'symfony/mailer' => 'v5.2.3@1efa11a8f59b8ba706aa6ee112c4675dce4dccf6',
   'symfony/mime' => 'v5.2.1@de97005aef7426ba008c46ba840fc301df577ada',
   'symfony/monolog-bridge' => 'v5.2.1@c024671adcac903b142dd952306a243d35843963',
   'symfony/monolog-bundle' => 'v3.6.0@e495f5c7e4e672ffef4357d4a4d85f010802f940',
@@ -154,10 +152,10 @@ final class Versions
   'symfony/maker-bundle' => 'v1.26.1@0f1d3ed2584349dc8700d7908e8a92b3742b1c99',
   'symfony/phpunit-bridge' => 'v5.2.1@235823f6d215c9bd930a47a496e62c1354cde55b',
   'symfony/web-profiler-bundle' => 'v5.2.1@6cd2f3d01faf1d77125ec14150a6fbd062dbe211',
-  'symfony/polyfill-ctype' => '*@e8d136db79f8b2c77ec4c7cf4ffa8e2fbb5f2c02',
-  'symfony/polyfill-iconv' => '*@e8d136db79f8b2c77ec4c7cf4ffa8e2fbb5f2c02',
-  'symfony/polyfill-php72' => '*@e8d136db79f8b2c77ec4c7cf4ffa8e2fbb5f2c02',
-  '__root__' => 'dev-main@e8d136db79f8b2c77ec4c7cf4ffa8e2fbb5f2c02',
+  'symfony/polyfill-ctype' => '*@044eacd3a85e9622687bb35806c56a09ec6d7f99',
+  'symfony/polyfill-iconv' => '*@044eacd3a85e9622687bb35806c56a09ec6d7f99',
+  'symfony/polyfill-php72' => '*@044eacd3a85e9622687bb35806c56a09ec6d7f99',
+  '__root__' => 'dev-main@044eacd3a85e9622687bb35806c56a09ec6d7f99',
 );
 
     private function __construct()

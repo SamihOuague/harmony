@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'e8d136db79f8b2c77ec4c7cf4ffa8e2fbb5f2c02',
+    'reference' => '044eacd3a85e9622687bb35806c56a09ec6d7f99',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'e8d136db79f8b2c77ec4c7cf4ffa8e2fbb5f2c02',
+      'reference' => '044eacd3a85e9622687bb35806c56a09ec6d7f99',
     ),
     'amphp/amp' => 
     array (
@@ -289,15 +289,6 @@
       array (
       ),
       'reference' => '56070bebac6e77230ed7d306ad13528e60732871',
-    ),
-    'egulias/email-validator' => 
-    array (
-      'pretty_version' => '2.1.25',
-      'version' => '2.1.25.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '0dbf5d78455d4d6a41d186da50adc1122ec066f4',
     ),
     'friendsofphp/proxy-manager-lts' => 
     array (
@@ -829,15 +820,6 @@
       array (
       ),
       'reference' => '53927f98c9201fe5db3cfc4d574b1f4039020297',
-    ),
-    'symfony/mailer' => 
-    array (
-      'pretty_version' => 'v5.2.3',
-      'version' => '5.2.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '1efa11a8f59b8ba706aa6ee112c4675dce4dccf6',
     ),
     'symfony/maker-bundle' => 
     array (
