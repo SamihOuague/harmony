@@ -123,17 +123,27 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\">CONTACT</a>
                       </li>
+                      <li class=\"nav-item d-flex align-items-center justify-content-center\">
+                        <a class=\"nav-link\" href=\"";
+        // line 60
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
+        echo "\">
+\t\t\t\t                  <div class=\"container\" style=\"height: 55px; background-image: url('/images/phone.png'); background-size: 100%; background-repeat: no-repeat; width: 145px; background-color: #8DC63F; border-radius: 5px;\">
+\t\t\t\t                  \t<!--<p style=\"font-family: 'Montserrat';\">0 801 900 500</p>-->
+\t\t\t\t                  </div>
+                        </a>
+                      </li>
                     </ul>
                 </div>
             </div>
         </nav>
         ";
-        // line 63
+        // line 70
         $this->displayBlock('body', $context, $blocks);
-        // line 64
+        // line 71
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 65
+        // line 72
         echo "        <div id=\"anticovid\" class=\"fixed-bottom bg-success text-light d-flex justify-content-between\" style=\"height: 150px; opacity: 0.8;\">
           <div style=\"margin: 10px 25px;\">
             <img src=\"https://harmony-promotion.com/images/covid.png\" alt=\"stop covid\" width=\"100\"/>
@@ -166,15 +176,15 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">MENU</h4>
               <a href=\"";
-        // line 96
+        // line 103
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("programme");
         echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Tous les programmes</a><br/>
               <a href=\"";
-        // line 97
+        // line 104
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("guide");
         echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Guide de l'acheteur</a><br/>
               <a href=\"";
-        // line 98
+        // line 105
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("guide");
         echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Guide de l'investisseur</a><br/>
             </div>
@@ -186,22 +196,22 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">DÉCOUVRIR</h4>
               <a href=\"";
-        // line 107
+        // line 114
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("harmony");
         echo "#team\" class=\"text-muted\" style=\"font-size: 18px;\">Notre team</a><br/>
               <a href=\"";
-        // line 108
+        // line 115
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("harmony");
         echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Nos valeurs</a><br/>
             </div>
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">CONTACT</h4>
               <a href=\"";
-        // line 112
+        // line 119
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rappel");
         echo "\"><img src=\"https://harmony-promotion.com/images/appel-v.png\" width=\"35\" style=\"margin: 25px;\" alt=\"logo telephone\"/></a>
               <a href=\"";
-        // line 113
+        // line 120
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\"><img src=\"https://harmony-promotion.com/images/mail-v.png\" width=\"35\" style=\"margin: 25px;\" alt=\"logo mail\"/></a>
             </div>
@@ -256,7 +266,7 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
 
     }
 
-    // line 63
+    // line 70
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -274,7 +284,7 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
 
     }
 
-    // line 64
+    // line 71
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -304,7 +314,7 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
 
     public function getDebugInfo()
     {
-        return array (  278 => 64,  260 => 63,  242 => 31,  223 => 30,  205 => 113,  201 => 112,  194 => 108,  190 => 107,  178 => 98,  174 => 97,  170 => 96,  137 => 65,  134 => 64,  132 => 63,  123 => 57,  117 => 54,  111 => 51,  105 => 48,  99 => 45,  84 => 32,  82 => 31,  78 => 30,  47 => 1,);
+        return array (  288 => 71,  270 => 70,  252 => 31,  233 => 30,  215 => 120,  211 => 119,  204 => 115,  200 => 114,  188 => 105,  184 => 104,  180 => 103,  147 => 72,  144 => 71,  142 => 70,  129 => 60,  123 => 57,  117 => 54,  111 => 51,  105 => 48,  99 => 45,  84 => 32,  82 => 31,  78 => 30,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -366,6 +376,13 @@ class __TwigTemplate_f478a72c98604a70604716176a6dbf0bfcb5cc102015bf45d56169d35d5
                       </li>-->
                       <li class=\"nav-item d-flex align-items-center justify-content-center\">
                         <a class=\"nav-link\" href=\"{{ path('contact') }}\">CONTACT</a>
+                      </li>
+                      <li class=\"nav-item d-flex align-items-center justify-content-center\">
+                        <a class=\"nav-link\" href=\"{{ path('contact') }}\">
+\t\t\t\t                  <div class=\"container\" style=\"height: 55px; background-image: url('/images/phone.png'); background-size: 100%; background-repeat: no-repeat; width: 145px; background-color: #8DC63F; border-radius: 5px;\">
+\t\t\t\t                  \t<!--<p style=\"font-family: 'Montserrat';\">0 801 900 500</p>-->
+\t\t\t\t                  </div>
+                        </a>
                       </li>
                     </ul>
                 </div>
