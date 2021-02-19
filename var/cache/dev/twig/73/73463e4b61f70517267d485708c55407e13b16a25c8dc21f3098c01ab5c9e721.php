@@ -204,6 +204,6 @@ class __TwigTemplate_ed101a5073b7e7fb88daa15011d21ff22c778bce01f3c53c3b83693acc2
     </form>
 </div>
 {% endblock %}
-", "security/login.html.twig", "/var/www/html/templates/security/login.html.twig");
+", "security/login.html.twig", "/var/www/html/harmony/templates/security/login.html.twig");
     }
 }

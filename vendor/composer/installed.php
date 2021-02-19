@@ -6,15 +6,7 @@
     'aliases' => 
     array (
     ),
-<<<<<<< HEAD
-    'reference' => '044eacd3a85e9622687bb35806c56a09ec6d7f99',
-=======
-<<<<<<< HEAD
-    'reference' => '4488de9d9a00a997e1f7729ade7bdafba9545984',
-=======
-    'reference' => 'e8d136db79f8b2c77ec4c7cf4ffa8e2fbb5f2c02',
->>>>>>> 044eacd3a85e9622687bb35806c56a09ec6d7f99
->>>>>>> 2b969a01384961609ba6132dbc8aaacad9ee0e7f
+    'reference' => '8f84d458aa35ac6663ca583e853b3606dfc0e376',
     'name' => '__root__',
   ),
   'versions' => 
@@ -26,15 +18,7 @@
       'aliases' => 
       array (
       ),
-<<<<<<< HEAD
-      'reference' => '044eacd3a85e9622687bb35806c56a09ec6d7f99',
-=======
-<<<<<<< HEAD
-      'reference' => '4488de9d9a00a997e1f7729ade7bdafba9545984',
-=======
-      'reference' => 'e8d136db79f8b2c77ec4c7cf4ffa8e2fbb5f2c02',
->>>>>>> 044eacd3a85e9622687bb35806c56a09ec6d7f99
->>>>>>> 2b969a01384961609ba6132dbc8aaacad9ee0e7f
+      'reference' => '8f84d458aa35ac6663ca583e853b3606dfc0e376',
     ),
     'amphp/amp' => 
     array (
@@ -305,6 +289,15 @@
       array (
       ),
       'reference' => '56070bebac6e77230ed7d306ad13528e60732871',
+    ),
+    'egulias/email-validator' => 
+    array (
+      'pretty_version' => '2.1.25',
+      'version' => '2.1.25.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0dbf5d78455d4d6a41d186da50adc1122ec066f4',
     ),
     'friendsofphp/proxy-manager-lts' => 
     array (
@@ -836,6 +829,15 @@
       array (
       ),
       'reference' => '930f17689729cc47d2ce18be21ed403bcbeeb6a9',
+    ),
+    'symfony/mailer' => 
+    array (
+      'pretty_version' => 'v5.2.3',
+      'version' => '5.2.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1efa11a8f59b8ba706aa6ee112c4675dce4dccf6',
     ),
     'symfony/maker-bundle' => 
     array (

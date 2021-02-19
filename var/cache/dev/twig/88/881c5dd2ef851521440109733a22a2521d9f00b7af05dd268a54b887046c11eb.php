@@ -133,6 +133,6 @@ class __TwigTemplate_76a7c3a7faada033b66edc50fef45cd7fa4f81978a86788a1308e3028ed
         {{form(form)}}
     {% endif  %}
 </div>
-{% endblock %}", "dashboard/programme.html.twig", "/var/www/html/templates/dashboard/programme.html.twig");
+{% endblock %}", "dashboard/programme.html.twig", "/var/www/html/harmony/templates/dashboard/programme.html.twig");
     }
 }

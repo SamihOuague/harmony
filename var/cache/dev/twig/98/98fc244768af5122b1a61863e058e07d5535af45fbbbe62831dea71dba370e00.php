@@ -460,6 +460,6 @@ class __TwigTemplate_9d1b66f8e49bfbbff899ce2d3f5303fc0e26878a2d14e03ad400a877849
         }
     });
 </script>
-{% endblock %}", "home/guide.html.twig", "/var/www/html/templates/home/guide.html.twig");
+{% endblock %}", "home/guide.html.twig", "/var/www/html/harmony/templates/home/guide.html.twig");
     }
 }

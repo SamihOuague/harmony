@@ -185,6 +185,6 @@ class __TwigTemplate_9c3e33a290a023d83379b46bb772beac91244e411b02cc3e7ca982496d7
     {% endif  %}
 </div>
 {% endblock %}
-", "dashboard/index.html.twig", "/var/www/html/templates/dashboard/index.html.twig");
+", "dashboard/index.html.twig", "/var/www/html/harmony/templates/dashboard/index.html.twig");
     }
 }

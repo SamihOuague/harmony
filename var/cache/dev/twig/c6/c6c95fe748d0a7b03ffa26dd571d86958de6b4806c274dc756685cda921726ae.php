@@ -347,6 +347,6 @@ class __TwigTemplate_461de65e622ab2a915782da18abe8228a07516bb81894194034712031e6
         <a href=\"{{ path('contact') }}\" class=\"btn btn-success\" style=\"width: 200px;\">Nous rejoindre</a>
     </div>
 </div>
-{% endblock %}", "home/harmony.html.twig", "/var/www/html/templates/home/harmony.html.twig");
+{% endblock %}", "home/harmony.html.twig", "/var/www/html/harmony/templates/home/harmony.html.twig");
     }
 }
