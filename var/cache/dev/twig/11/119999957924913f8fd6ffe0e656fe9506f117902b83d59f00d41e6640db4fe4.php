@@ -131,7 +131,7 @@ class __TwigTemplate_8b1aad119c78ae77799be307b33e3db62a6df0635ffe39f48a4712ec4cd
     <div id=\"carouselExampleControls\" class=\"carousel slide\" style=\"padding: 0;\" data-ride=\"carousel\">
         <div class=\"carousel-inner\">
             <div class=\"carousel-item active\">
-                <img class=\"d-block w-100\" src=\"https://harmony-promotion.com/admin/uploads/AmplitudeSlider.png\" alt=\"First slide\">
+                <img class=\"d-block w-100\" src=\"https://harmony-promotion.com/images/AmplitudeSlider.png\" alt=\"Amplitude\">
                 <div class=\"encart\">
                     <div style=\"font-family: 'Montserrat'; margin: 5%;\">
                         <h2 style=\"font-family: 'Barlow'; color: #336336; font-weight: 600;\">Amplitude</h2>
@@ -143,7 +143,7 @@ class __TwigTemplate_8b1aad119c78ae77799be307b33e3db62a6df0635ffe39f48a4712ec4cd
                 </div>
             </div>
             <div class=\"carousel-item\">
-                <img class=\"d-block w-100\" src=\"https://harmony-promotion.com/admin/uploads/TerrasseSlide.png\" alt=\"Second slide\">
+                <img class=\"d-block w-100\" src=\"https://harmony-promotion.com/images/TerrasseSlide.png\" alt=\"Second slide\">
                 <div class=\"encart\">
                     <div style=\"font-family: 'Montserrat'; margin: 5%;\">
                         <h2 style=\"font-family: 'Barlow'; color: #336336; font-weight: 600;\">Les Terrasses d'Osenat</h2>
@@ -536,7 +536,7 @@ class __TwigTemplate_8b1aad119c78ae77799be307b33e3db62a6df0635ffe39f48a4712ec4cd
     <div id=\"carouselExampleControls\" class=\"carousel slide\" style=\"padding: 0;\" data-ride=\"carousel\">
         <div class=\"carousel-inner\">
             <div class=\"carousel-item active\">
-                <img class=\"d-block w-100\" src=\"https://harmony-promotion.com/admin/uploads/AmplitudeSlider.png\" alt=\"First slide\">
+                <img class=\"d-block w-100\" src=\"https://harmony-promotion.com/images/AmplitudeSlider.png\" alt=\"Amplitude\">
                 <div class=\"encart\">
                     <div style=\"font-family: 'Montserrat'; margin: 5%;\">
                         <h2 style=\"font-family: 'Barlow'; color: #336336; font-weight: 600;\">Amplitude</h2>
@@ -548,7 +548,7 @@ class __TwigTemplate_8b1aad119c78ae77799be307b33e3db62a6df0635ffe39f48a4712ec4cd
                 </div>
             </div>
             <div class=\"carousel-item\">
-                <img class=\"d-block w-100\" src=\"https://harmony-promotion.com/admin/uploads/TerrasseSlide.png\" alt=\"Second slide\">
+                <img class=\"d-block w-100\" src=\"https://harmony-promotion.com/images/TerrasseSlide.png\" alt=\"Second slide\">
                 <div class=\"encart\">
                     <div style=\"font-family: 'Montserrat'; margin: 5%;\">
                         <h2 style=\"font-family: 'Barlow'; color: #336336; font-weight: 600;\">Les Terrasses d'Osenat</h2>
@@ -775,6 +775,6 @@ class __TwigTemplate_8b1aad119c78ae77799be307b33e3db62a6df0635ffe39f48a4712ec4cd
         });
     </script>
 {% endblock %}
-", "home/index.html.twig", "/var/www/html/templates/home/index.html.twig");
+", "home/index.html.twig", "/var/www/html/harmony/templates/home/index.html.twig");
     }
 }
