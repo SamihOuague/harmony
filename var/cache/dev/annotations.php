@@ -1018,7 +1018,11 @@ return [[
 
 0 => 'N;',
 1 => [],
+<<<<<<< HEAD
 2 => 1613717035,
+=======
+2 => 1613716698,
+>>>>>>> 5cf79a17ce81f48d5f612f3807e455d56d8e8f8b
 3 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
