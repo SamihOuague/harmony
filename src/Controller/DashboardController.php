@@ -63,7 +63,7 @@ class DashboardController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($form->getData());
             $entityManager->flush();
-            return $this->redirectToRoute("home");
+            return $this->redirectToRoute("dashboard");
         }
         return  $this->render('dashboard/bien.html.twig', [
             'controller_name' => 'DashboardController',
@@ -124,7 +124,7 @@ class DashboardController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($programme);
             $entityManager->flush();
-            return $this->redirectToRoute("home");
+            return $this->redirectToRoute("dashboard");
         }
         return $this->render("dashboard/delete.html.twig", [
             'name' => 'programme',
@@ -160,7 +160,7 @@ class DashboardController extends AbstractController
                 $entityManager->persist($form->getData());
                 $entityManager->flush();
             }
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('dashboard');
         }
         return $this->render('dashboard/programme.html.twig', [
             'controller_name' => 'DashboardController',
@@ -214,14 +214,14 @@ class DashboardController extends AbstractController
                 $bien->setProgramme($programme);
                 $entityManager->persist($form->getData());
                 $entityManager->flush();
-                return $this->redirectToRoute("home");
+                return $this->redirectToRoute("dashboard");
             }
             return $this->render('dashboard/bien.html.twig', [
                 'controller_name' => 'HomeController',
                 'form' => $form->createView()
             ]);
         } else {
-            return $this->redirectToRoute("home");
+            return $this->redirectToRoute("dashboard");
         }
     }
 
@@ -257,14 +257,14 @@ class DashboardController extends AbstractController
                 $lot->setBien($bien);
                 $entityManager->persist($form->getData());
                 $entityManager->flush();
-                return $this->redirectToRoute("home");
+                return $this->redirectToRoute("dashboard");
             }
             return $this->render('dashboard/bien.html.twig', [
                 'controller_name' => 'HomeController',
                 'form' => $form->createView()
             ]);
         } else {
-            return $this->redirectToRoute("home");
+            return $this->redirectToRoute("dashboard");
         }
     }
 }

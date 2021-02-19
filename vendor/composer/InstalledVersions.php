@@ -30,7 +30,11 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
+<<<<<<< HEAD
     'reference' => '4488de9d9a00a997e1f7729ade7bdafba9545984',
+=======
+    'reference' => 'e8d136db79f8b2c77ec4c7cf4ffa8e2fbb5f2c02',
+>>>>>>> 044eacd3a85e9622687bb35806c56a09ec6d7f99
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +46,11 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
+<<<<<<< HEAD
       'reference' => '4488de9d9a00a997e1f7729ade7bdafba9545984',
+=======
+      'reference' => 'e8d136db79f8b2c77ec4c7cf4ffa8e2fbb5f2c02',
+>>>>>>> 044eacd3a85e9622687bb35806c56a09ec6d7f99
     ),
     'amphp/amp' => 
     array (

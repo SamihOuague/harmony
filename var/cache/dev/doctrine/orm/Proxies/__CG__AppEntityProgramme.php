@@ -66,10 +66,10 @@ class Programme extends \App\Entity\Programme implements \Doctrine\ORM\Proxy\Pro
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'isPrestige', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'title', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'ville', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'text', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'miniature', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'img1', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'img2', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'departement', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'tag', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'biens', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'subtitle', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'text2', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'subtitle2'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'isPrestige', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'title', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'ville', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'text', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'miniature', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'img1', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'img2', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'departement', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'tag', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'biens', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'subtitle', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'text2', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'subtitle2', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'coords'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'isPrestige', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'title', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'ville', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'text', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'miniature', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'img1', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'img2', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'departement', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'tag', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'biens', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'subtitle', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'text2', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'subtitle2'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'isPrestige', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'title', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'ville', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'text', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'miniature', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'img1', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'img2', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'departement', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'tag', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'biens', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'subtitle', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'text2', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'subtitle2', '' . "\0" . 'App\\Entity\\Programme' . "\0" . 'coords'];
     }
 
     /**
@@ -486,6 +486,28 @@ class Programme extends \App\Entity\Programme implements \Doctrine\ORM\Proxy\Pro
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSubtitle2', [$subtitle2]);
 
         return parent::setSubtitle2($subtitle2);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getCoords(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCoords', []);
+
+        return parent::getCoords();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setCoords(string $coords): \App\Entity\Programme
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCoords', [$coords]);
+
+        return parent::setCoords($coords);
     }
 
 }

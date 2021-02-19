@@ -164,7 +164,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
             </div>
         </div>
         <div class=\"col-lg-8\" style=\"padding: 0;\">
-            <div class=\"d-flex justify-content-around\" style=\"height: 70px; background-color: #336335;\">
+            <div id=\"research\" class=\"d-flex justify-content-around\" style=\"height: 70px; background-color: #336335;\">
                 <select class=\"w-100 exampleFormControlSelect1\" id=\"department\" style=\"margin: 15px;\">
                     <option disabled selected>Département</option>
                     <option value=\"75\">75</option>
@@ -207,7 +207,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
                 echo " prog\" href=\"/detail/";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "id", [], "any", false, false, false, 105), "html", null, true);
                 echo "\" style=\"text-decoration: none;\">
-                        <div style=\"margin: 15px 25px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
+                        <div style=\"margin: 15px 15px; min-width: 230px; max-width: 230px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
                             <div class=\"d-flex justify-content-end align-items-start\" style=\"min-height: 150px; background-image: url('/uploads/pages/";
                 // line 107
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "miniature", [], "any", false, false, false, 107), "html", null, true);
@@ -440,7 +440,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
             \$(\".dep-\" + anchors[i]).show();
             \$(\"#department\").val(anchors[i]);
         }
-        if (!(Number(anchors[i]))) {
+        if (!(Number(anchors[i])) && anchors[i] !== \"research\") {
             \$(\".\" + anchors[i]).show();
             \$(\"#piece\").val(anchors[i]);
         }
@@ -583,7 +583,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
             </div>
         </div>
         <div class=\"col-lg-8\" style=\"padding: 0;\">
-            <div class=\"d-flex justify-content-around\" style=\"height: 70px; background-color: #336335;\">
+            <div id=\"research\" class=\"d-flex justify-content-around\" style=\"height: 70px; background-color: #336335;\">
                 <select class=\"w-100 exampleFormControlSelect1\" id=\"department\" style=\"margin: 15px;\">
                     <option disabled selected>Département</option>
                     <option value=\"75\">75</option>
@@ -604,7 +604,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
             <div class=\"d-flex flex-wrap justify-content-lg-start justify-content-center\" style=\"overflow-y: scroll; overflow-x: hidden; max-height: 600px;\">
                 {% for prog in programmes %}
                     <a class=\"{% for bien in prog.biens %}{{ bien.title }} {% endfor %}dep-{{prog.departement|slice(0,2)}} prog\" href=\"/detail/{{prog.id}}\" style=\"text-decoration: none;\">
-                        <div style=\"margin: 15px 25px; min-width: 240px; max-width: 260px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
+                        <div style=\"margin: 15px 15px; min-width: 230px; max-width: 230px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
                             <div class=\"d-flex justify-content-end align-items-start\" style=\"min-height: 150px; background-image: url('/uploads/pages/{{prog.miniature}}'); background-size: cover; width: 100%;\">
                                 {% if prog.isPrestige %}<img src=\"https://harmony-promotion.com/images/pastille.svg\" alt=\"Pastille prestige\" width=\"75\" style=\"margin: 5px;\"/>{% endif %}
                             </div>
@@ -769,7 +769,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
             \$(\".dep-\" + anchors[i]).show();
             \$(\"#department\").val(anchors[i]);
         }
-        if (!(Number(anchors[i]))) {
+        if (!(Number(anchors[i])) && anchors[i] !== \"research\") {
             \$(\".\" + anchors[i]).show();
             \$(\"#piece\").val(anchors[i]);
         }

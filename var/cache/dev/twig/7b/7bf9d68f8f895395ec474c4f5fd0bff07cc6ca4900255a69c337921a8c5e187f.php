@@ -89,29 +89,68 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
         echo "<style>
     @media (max-width: 620px) {
         .accordion {
-            font-size: 8px;
+            font-size: 7px;
+        }
+        #ddplan 
+        {
+            font-size: 7px;
+            border: 1px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .ctaimg
+        {
+            width: 15px;
         }
     }
     @media (min-width: 620px) and (max-width: 780px) {
         .accordion {
-            font-size: 11px;
+            font-size: 10px;
+        }
+        #ddplan 
+        {
+            font-size: 10px; 
+            border: 1px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .ctaimg
+        {
+            width: 25px;
         }
     }
+    @media (min-width: 780px) {
+        .accordion {
+            font-size: 14px;
+        }
+        #ddplan 
+        {
+            font-size: 14px;
+            border: 1px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .ctaimg
+        {
+            width: 35px;
+        }
+    }
+
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
 <div style=\"background-image: url('/uploads/pages/";
-        // line 21
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 21, $this->source); })()), "miniature", [], "any", false, false, false, 21), "html", null, true);
+        // line 60
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 60, $this->source); })()), "miniature", [], "any", false, false, false, 60), "html", null, true);
         echo "'); height: 500px; background-size: cover;\">
     <div class=\"d-flex justify-content-between align-items-end h-100\" style=\"padding: 0px 5%;\">
         <div class=\"d-none d-md-block\" style=\"
             width: 90px; 
             height: 90px; 
             background-color: ";
-        // line 26
-        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 26, $this->source); })()), "isPrestige", [], "any", false, false, false, 26)) {
+        // line 65
+        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 65, $this->source); })()), "isPrestige", [], "any", false, false, false, 65)) {
             echo "rgb(0, 48, 60)";
         } else {
             echo "#336336";
@@ -125,14 +164,14 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
             margin-bottom: -50px;\">
         </div>
         <div class=\"";
-        // line 34
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 34, $this->source); })()), "isPrestige", [], "any", false, false, false, 34)) {
+        // line 73
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 73, $this->source); })()), "isPrestige", [], "any", false, false, false, 73)) {
             echo "bg-light";
         }
         echo " d-flex justify-content-end flex-column\" style=\"
                                 height: ";
-        // line 35
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 35, $this->source); })()), "isPrestige", [], "any", false, false, false, 35)) {
+        // line 74
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 74, $this->source); })()), "isPrestige", [], "any", false, false, false, 74)) {
             echo " 270px ";
         } else {
             echo " 220px ";
@@ -142,87 +181,87 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
                                 margin-bottom: 50px;
                                 border-radius: 0px 50px 0px 50px;
                                 overflow: ";
-        // line 39
-        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 39, $this->source); })()), "isPrestige", [], "any", false, false, false, 39)) {
+        // line 78
+        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 78, $this->source); })()), "isPrestige", [], "any", false, false, false, 78)) {
             echo "visible";
         } else {
             echo "hidden";
         }
         echo ";
                                 ";
-        // line 40
-        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 40, $this->source); })()), "isPrestige", [], "any", false, false, false, 40)) {
+        // line 79
+        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 79, $this->source); })()), "isPrestige", [], "any", false, false, false, 79)) {
             echo "background-color: rgba(255, 255, 255, 0.6);";
         }
         echo "\">
             ";
-        // line 41
-        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 41, $this->source); })()), "isPrestige", [], "any", false, false, false, 41)) {
+        // line 80
+        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 80, $this->source); })()), "isPrestige", [], "any", false, false, false, 80)) {
             echo "<img src=\"https://harmony-promotion.com/images/pastille.svg\" alt=\"Pastille prestige\" class=\"d-none d-md-block\" width=\"100\" style=\"position: relative; left: 400px; top: 100px;\"/>";
         }
-        // line 42
+        // line 81
         echo "            <div class=\"h-100\" style=\"padding: 25px 35px; font-family: 'Montserrat'; color: ";
-        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 42, $this->source); })()), "isPrestige", [], "any", false, false, false, 42)) {
+        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 81, $this->source); })()), "isPrestige", [], "any", false, false, false, 81)) {
             echo "rgb(0, 48, 60)";
         } else {
             echo "#336336";
         }
         echo ";\">
                 <h1 style=\"font-family: 'Barlow'; margin-top: 20px; font-size: 31px;\">";
-        // line 43
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 43, $this->source); })()), "title", [], "any", false, false, false, 43), "html", null, true);
+        // line 82
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 82, $this->source); })()), "title", [], "any", false, false, false, 82), "html", null, true);
         echo "</h1>
                 ";
-        // line 44
-        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 44, $this->source); })()), "isPrestige", [], "any", false, false, false, 44)) {
+        // line 83
+        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 83, $this->source); })()), "isPrestige", [], "any", false, false, false, 83)) {
             echo "<div style=\"border: 2px solid #B1A06B; width: 50px; left: -55px; top: -20px; position: relative;\"></div>";
         }
-        // line 45
+        // line 84
         echo "                <h3 style=\"";
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 45, $this->source); })()), "isPrestige", [], "any", false, false, false, 45)) {
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 84, $this->source); })()), "isPrestige", [], "any", false, false, false, 84)) {
             echo "color: #8DC63F;";
         }
         echo "font-size: 25px;\">";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 45, $this->source); })()), "ville", [], "any", false, false, false, 45), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 84, $this->source); })()), "ville", [], "any", false, false, false, 84), "html", null, true);
         echo "</h3>
                 ";
-        // line 46
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 46, $this->source); })()), "isPrestige", [], "any", false, false, false, 46)) {
+        // line 85
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 85, $this->source); })()), "isPrestige", [], "any", false, false, false, 85)) {
             echo "<h3 style=\"";
-            if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 46, $this->source); })()), "isPrestige", [], "any", false, false, false, 46)) {
+            if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 85, $this->source); })()), "isPrestige", [], "any", false, false, false, 85)) {
                 echo "color: #8DC63F;";
             }
             echo "font-size: 25px;\">Programme neuf</h3>";
         }
-        // line 47
+        // line 86
         echo "            </div>
             <div class=\"d-flex ";
-        // line 48
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 48, $this->source); })()), "isPrestige", [], "any", false, false, false, 48)) {
+        // line 87
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 87, $this->source); })()), "isPrestige", [], "any", false, false, false, 87)) {
             echo "justify-content-around align-items-center";
         }
         echo "\" 
                                                                                             style=\"background-color: ";
-        // line 49
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 49, $this->source); })()), "isPrestige", [], "any", false, false, false, 49)) {
+        // line 88
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 88, $this->source); })()), "isPrestige", [], "any", false, false, false, 88)) {
             echo "#336336";
         }
         echo "; 
                                                                                                     height: 100px; 
                                                                                                     width: 100%;\">
                 <a href=\"/rappel/";
-        // line 52
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 52, $this->source); })()), "id", [], "any", false, false, false, 52), "html", null, true);
+        // line 91
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 91, $this->source); })()), "id", [], "any", false, false, false, 91), "html", null, true);
         echo "/programme\">
                     <img width=\"45\" style=\"margin: ";
-        // line 53
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 53, $this->source); })()), "isPrestige", [], "any", false, false, false, 53)) {
+        // line 92
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 92, $this->source); })()), "isPrestige", [], "any", false, false, false, 92)) {
             echo "5px";
         } else {
             echo "0 0px 25px 35px";
         }
         echo ";\" src=\"";
-        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 53, $this->source); })()), "isPrestige", [], "any", false, false, false, 53)) {
+        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 92, $this->source); })()), "isPrestige", [], "any", false, false, false, 92)) {
             echo "https://harmony-promotion.com/images/appelP.svg";
         } else {
             echo "https://harmony-promotion.com/images/appel-w.png";
@@ -230,18 +269,18 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
         echo "\"/>
                 </a>
                 <a href=\"/brochure/";
-        // line 55
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 55, $this->source); })()), "id", [], "any", false, false, false, 55), "html", null, true);
+        // line 94
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 94, $this->source); })()), "id", [], "any", false, false, false, 94), "html", null, true);
         echo "/programme\">
                     <img width=\"45\" style=\"margin: ";
-        // line 56
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 56, $this->source); })()), "isPrestige", [], "any", false, false, false, 56)) {
+        // line 95
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 95, $this->source); })()), "isPrestige", [], "any", false, false, false, 95)) {
             echo "5px";
         } else {
             echo "0 0px 25px 35px";
         }
         echo ";\" src=\"";
-        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 56, $this->source); })()), "isPrestige", [], "any", false, false, false, 56)) {
+        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 95, $this->source); })()), "isPrestige", [], "any", false, false, false, 95)) {
             echo "https://harmony-promotion.com/images/brochureP.svg";
         } else {
             echo "https://harmony-promotion.com/images/brochure-w.png";
@@ -254,26 +293,26 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
 </div>
 
 <div class=\"container-fluid ";
-        // line 63
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 63, $this->source); })()), "isPrestige", [], "any", false, false, false, 63)) {
+        // line 102
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 102, $this->source); })()), "isPrestige", [], "any", false, false, false, 102)) {
             echo "text-center";
         }
         echo "\" style=\"border-bottom: 2px solid #d39c2f; padding: 80px 0px;\">
     <div class=\"row\">
         <div class=\"col-md-8 offset-md-2\">
             ";
-        // line 66
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 66, $this->source); })()), "isPrestige", [], "any", false, false, false, 66)) {
-            // line 67
+        // line 105
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 105, $this->source); })()), "isPrestige", [], "any", false, false, false, 105)) {
+            // line 106
             echo "                <h4 style=\"color: #336336; font-family: 'Barlow';\">Nos commerciaux sont à votre disposition dans notre bureau de vente !</h4>
                 <h5 style=\"font-family: 'Barlow';\">40-42 Avenue Maurice Berteaux, 94420 Le Plessis-Trévise</h5>
                 <a href=\"";
-            // line 69
+            // line 108
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rappel");
             echo "\" class=\"btn btn-success\" style=\"margin-top: 35px; width: 220px; padding: 10px; font-size: 18px;\">Prendre rendez-vous</a>
             ";
         } else {
-            // line 71
+            // line 110
             echo "                <h4 class=\"text-center\" style=\"color: rgb(0, 48, 60); font-family: 'Barlow'; font-size: 35px;\">LA GAMME HARMONY PRESTIGE<br/>
                     OÙ RÉINVENTER LE LUXE À LA FRANÇAISE</h4>
                 <br/>
@@ -289,88 +328,96 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
                 nous permettant d’investir ardemment dans l’écologie et créer des programmes immobiliers toujours plus innovants.</p>
             ";
         }
-        // line 85
+        // line 124
         echo "        </div>
     </div>
 </div>
 <div class=\"container\" style=\"padding-top: 100px;\">
     <h2 class=\"text-center\" style=\"font-family: 'Barlow'; color: ";
-        // line 89
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 89, $this->source); })()), "isPrestige", [], "any", false, false, false, 89)) {
+        // line 128
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 128, $this->source); })()), "isPrestige", [], "any", false, false, false, 128)) {
             echo "#336336";
         } else {
             echo "rgb(0, 48, 60)";
         }
         echo ";\">Biens disponibles</h2>
     ";
-        // line 90
-        if ((1 === twig_compare(twig_length_filter($this->env, (isset($context["biens"]) || array_key_exists("biens", $context) ? $context["biens"] : (function () { throw new RuntimeError('Variable "biens" does not exist.', 90, $this->source); })())), 0))) {
-            // line 91
+        // line 129
+        if ((1 === twig_compare(twig_length_filter($this->env, (isset($context["biens"]) || array_key_exists("biens", $context) ? $context["biens"] : (function () { throw new RuntimeError('Variable "biens" does not exist.', 129, $this->source); })())), 0))) {
+            // line 130
             echo "        <h3 class=\"text-center\" style=\"font-family: 'Montserrat'; margin-bottom: 50px;\">Tout ce dont vous rêvez à portée de main</h3>
     ";
         } else {
-            // line 93
+            // line 132
             echo "        <h3 class=\"text-center\" style=\"font-family: 'Montserrat'; margin-bottom: 50px;\">Les biens de ce programme seront disponibles prochainement</h3>
     ";
         }
-        // line 95
+        // line 134
         echo "    ";
-        if ((isset($context["biens"]) || array_key_exists("biens", $context) ? $context["biens"] : (function () { throw new RuntimeError('Variable "biens" does not exist.', 95, $this->source); })())) {
-            // line 96
+        if ((isset($context["biens"]) || array_key_exists("biens", $context) ? $context["biens"] : (function () { throw new RuntimeError('Variable "biens" does not exist.', 134, $this->source); })())) {
+            // line 135
             echo "        ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["biens"]) || array_key_exists("biens", $context) ? $context["biens"] : (function () { throw new RuntimeError('Variable "biens" does not exist.', 96, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["biens"]) || array_key_exists("biens", $context) ? $context["biens"] : (function () { throw new RuntimeError('Variable "biens" does not exist.', 135, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["bien"]) {
-                // line 97
+                // line 136
                 echo "            <div class=\"accordion\" id=\"bien";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "id", [], "any", false, false, false, 97), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "id", [], "any", false, false, false, 136), "html", null, true);
                 echo "\">
-                <div class=\"alert alert-success\">
+                <div style=\"padding: 15px 0; background-color: ";
+                // line 137
+                if ( !twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 137, $this->source); })()), "isPrestige", [], "any", false, false, false, 137)) {
+                    echo "#336336";
+                } else {
+                    echo "rgb(0, 48, 60)";
+                }
+                echo ";; color: white; border-radius: 5px; border: 2px solid silver;\">
                     <div id=\"heading";
-                // line 99
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "id", [], "any", false, false, false, 99), "html", null, true);
+                // line 138
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "id", [], "any", false, false, false, 138), "html", null, true);
                 echo "\" class=\"d-flex justify-content-between align-items-center\">
-                        <div class=\"d-flex justify-content-around w-100\">
+                        <div class=\"d-flex justify-content-around align-items-center w-100\">
                             <span class=\"text-center w-100\">";
-                // line 101
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "title", [], "any", false, false, false, 101), "html", null, true);
+                // line 140
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "title", [], "any", false, false, false, 140), "html", null, true);
                 echo "</span>
                             <span class=\"text-center w-100\">Jusqu'à ";
-                // line 102
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "surface", [], "any", false, false, false, 102), "html", null, true);
+                // line 141
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "surface", [], "any", false, false, false, 141), "html", null, true);
                 echo " m2</span>
                             <span class=\"text-center w-100\">À partir de ";
-                // line 103
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "prix", [], "any", false, false, false, 103), "html", null, true);
+                // line 142
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "prix", [], "any", false, false, false, 142), "html", null, true);
                 echo " €</span>
                             <span class=\"text-center w-100\">";
-                // line 104
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "disponible", [], "any", false, false, false, 104), "html", null, true);
+                // line 143
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "disponible", [], "any", false, false, false, 143), "html", null, true);
                 echo " disponible";
-                if ((1 === twig_compare(twig_get_attribute($this->env, $this->source, $context["bien"], "disponible", [], "any", false, false, false, 104), 1))) {
+                if ((1 === twig_compare(twig_get_attribute($this->env, $this->source, $context["bien"], "disponible", [], "any", false, false, false, 143), 1))) {
                     echo "s";
                 }
                 echo "</span>
+                            <span id=\"ddplan\" class=\"text-center w-75 border border-light\">Plan 2D</span>
                         </div>
-                        <button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bien-";
-                // line 106
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "id", [], "any", false, false, false, 106), "html", null, true);
+                        <button style=\"margin-left: 25px;\" class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bien-";
+                // line 146
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "id", [], "any", false, false, false, 146), "html", null, true);
                 echo "\" aria-expanded=\"true\" aria-controls=\"bien-";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "id", [], "any", false, false, false, 106), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "id", [], "any", false, false, false, 146), "html", null, true);
                 echo "\">
-                            <i class=\"fas fa-chevron-down\"></i>
+                            <i class=\"fas fa-chevron-down text-light\"></i>
                         </button>
                     </div>
                 </div>
                 <div id=\"bien-";
-                // line 111
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "id", [], "any", false, false, false, 111), "html", null, true);
+                // line 151
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "id", [], "any", false, false, false, 151), "html", null, true);
                 echo "\" class=\"collapse\" aria-labelledby=\"heading";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "id", [], "any", false, false, false, 111), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "id", [], "any", false, false, false, 151), "html", null, true);
                 echo "\" data-parent=\"#bien";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "id", [], "any", false, false, false, 111), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["bien"], "id", [], "any", false, false, false, 151), "html", null, true);
                 echo "\">
-                    <div class=\"alert alert-warning d-flex justify-content-around\">
+                    <div class=\"d-flex justify-content-around\" style=\"padding: 15px 0; background-color: #D39C2F; border-radius: 5px; border: 2px solid silver;\">
                         <span class=\"text-center w-100\">Lot</span>
                         <span class=\"text-center w-100\">Surface (m2)</span>
                         <span class=\"text-center w-100\">Étage</span>
@@ -380,45 +427,45 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
                         <span class=\"text-center w-100\">Actions</span>
                     </div>
                     ";
-                // line 121
+                // line 161
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["bien"], "lots", [], "any", false, false, false, 121));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["bien"], "lots", [], "any", false, false, false, 161));
                 foreach ($context['_seq'] as $context["_key"] => $context["lot"]) {
-                    // line 122
-                    echo "                        <div class=\"alert alert-secondary d-flex justify-content-around align-items-center\">
+                    // line 162
+                    echo "                        <div class=\"d-flex justify-content-around align-items-center bg-light\" style=\"padding: 15px 0; border-radius: 5px; border: 2px solid silver;\">
                             <span class=\"text-center w-100\">";
-                    // line 123
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lot"], "lot", [], "any", false, false, false, 123), "html", null, true);
+                    // line 163
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lot"], "lot", [], "any", false, false, false, 163), "html", null, true);
                     echo "</span>
                             <span class=\"text-center w-100\">";
-                    // line 124
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lot"], "surface", [], "any", false, false, false, 124), "html", null, true);
+                    // line 164
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lot"], "surface", [], "any", false, false, false, 164), "html", null, true);
                     echo " m2</span>
                             <span class=\"text-center w-100\">";
-                    // line 125
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lot"], "etage", [], "any", false, false, false, 125), "html", null, true);
+                    // line 165
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lot"], "etage", [], "any", false, false, false, 165), "html", null, true);
                     echo "</span>
                             <span class=\"text-center w-100\">";
-                    // line 126
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lot"], "orientation", [], "any", false, false, false, 126), "html", null, true);
+                    // line 166
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lot"], "orientation", [], "any", false, false, false, 166), "html", null, true);
                     echo "</span>
                             <span class=\"text-center w-100\">";
-                    // line 127
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lot"], "exterieur", [], "any", false, false, false, 127), "html", null, true);
+                    // line 167
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lot"], "exterieur", [], "any", false, false, false, 167), "html", null, true);
                     echo "</span>
                             <span class=\"text-center w-100\">-</span>
                             <span class=\"text-center w-100\">                            
                                 <a href=\"/rappel/";
-                    // line 130
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lot"], "id", [], "any", false, false, false, 130), "html", null, true);
+                    // line 170
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lot"], "id", [], "any", false, false, false, 170), "html", null, true);
                     echo "/bien\">
-                                    <img src=\"https://harmony-promotion.com/images/phone-black.png\" width=\"35\" alt=\"rappel\" style=\"margin-right: 5px;\"/>
+                                    <img src=\"https://harmony-promotion.com/images/phone-black.png\" width=\"35\" alt=\"rappel\" class=\"ctaimg\" style=\"margin-right: 5px;\"/>
                                 </a>
                                 <a href=\"/brochure/";
-                    // line 133
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lot"], "id", [], "any", false, false, false, 133), "html", null, true);
+                    // line 173
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["lot"], "id", [], "any", false, false, false, 173), "html", null, true);
                     echo "/bien\">
-                                    <img src=\"https://harmony-promotion.com/images/mail-black.png\" width=\"35\" alt=\"brochure\"/>
+                                    <img src=\"https://harmony-promotion.com/images/mail-black.png\" width=\"35\" alt=\"brochure\" class=\"ctaimg\"/>
                                 </a>
                             </span>
                         </div>
@@ -427,7 +474,7 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['lot'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 139
+                // line 179
                 echo "                </div>
             </div>
         ";
@@ -435,40 +482,40 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['bien'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 142
+            // line 182
             echo "    ";
         }
-        // line 143
+        // line 183
         echo "</div>
 <div class=\"d-flex justify-content-center flex-wrap\" style=\"border-top: 2px solid #d39c2f; margin-top: 100px; padding: 50px 0px;\">
     <div class=\"bg-light border border-muted\" style=\"max-width: 750px; padding: 50px;\">
         <h3 style=\"color: ";
-        // line 146
-        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 146, $this->source); })()), "isPrestige", [], "any", false, false, false, 146)) {
+        // line 186
+        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 186, $this->source); })()), "isPrestige", [], "any", false, false, false, 186)) {
             echo "background-color: rgb(0, 48, 60)";
         } else {
             echo "#336336";
         }
         echo "; font-family: 'Barlow'; margin-bottom: 50px;\">";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 146, $this->source); })()), "subtitle", [], "any", false, false, false, 146), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 186, $this->source); })()), "subtitle", [], "any", false, false, false, 186), "html", null, true);
         echo "</h3>
         <p style=\"font-family: 'Barlow'; font-size: 21px;\">";
-        // line 147
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 147, $this->source); })()), "text", [], "any", false, false, false, 147), "html", null, true);
+        // line 187
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 187, $this->source); })()), "text", [], "any", false, false, false, 187), "html", null, true);
         echo "</p>
         <a class=\"btn ";
-        // line 148
-        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 148, $this->source); })()), "isPrestige", [], "any", false, false, false, 148)) {
+        // line 188
+        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 188, $this->source); })()), "isPrestige", [], "any", false, false, false, 188)) {
             echo "text-light";
         } else {
             echo "btn-success";
         }
         echo "\" style=\"margin-top: 50px; font-size: 18px; padding: 10px; ";
-        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 148, $this->source); })()), "isPrestige", [], "any", false, false, false, 148)) {
+        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 188, $this->source); })()), "isPrestige", [], "any", false, false, false, 188)) {
             echo "background-color: rgb(0, 48, 60);";
         }
         echo "\" href=\"/brochure/";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 148, $this->source); })()), "id", [], "any", false, false, false, 148), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 188, $this->source); })()), "id", [], "any", false, false, false, 188), "html", null, true);
         echo "/programme\">Demander la brochure</a>
     </div>
     <div style=\"border-style: solid;
@@ -477,23 +524,23 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
                 height: 350px;
                 width: 450px;
                 ";
-        // line 155
-        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 155, $this->source); })()), "img1", [], "any", false, false, false, 155)) {
-            // line 156
+        // line 195
+        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 195, $this->source); })()), "img1", [], "any", false, false, false, 195)) {
+            // line 196
             echo "                    background-image: url(/uploads/pages/";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 156, $this->source); })()), "img1", [], "any", false, false, false, 156), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 196, $this->source); })()), "img1", [], "any", false, false, false, 196), "html", null, true);
             echo ");
                     background-size: cover;
                 ";
         }
-        // line 158
+        // line 198
         echo "\">
     </div>
 </div>
 <div class=\"container-fluid text-center\" style=\"padding-top: 50px; border-top: 2px solid #d39c2f; border-bottom: 100px solid #d39c2f; padding: 50px 0 0 0;\">
     <h2 style=\"color: ";
-        // line 162
-        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 162, $this->source); })()), "isPrestige", [], "any", false, false, false, 162)) {
+        // line 202
+        if (twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 202, $this->source); })()), "isPrestige", [], "any", false, false, false, 202)) {
             echo "background-color: rgb(0, 48, 60)";
         } else {
             echo "#336336";
@@ -506,80 +553,80 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
 <div class=\"container-fluid\" style=\"padding-top: 25px; margin-bottom: 50px;\">
     <div class=\"d-flex justify-content-center flex-wrap\">
         ";
-        // line 169
+        // line 209
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["programmes"]) || array_key_exists("programmes", $context) ? $context["programmes"] : (function () { throw new RuntimeError('Variable "programmes" does not exist.', 169, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["programmes"]) || array_key_exists("programmes", $context) ? $context["programmes"] : (function () { throw new RuntimeError('Variable "programmes" does not exist.', 209, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["prog"]) {
-            // line 170
+            // line 210
             echo "            ";
-            if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["prog"], "id", [], "any", false, false, false, 170), twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 170, $this->source); })()), "id", [], "any", false, false, false, 170)))) {
-                // line 171
+            if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["prog"], "id", [], "any", false, false, false, 210), twig_get_attribute($this->env, $this->source, (isset($context["programme"]) || array_key_exists("programme", $context) ? $context["programme"] : (function () { throw new RuntimeError('Variable "programme" does not exist.', 210, $this->source); })()), "id", [], "any", false, false, false, 210)))) {
+                // line 211
                 echo "                <a href=\"/detail/";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "id", [], "any", false, false, false, 171), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "id", [], "any", false, false, false, 211), "html", null, true);
                 echo "\" style=\"text-decoration: none;\">
-                    <div style=\"margin: 10px 50px; max-width: 240px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
+                    <div style=\"margin: 10px 25px; max-width: 240px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
                         <div style=\"min-height: 150px; background-image: url('/uploads/pages/";
-                // line 173
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "miniature", [], "any", false, false, false, 173), "html", null, true);
+                // line 213
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "miniature", [], "any", false, false, false, 213), "html", null, true);
                 echo "'); background-size: cover; width: 100%;\">
                         </div>
                         <div class=\"h-100\" ";
-                // line 175
-                if (twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 175)) {
+                // line 215
+                if (twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 215)) {
                     echo "style=\"background-color: rgb(0, 48, 60);\"";
                 }
                 echo ">
                             <div class=\"d-flex justify-content-end\" style=\"padding-right: 10px;\">
                                 <div class=\"text-center d-inline-block ";
-                // line 177
-                if (twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 177)) {
+                // line 217
+                if (twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 217)) {
                     echo "text-dark bg-light";
                 } else {
                     echo "text-light";
                 }
                 echo "\" style=\"margin-top: -10px; background-color: ";
-                if ( !twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 177)) {
+                if ( !twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 217)) {
                     echo "rgb(144, 188, 85)";
                 }
                 echo "; padding: 5px 12px;\">
                                     ";
-                // line 178
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "tag", [], "any", false, false, false, 178), "html", null, true);
+                // line 218
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "tag", [], "any", false, false, false, 218), "html", null, true);
                 echo "
                                 </div>
                             </div>
                             <div style=\"padding: 20px;\">
                                 <h2 style=\"font-family: 'Barlow'; font-size: 18px; color: ";
-                // line 182
-                if ( !twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 182)) {
+                // line 222
+                if ( !twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 222)) {
                     echo "#336336";
                 } else {
                     echo "white";
                 }
                 echo "; font-weight: 700;\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "title", [], "any", false, false, false, 182), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "title", [], "any", false, false, false, 222), "html", null, true);
                 echo "</h2>
                                 <h3 style=\"font-family: 'Montserrat'; font-size: 18px; color: ";
-                // line 183
-                if ( !twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 183)) {
+                // line 223
+                if ( !twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 223)) {
                     echo "#d39c2f";
                 } else {
                     echo "white";
                 }
                 echo ";\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "ville", [], "any", false, false, false, 183), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "ville", [], "any", false, false, false, 223), "html", null, true);
                 echo "</h3>
                                 <div style=\"border: 2px solid ";
-                // line 184
-                if (twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 184)) {
+                // line 224
+                if (twig_get_attribute($this->env, $this->source, $context["prog"], "isPrestige", [], "any", false, false, false, 224)) {
                     echo " #B1A06B ";
                 } else {
                     echo " #f8f9fa ";
                 }
                 echo "; width: 50px; margin: 5px 0;\"></div>
                                 <p class=\"text-muted text-justify\" style=\"font-size: 13px; word-wrap: break-word; hyphens: auto;\">";
-                // line 185
-                echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "text", [], "any", false, false, false, 185), 0, 80), "html", null, true);
+                // line 225
+                echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["prog"], "text", [], "any", false, false, false, 225), 0, 80), "html", null, true);
                 echo "...</p>
                             </div>
                         </div>
@@ -587,33 +634,33 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
                 </a>
             ";
             }
-            // line 191
+            // line 231
             echo "        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['prog'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 192
+        // line 232
         echo "    </div>
 </div>
 <script>
     function initMap() {
         const map = new google.maps.Map(document.getElementById(\"map\"), {
           center: { lat: ";
-        // line 197
-        echo twig_escape_filter($this->env, (isset($context["lat"]) || array_key_exists("lat", $context) ? $context["lat"] : (function () { throw new RuntimeError('Variable "lat" does not exist.', 197, $this->source); })()), "html", null, true);
+        // line 237
+        echo twig_escape_filter($this->env, (isset($context["lat"]) || array_key_exists("lat", $context) ? $context["lat"] : (function () { throw new RuntimeError('Variable "lat" does not exist.', 237, $this->source); })()), "html", null, true);
         echo ", lng: ";
-        echo twig_escape_filter($this->env, (isset($context["lng"]) || array_key_exists("lng", $context) ? $context["lng"] : (function () { throw new RuntimeError('Variable "lng" does not exist.', 197, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["lng"]) || array_key_exists("lng", $context) ? $context["lng"] : (function () { throw new RuntimeError('Variable "lng" does not exist.', 237, $this->source); })()), "html", null, true);
         echo " },
           zoom: 15,
         });
         map.setTilt(45);
         const marker = new google.maps.Marker({
             position: { lat: ";
-        // line 202
-        echo twig_escape_filter($this->env, (isset($context["lat"]) || array_key_exists("lat", $context) ? $context["lat"] : (function () { throw new RuntimeError('Variable "lat" does not exist.', 202, $this->source); })()), "html", null, true);
+        // line 242
+        echo twig_escape_filter($this->env, (isset($context["lat"]) || array_key_exists("lat", $context) ? $context["lat"] : (function () { throw new RuntimeError('Variable "lat" does not exist.', 242, $this->source); })()), "html", null, true);
         echo ", lng: ";
-        echo twig_escape_filter($this->env, (isset($context["lng"]) || array_key_exists("lng", $context) ? $context["lng"] : (function () { throw new RuntimeError('Variable "lng" does not exist.', 202, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["lng"]) || array_key_exists("lng", $context) ? $context["lng"] : (function () { throw new RuntimeError('Variable "lng" does not exist.', 242, $this->source); })()), "html", null, true);
         echo " },
             map: map,
         });
@@ -641,7 +688,7 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
 
     public function getDebugInfo()
     {
-        return array (  614 => 202,  604 => 197,  597 => 192,  591 => 191,  582 => 185,  574 => 184,  564 => 183,  554 => 182,  547 => 178,  535 => 177,  528 => 175,  523 => 173,  517 => 171,  514 => 170,  510 => 169,  496 => 162,  490 => 158,  483 => 156,  481 => 155,  461 => 148,  457 => 147,  447 => 146,  442 => 143,  439 => 142,  431 => 139,  419 => 133,  413 => 130,  407 => 127,  403 => 126,  399 => 125,  395 => 124,  391 => 123,  388 => 122,  384 => 121,  367 => 111,  357 => 106,  348 => 104,  344 => 103,  340 => 102,  336 => 101,  331 => 99,  325 => 97,  320 => 96,  317 => 95,  313 => 93,  309 => 91,  307 => 90,  299 => 89,  293 => 85,  277 => 71,  272 => 69,  268 => 67,  266 => 66,  258 => 63,  238 => 56,  234 => 55,  219 => 53,  215 => 52,  207 => 49,  201 => 48,  198 => 47,  190 => 46,  181 => 45,  177 => 44,  173 => 43,  164 => 42,  160 => 41,  154 => 40,  146 => 39,  135 => 35,  129 => 34,  114 => 26,  106 => 21,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  661 => 242,  651 => 237,  644 => 232,  638 => 231,  629 => 225,  621 => 224,  611 => 223,  601 => 222,  594 => 218,  582 => 217,  575 => 215,  570 => 213,  564 => 211,  561 => 210,  557 => 209,  543 => 202,  537 => 198,  530 => 196,  528 => 195,  508 => 188,  504 => 187,  494 => 186,  489 => 183,  486 => 182,  478 => 179,  466 => 173,  460 => 170,  454 => 167,  450 => 166,  446 => 165,  442 => 164,  438 => 163,  435 => 162,  431 => 161,  414 => 151,  404 => 146,  394 => 143,  390 => 142,  386 => 141,  382 => 140,  377 => 138,  369 => 137,  364 => 136,  359 => 135,  356 => 134,  352 => 132,  348 => 130,  346 => 129,  338 => 128,  332 => 124,  316 => 110,  311 => 108,  307 => 106,  305 => 105,  297 => 102,  277 => 95,  273 => 94,  258 => 92,  254 => 91,  246 => 88,  240 => 87,  237 => 86,  229 => 85,  220 => 84,  216 => 83,  212 => 82,  203 => 81,  199 => 80,  193 => 79,  185 => 78,  174 => 74,  168 => 73,  153 => 65,  145 => 60,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -654,14 +701,53 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
 <style>
     @media (max-width: 620px) {
         .accordion {
-            font-size: 8px;
+            font-size: 7px;
+        }
+        #ddplan 
+        {
+            font-size: 7px;
+            border: 1px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .ctaimg
+        {
+            width: 15px;
         }
     }
     @media (min-width: 620px) and (max-width: 780px) {
         .accordion {
-            font-size: 11px;
+            font-size: 10px;
+        }
+        #ddplan 
+        {
+            font-size: 10px; 
+            border: 1px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .ctaimg
+        {
+            width: 25px;
         }
     }
+    @media (min-width: 780px) {
+        .accordion {
+            font-size: 14px;
+        }
+        #ddplan 
+        {
+            font-size: 14px;
+            border: 1px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .ctaimg
+        {
+            width: 35px;
+        }
+    }
+
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
@@ -743,21 +829,22 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
     {% if biens %}
         {% for bien in biens %}
             <div class=\"accordion\" id=\"bien{{bien.id}}\">
-                <div class=\"alert alert-success\">
+                <div style=\"padding: 15px 0; background-color: {% if not programme.isPrestige %}#336336{% else %}rgb(0, 48, 60){% endif %};; color: white; border-radius: 5px; border: 2px solid silver;\">
                     <div id=\"heading{{bien.id}}\" class=\"d-flex justify-content-between align-items-center\">
-                        <div class=\"d-flex justify-content-around w-100\">
+                        <div class=\"d-flex justify-content-around align-items-center w-100\">
                             <span class=\"text-center w-100\">{{bien.title}}</span>
                             <span class=\"text-center w-100\">Jusqu'à {{bien.surface}} m2</span>
                             <span class=\"text-center w-100\">À partir de {{bien.prix}} €</span>
                             <span class=\"text-center w-100\">{{bien.disponible}} disponible{% if bien.disponible > 1 %}s{% endif %}</span>
+                            <span id=\"ddplan\" class=\"text-center w-75 border border-light\">Plan 2D</span>
                         </div>
-                        <button class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bien-{{bien.id}}\" aria-expanded=\"true\" aria-controls=\"bien-{{bien.id}}\">
-                            <i class=\"fas fa-chevron-down\"></i>
+                        <button style=\"margin-left: 25px;\" class=\"btn btn-link\" type=\"button\" data-toggle=\"collapse\" data-target=\"#bien-{{bien.id}}\" aria-expanded=\"true\" aria-controls=\"bien-{{bien.id}}\">
+                            <i class=\"fas fa-chevron-down text-light\"></i>
                         </button>
                     </div>
                 </div>
                 <div id=\"bien-{{bien.id}}\" class=\"collapse\" aria-labelledby=\"heading{{bien.id}}\" data-parent=\"#bien{{bien.id}}\">
-                    <div class=\"alert alert-warning d-flex justify-content-around\">
+                    <div class=\"d-flex justify-content-around\" style=\"padding: 15px 0; background-color: #D39C2F; border-radius: 5px; border: 2px solid silver;\">
                         <span class=\"text-center w-100\">Lot</span>
                         <span class=\"text-center w-100\">Surface (m2)</span>
                         <span class=\"text-center w-100\">Étage</span>
@@ -767,7 +854,7 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
                         <span class=\"text-center w-100\">Actions</span>
                     </div>
                     {% for lot in bien.lots %}
-                        <div class=\"alert alert-secondary d-flex justify-content-around align-items-center\">
+                        <div class=\"d-flex justify-content-around align-items-center bg-light\" style=\"padding: 15px 0; border-radius: 5px; border: 2px solid silver;\">
                             <span class=\"text-center w-100\">{{lot.lot}}</span>
                             <span class=\"text-center w-100\">{{lot.surface}} m2</span>
                             <span class=\"text-center w-100\">{{lot.etage}}</span>
@@ -776,10 +863,10 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
                             <span class=\"text-center w-100\">-</span>
                             <span class=\"text-center w-100\">                            
                                 <a href=\"/rappel/{{lot.id}}/bien\">
-                                    <img src=\"https://harmony-promotion.com/images/phone-black.png\" width=\"35\" alt=\"rappel\" style=\"margin-right: 5px;\"/>
+                                    <img src=\"https://harmony-promotion.com/images/phone-black.png\" width=\"35\" alt=\"rappel\" class=\"ctaimg\" style=\"margin-right: 5px;\"/>
                                 </a>
                                 <a href=\"/brochure/{{lot.id}}/bien\">
-                                    <img src=\"https://harmony-promotion.com/images/mail-black.png\" width=\"35\" alt=\"brochure\"/>
+                                    <img src=\"https://harmony-promotion.com/images/mail-black.png\" width=\"35\" alt=\"brochure\" class=\"ctaimg\"/>
                                 </a>
                             </span>
                         </div>
@@ -817,7 +904,7 @@ class __TwigTemplate_940a639d2da420c8ad7f1a5d013409339c876e2b5da40a65b02f33aa575
         {% for prog in programmes %}
             {% if prog.id != programme.id %}
                 <a href=\"/detail/{{prog.id}}\" style=\"text-decoration: none;\">
-                    <div style=\"margin: 10px 50px; max-width: 240px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
+                    <div style=\"margin: 10px 25px; max-width: 240px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;\">
                         <div style=\"min-height: 150px; background-image: url('/uploads/pages/{{prog.miniature}}'); background-size: cover; width: 100%;\">
                         </div>
                         <div class=\"h-100\" {% if prog.isPrestige %}style=\"background-color: rgb(0, 48, 60);\"{% endif %}>

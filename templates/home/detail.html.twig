@@ -6,14 +6,53 @@
 <style>
     @media (max-width: 620px) {
         .accordion {
-            font-size: 8px;
+            font-size: 7px;
+        }
+        #ddplan 
+        {
+            font-size: 7px;
+            border: 1px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .ctaimg
+        {
+            width: 15px;
         }
     }
     @media (min-width: 620px) and (max-width: 780px) {
         .accordion {
-            font-size: 11px;
+            font-size: 10px;
+        }
+        #ddplan 
+        {
+            font-size: 10px; 
+            border: 1px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .ctaimg
+        {
+            width: 25px;
         }
     }
+    @media (min-width: 780px) {
+        .accordion {
+            font-size: 14px;
+        }
+        #ddplan 
+        {
+            font-size: 14px;
+            border: 1px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .ctaimg
+        {
+            width: 35px;
+        }
+    }
+
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
@@ -95,21 +134,22 @@
     {% if biens %}
         {% for bien in biens %}
             <div class="accordion" id="bien{{bien.id}}">
-                <div class="alert alert-success">
+                <div style="padding: 15px 0; background-color: {% if not programme.isPrestige %}#336336{% else %}rgb(0, 48, 60){% endif %};; color: white; border-radius: 5px; border: 2px solid silver;">
                     <div id="heading{{bien.id}}" class="d-flex justify-content-between align-items-center">
-                        <div class="d-flex justify-content-around w-100">
+                        <div class="d-flex justify-content-around align-items-center w-100">
                             <span class="text-center w-100">{{bien.title}}</span>
                             <span class="text-center w-100">Jusqu'à {{bien.surface}} m2</span>
                             <span class="text-center w-100">À partir de {{bien.prix}} €</span>
                             <span class="text-center w-100">{{bien.disponible}} disponible{% if bien.disponible > 1 %}s{% endif %}</span>
+                            <span id="ddplan" class="text-center w-75 border border-light">Plan 2D</span>
                         </div>
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#bien-{{bien.id}}" aria-expanded="true" aria-controls="bien-{{bien.id}}">
-                            <i class="fas fa-chevron-down"></i>
+                        <button style="margin-left: 25px;" class="btn btn-link" type="button" data-toggle="collapse" data-target="#bien-{{bien.id}}" aria-expanded="true" aria-controls="bien-{{bien.id}}">
+                            <i class="fas fa-chevron-down text-light"></i>
                         </button>
                     </div>
                 </div>
                 <div id="bien-{{bien.id}}" class="collapse" aria-labelledby="heading{{bien.id}}" data-parent="#bien{{bien.id}}">
-                    <div class="alert alert-warning d-flex justify-content-around">
+                    <div class="d-flex justify-content-around" style="padding: 15px 0; background-color: #D39C2F; border-radius: 5px; border: 2px solid silver;">
                         <span class="text-center w-100">Lot</span>
                         <span class="text-center w-100">Surface (m2)</span>
                         <span class="text-center w-100">Étage</span>
@@ -119,7 +159,7 @@
                         <span class="text-center w-100">Actions</span>
                     </div>
                     {% for lot in bien.lots %}
-                        <div class="alert alert-secondary d-flex justify-content-around align-items-center">
+                        <div class="d-flex justify-content-around align-items-center bg-light" style="padding: 15px 0; border-radius: 5px; border: 2px solid silver;">
                             <span class="text-center w-100">{{lot.lot}}</span>
                             <span class="text-center w-100">{{lot.surface}} m2</span>
                             <span class="text-center w-100">{{lot.etage}}</span>
@@ -128,10 +168,10 @@
                             <span class="text-center w-100">-</span>
                             <span class="text-center w-100">                            
                                 <a href="/rappel/{{lot.id}}/bien">
-                                    <img src="https://harmony-promotion.com/images/phone-black.png" width="35" alt="rappel" style="margin-right: 5px;"/>
+                                    <img src="https://harmony-promotion.com/images/phone-black.png" width="35" alt="rappel" class="ctaimg" style="margin-right: 5px;"/>
                                 </a>
                                 <a href="/brochure/{{lot.id}}/bien">
-                                    <img src="https://harmony-promotion.com/images/mail-black.png" width="35" alt="brochure"/>
+                                    <img src="https://harmony-promotion.com/images/mail-black.png" width="35" alt="brochure" class="ctaimg"/>
                                 </a>
                             </span>
                         </div>
@@ -169,7 +209,7 @@
         {% for prog in programmes %}
             {% if prog.id != programme.id %}
                 <a href="/detail/{{prog.id}}" style="text-decoration: none;">
-                    <div style="margin: 10px 50px; max-width: 240px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;">
+                    <div style="margin: 10px 25px; max-width: 240px; height: 350px; border-radius: 25px; box-shadow: 6px 6px 2px 0px rgba(0,0,0,0.16); overflow: hidden;">
                         <div style="min-height: 150px; background-image: url('/uploads/pages/{{prog.miniature}}'); background-size: cover; width: 100%;">
                         </div>
                         <div class="h-100" {% if prog.isPrestige %}style="background-color: rgb(0, 48, 60);"{% endif %}>
