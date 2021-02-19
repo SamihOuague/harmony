@@ -6,8 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Email;
+//use Symfony\Component\Mailer\MailerInterface;
+//use Symfony\Component\Mime\Email;
 use App\Form\ContactFormType;
 use App\Form\RappelFormType;
 use App\Entity\Programme;
@@ -88,7 +88,7 @@ class HomeController extends AbstractController
     /**
      * @Route("/rappel", name="rappel")
      */
-    public function rendezVous(Request $request, MailerInterface $mailer): Response
+    public function rendezVous(Request $request): Response
     {
         $lead = new Prospect();
         $form = $this->createForm(RappelFormType::class, $lead);
@@ -96,17 +96,17 @@ class HomeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $pros = $this->getDoctrine()->getRepository(Prospect::class)->findBy(["email" => $form->getData()->getEmail()]);
             $data = $form->getData();
-            $email = (new Email())
-            ->from('contact@harmony-promotion.com')
-            ->to('dev@harmony-promotion.com')
+            //$email = (new Email())
+            //->from('contact@harmony-promotion.com')
+            //->to('dev@harmony-promotion.com')
             //->cc('cc@example.com')
             //->bcc('bcc@example.com')
             //->replyTo('fabien@example.com')
             //->priority(Email::PRIORITY_HIGH)
-            ->subject('Time for Symfony Mailer!')
-            ->text('Sending emails is fun again!')
-            ->html('<p>See Twig integration for better HTML integration!</p>');
-            $mailer->send($email);
+            //->subject('Time for Symfony Mailer!')
+            //->text('Sending emails is fun again!')
+            //->html('<p>See Twig integration for better HTML integration!</p>');
+            //$mailer->send($email);
 
             //$this->importLead($data);
             if (!$pros) {
