@@ -167,10 +167,10 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
     <div class=\"d-flex justify-content-center align-items-center\" style=\"height: 80px; background-color: #172F26;\">
         
         <div style=\"width: 100%; height: 100%;\" class=\"d-block d-md-none d-flex justify-content-center align-items-center\">
-          <div id=\"pointeur\" style=\"width: 80%; height: 70%; background-color: white; border-radius: 5px; display: flex; align-items: center; justify-content: space-around; cursor: pointer;\">
-            <p style=\"font-family: Montserrat; text-align: center; margin-left: 15px; font-weight: 500; color: #8FB91E;\">Parametre de recherche</p>
+          <a href=\"/programme#research\" id=\"pointeur\" style=\"text-decoration: none; width: 80%; height: 70%; background-color: white; border-radius: 5px; display: flex; align-items: center; justify-content: space-around; cursor: pointer;\">
+            <span style=\"font-family: Montserrat; text-align: center; margin-left: 15px; font-weight: 500; color: #8FB91E;\">Parametre de recherche</span>
             <img src=\"Rectangle.png\" alt=\"petit crayon vert\">
-          </div>
+          </a>
         </div>
   \t\t
         <div class=\"d-none d-md-flex\">
@@ -582,10 +582,10 @@ class __TwigTemplate_6d76ebb590e4612420c61b9e1aaa55217ce6dd0fc755f833f890910ca14
     <div class=\"d-flex justify-content-center align-items-center\" style=\"height: 80px; background-color: #172F26;\">
         
         <div style=\"width: 100%; height: 100%;\" class=\"d-block d-md-none d-flex justify-content-center align-items-center\">
-          <div id=\"pointeur\" style=\"width: 80%; height: 70%; background-color: white; border-radius: 5px; display: flex; align-items: center; justify-content: space-around; cursor: pointer;\">
-            <p style=\"font-family: Montserrat; text-align: center; margin-left: 15px; font-weight: 500; color: #8FB91E;\">Parametre de recherche</p>
+          <a href=\"/programme#research\" id=\"pointeur\" style=\"text-decoration: none; width: 80%; height: 70%; background-color: white; border-radius: 5px; display: flex; align-items: center; justify-content: space-around; cursor: pointer;\">
+            <span style=\"font-family: Montserrat; text-align: center; margin-left: 15px; font-weight: 500; color: #8FB91E;\">Parametre de recherche</span>
             <img src=\"Rectangle.png\" alt=\"petit crayon vert\">
-          </div>
+          </a>
         </div>
   \t\t
         <div class=\"d-none d-md-flex\">

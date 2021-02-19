@@ -164,7 +164,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
             </div>
         </div>
         <div class=\"col-lg-8\" style=\"padding: 0;\">
-            <div class=\"d-flex justify-content-around\" style=\"height: 70px; background-color: #336335;\">
+            <div id=\"research\" class=\"d-flex justify-content-around\" style=\"height: 70px; background-color: #336335;\">
                 <select class=\"w-100 exampleFormControlSelect1\" id=\"department\" style=\"margin: 15px;\">
                     <option disabled selected>Département</option>
                     <option value=\"75\">75</option>
@@ -440,7 +440,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
             \$(\".dep-\" + anchors[i]).show();
             \$(\"#department\").val(anchors[i]);
         }
-        if (!(Number(anchors[i]))) {
+        if (!(Number(anchors[i])) && anchors[i] !== \"research\") {
             \$(\".\" + anchors[i]).show();
             \$(\"#piece\").val(anchors[i]);
         }
@@ -583,7 +583,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
             </div>
         </div>
         <div class=\"col-lg-8\" style=\"padding: 0;\">
-            <div class=\"d-flex justify-content-around\" style=\"height: 70px; background-color: #336335;\">
+            <div id=\"research\" class=\"d-flex justify-content-around\" style=\"height: 70px; background-color: #336335;\">
                 <select class=\"w-100 exampleFormControlSelect1\" id=\"department\" style=\"margin: 15px;\">
                     <option disabled selected>Département</option>
                     <option value=\"75\">75</option>
@@ -769,7 +769,7 @@ class __TwigTemplate_8f21c4dd22ef551e38f4f709d6b396dad73a562dc74c5212e21db8ba626
             \$(\".dep-\" + anchors[i]).show();
             \$(\"#department\").val(anchors[i]);
         }
-        if (!(Number(anchors[i]))) {
+        if (!(Number(anchors[i])) && anchors[i] !== \"research\") {
             \$(\".\" + anchors[i]).show();
             \$(\"#piece\").val(anchors[i]);
         }
