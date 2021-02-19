@@ -178,6 +178,6 @@ class __TwigTemplate_f421d5d1c4bbc20e00e0e128cc6e94ac4e275e9da42358980f2f0b9f7dd
         </div>
     {% endif  %}
 </div>
-{% endblock %}", "dashboard/lots.html.twig", "/var/www/html/harmony/templates/dashboard/lots.html.twig");
+{% endblock %}", "dashboard/lots.html.twig", "/home/souaguen/Bureau/harmonypresent/templates/dashboard/lots.html.twig");
     }
 }

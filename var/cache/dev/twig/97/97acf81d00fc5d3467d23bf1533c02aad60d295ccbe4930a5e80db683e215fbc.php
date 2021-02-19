@@ -137,6 +137,6 @@ class __TwigTemplate_e49813e5cceae43652a663d52ca43131482840b07dd2b2c63a424be3c5b
     <h1>Ajouter une News</h1>
     {{form(form)}}
 </div>
-{% endblock %}", "news/addArticle.html.twig", "/var/www/html/harmony/templates/news/addArticle.html.twig");
+{% endblock %}", "news/addArticle.html.twig", "/home/souaguen/Bureau/harmonypresent/templates/news/addArticle.html.twig");
     }
 }

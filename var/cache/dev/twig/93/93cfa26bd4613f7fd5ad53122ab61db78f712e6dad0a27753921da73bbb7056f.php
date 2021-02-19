@@ -172,6 +172,6 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
         <button type=\"submit\" class=\"btn\">Register</button>
     {{ form_end(registrationForm) }}
 {% endblock %}
-", "registration/register.html.twig", "/var/www/html/harmony/templates/registration/register.html.twig");
+", "registration/register.html.twig", "/home/souaguen/Bureau/harmonypresent/templates/registration/register.html.twig");
     }
 }

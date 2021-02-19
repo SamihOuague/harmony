@@ -145,6 +145,6 @@ class __TwigTemplate_c511f1ffcf0cd4262c66410ca87f4e54c237b474c23db24985352956b67
     {{form(form)}}
 </div>
 {% endblock %}
-", "page/delete.html.twig", "/var/www/html/harmony/templates/page/delete.html.twig");
+", "page/delete.html.twig", "/home/souaguen/Bureau/harmonypresent/templates/page/delete.html.twig");
     }
 }

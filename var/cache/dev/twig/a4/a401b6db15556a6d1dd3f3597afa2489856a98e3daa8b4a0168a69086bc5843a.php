@@ -460,6 +460,6 @@ class __TwigTemplate_25055e399610a1d549ddcc78f22966aa2d06dab6689a750f242ca8e3c07
         }
     });
 </script>
-{% endblock %}", "home/guide.html.twig", "/var/www/html/harmony/templates/home/guide.html.twig");
+{% endblock %}", "home/guide.html.twig", "/home/souaguen/Bureau/harmonypresent/templates/home/guide.html.twig");
     }
 }

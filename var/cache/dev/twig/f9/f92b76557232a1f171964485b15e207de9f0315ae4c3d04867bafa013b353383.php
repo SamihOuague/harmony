@@ -168,6 +168,6 @@ class __TwigTemplate_0ae8e03935a4c5b2c717cee449fdb2fa3b0464405a2219b4304013e1d4e
         </div>
         <br/><br/>
     </div>
-{% endblock %}", "news/view_article.html.twig", "/var/www/html/harmony/templates/news/view_article.html.twig");
+{% endblock %}", "news/view_article.html.twig", "/home/souaguen/Bureau/harmonypresent/templates/news/view_article.html.twig");
     }
 }

@@ -183,6 +183,6 @@ class __TwigTemplate_9d86d4cbaeb866b8f0a31c94d2f291037edd5c934c87ae20cd4e1095d30
         </div>
     {% endif  %}
 </div>
-{% endblock %}", "dashboard/biens.html.twig", "/var/www/html/harmony/templates/dashboard/biens.html.twig");
+{% endblock %}", "dashboard/biens.html.twig", "/home/souaguen/Bureau/harmonypresent/templates/dashboard/biens.html.twig");
     }
 }

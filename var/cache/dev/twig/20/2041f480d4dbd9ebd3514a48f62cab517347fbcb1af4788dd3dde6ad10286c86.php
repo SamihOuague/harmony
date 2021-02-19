@@ -137,6 +137,6 @@ class __TwigTemplate_0d1c8c0f152392cace542565d6f217964d3b5894da45104d6bcfdff9d77
     <h1>Ajouter une page</h1>
     {{form(form)}}
 </div>
-{% endblock %}", "page/new.html.twig", "/var/www/html/harmony/templates/page/new.html.twig");
+{% endblock %}", "page/new.html.twig", "/home/souaguen/Bureau/harmonypresent/templates/page/new.html.twig");
     }
 }

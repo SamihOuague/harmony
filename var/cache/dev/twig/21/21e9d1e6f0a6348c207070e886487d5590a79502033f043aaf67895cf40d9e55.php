@@ -72,15 +72,18 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             background-color: white; 
             border-radius: 5px;
           }
+          .navlink {
+            font-size: 25px;
+          }
         </style>
         <title>";
-        // line 30
+        // line 33
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
         ";
-        // line 31
+        // line 34
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 32
+        // line 35
         echo "    </head>
     <body class=\"bg-light\" style=\"height: 100%; overflow-x: hidden;\">
         <nav class=\"navbar navbar-expand-lg navbar-light bg-light border-bottom border-muted\" style=\"min-height: 65px;\">
@@ -94,46 +97,56 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
                     <ul class=\"navbar-nav ml-auto w-100 d-flex justify-content-around\" style=\"font-size: 14px;\">
                       <li class=\"nav-item d-flex align-items-center justify-content-center\">
-                        <a class=\"nav-link\" href=\"";
-        // line 45
+                        <a class=\"nav-link\" style=\"font-size: 16px; font-family: 'Montserrat';\" href=\"";
+        // line 48
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("programme");
         echo "\">PROGRAMMES</a>
                       </li>
                       <li class=\"nav-item d-flex align-items-center text-center justify-content-center\">
-                        <a class=\"nav-link\" href=\"";
-        // line 48
+                        <a class=\"nav-link\" style=\"font-size: 16px; font-family: 'Montserrat';\" href=\"";
+        // line 51
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("guide");
         echo "\">GUIDE DE <br class=\"d-none d-lg-block d-xl-block\"/>L'IMMOBILIER</a>
                       </li>
                       <li class=\"nav-item d-flex align-items-center text-center justify-content-center\">
-                        <a class=\"nav-link\" href=\"";
-        // line 51
+                        <a class=\"nav-link\" style=\"font-size: 16px; font-family: 'Montserrat';\" href=\"";
+        // line 54
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("harmony");
         echo "\">HARMONY <br class=\"d-none d-lg-block d-xl-block\"/>PROMOTION</a>
                       </li>
                       <!--<li class=\"nav-item d-flex align-items-center justify-content-center\">
                         <a class=\"nav-link\" href=\"";
-        // line 54
+        // line 57
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("news");
         echo "\">ACTUS/NEWS</a>
                       </li>-->
                       <li class=\"nav-item d-flex align-items-center justify-content-center\">
-                        <a class=\"nav-link\" href=\"";
-        // line 57
+                        <a class=\"nav-link\" style=\"font-size: 16px; font-family: 'Montserrat';\" href=\"";
+        // line 60
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\">CONTACT</a>
+                      </li>
+                      <li class=\"nav-item d-flex align-items-center justify-content-center\">
+                        <a class=\"nav-link\" href=\"";
+        // line 63
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
+        echo "\">
+\t\t\t\t                  <div class=\"container\" style=\"height: 55px; background-image: url('/images/phone.png'); background-size: 100%; background-repeat: no-repeat; width: 145px; background-color: #8DC63F; border-radius: 5px;\">
+\t\t\t\t                  \t<!--<p style=\"font-family: 'Montserrat';\">0 801 900 500</p>-->
+\t\t\t\t                  </div>
+                        </a>
                       </li>
                     </ul>
                 </div>
             </div>
         </nav>
         ";
-        // line 63
+        // line 73
         $this->displayBlock('body', $context, $blocks);
-        // line 64
+        // line 74
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 65
+        // line 75
         echo "        <div id=\"anticovid\" class=\"fixed-bottom bg-success text-light d-flex justify-content-between\" style=\"height: 150px; opacity: 0.8;\">
           <div style=\"margin: 10px 25px;\">
             <img src=\"https://harmony-promotion.com/images/covid.png\" alt=\"stop covid\" width=\"100\"/>
@@ -166,15 +179,15 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">MENU</h4>
               <a href=\"";
-        // line 96
+        // line 106
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("programme");
         echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Tous les programmes</a><br/>
               <a href=\"";
-        // line 97
+        // line 107
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("guide");
         echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Guide de l'acheteur</a><br/>
               <a href=\"";
-        // line 98
+        // line 108
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("guide");
         echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Guide de l'investisseur</a><br/>
             </div>
@@ -186,22 +199,22 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">DÉCOUVRIR</h4>
               <a href=\"";
-        // line 107
+        // line 117
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("harmony");
         echo "#team\" class=\"text-muted\" style=\"font-size: 18px;\">Notre team</a><br/>
               <a href=\"";
-        // line 108
+        // line 118
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("harmony");
         echo "\" class=\"text-muted\" style=\"font-size: 18px;\">Nos valeurs</a><br/>
             </div>
             <div class=\"col-lg-2 text-center\">
               <h4 style=\"font-family: 'Barlow'; color: #336336; margin: 25px 0px;\">CONTACT</h4>
               <a href=\"";
-        // line 112
+        // line 122
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rappel");
         echo "\"><img src=\"https://harmony-promotion.com/images/appel-v.png\" width=\"35\" style=\"margin: 25px;\" alt=\"logo telephone\"/></a>
               <a href=\"";
-        // line 113
+        // line 123
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\"><img src=\"https://harmony-promotion.com/images/mail-v.png\" width=\"35\" style=\"margin: 25px;\" alt=\"logo mail\"/></a>
             </div>
@@ -219,7 +232,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 30
+    // line 33
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -238,7 +251,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 31
+    // line 34
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -256,7 +269,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 63
+    // line 73
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -274,7 +287,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 64
+    // line 74
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -304,7 +317,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     public function getDebugInfo()
     {
-        return array (  278 => 64,  260 => 63,  242 => 31,  223 => 30,  205 => 113,  201 => 112,  194 => 108,  190 => 107,  178 => 98,  174 => 97,  170 => 96,  137 => 65,  134 => 64,  132 => 63,  123 => 57,  117 => 54,  111 => 51,  105 => 48,  99 => 45,  84 => 32,  82 => 31,  78 => 30,  47 => 1,);
+        return array (  291 => 74,  273 => 73,  255 => 34,  236 => 33,  218 => 123,  214 => 122,  207 => 118,  203 => 117,  191 => 108,  187 => 107,  183 => 106,  150 => 75,  147 => 74,  145 => 73,  132 => 63,  126 => 60,  120 => 57,  114 => 54,  108 => 51,  102 => 48,  87 => 35,  85 => 34,  81 => 33,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -337,6 +350,9 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             background-color: white; 
             border-radius: 5px;
           }
+          .navlink {
+            font-size: 25px;
+          }
         </style>
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
@@ -353,19 +369,26 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
                     <ul class=\"navbar-nav ml-auto w-100 d-flex justify-content-around\" style=\"font-size: 14px;\">
                       <li class=\"nav-item d-flex align-items-center justify-content-center\">
-                        <a class=\"nav-link\" href=\"{{ path('programme') }}\">PROGRAMMES</a>
+                        <a class=\"nav-link\" style=\"font-size: 16px; font-family: 'Montserrat';\" href=\"{{ path('programme') }}\">PROGRAMMES</a>
                       </li>
                       <li class=\"nav-item d-flex align-items-center text-center justify-content-center\">
-                        <a class=\"nav-link\" href=\"{{  path('guide') }}\">GUIDE DE <br class=\"d-none d-lg-block d-xl-block\"/>L'IMMOBILIER</a>
+                        <a class=\"nav-link\" style=\"font-size: 16px; font-family: 'Montserrat';\" href=\"{{  path('guide') }}\">GUIDE DE <br class=\"d-none d-lg-block d-xl-block\"/>L'IMMOBILIER</a>
                       </li>
                       <li class=\"nav-item d-flex align-items-center text-center justify-content-center\">
-                        <a class=\"nav-link\" href=\"{{ path('harmony') }}\">HARMONY <br class=\"d-none d-lg-block d-xl-block\"/>PROMOTION</a>
+                        <a class=\"nav-link\" style=\"font-size: 16px; font-family: 'Montserrat';\" href=\"{{ path('harmony') }}\">HARMONY <br class=\"d-none d-lg-block d-xl-block\"/>PROMOTION</a>
                       </li>
                       <!--<li class=\"nav-item d-flex align-items-center justify-content-center\">
                         <a class=\"nav-link\" href=\"{{ path('news') }}\">ACTUS/NEWS</a>
                       </li>-->
                       <li class=\"nav-item d-flex align-items-center justify-content-center\">
-                        <a class=\"nav-link\" href=\"{{ path('contact') }}\">CONTACT</a>
+                        <a class=\"nav-link\" style=\"font-size: 16px; font-family: 'Montserrat';\" href=\"{{ path('contact') }}\">CONTACT</a>
+                      </li>
+                      <li class=\"nav-item d-flex align-items-center justify-content-center\">
+                        <a class=\"nav-link\" href=\"{{ path('contact') }}\">
+\t\t\t\t                  <div class=\"container\" style=\"height: 55px; background-image: url('/images/phone.png'); background-size: 100%; background-repeat: no-repeat; width: 145px; background-color: #8DC63F; border-radius: 5px;\">
+\t\t\t\t                  \t<!--<p style=\"font-family: 'Montserrat';\">0 801 900 500</p>-->
+\t\t\t\t                  </div>
+                        </a>
                       </li>
                     </ul>
                 </div>
@@ -428,6 +451,6 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>
         <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\"></script>
     </body>
-</html>", "base.html.twig", "/var/www/html/harmony/templates/base.html.twig");
+</html>", "base.html.twig", "/home/souaguen/Bureau/harmonypresent/templates/base.html.twig");
     }
 }
